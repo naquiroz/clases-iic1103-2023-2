@@ -122,6 +122,43 @@ level: 3
 </div>
 
 ---
+layout: two-cols
+level: 3
+---
+
+# Quién es su ayudante de bienestar
+
+- **Kris Pulgar** ([kmpulgar@uc.cl](mailto:kmpulgar@uc.cl))
+- En 4to año de Ingeniera Civil Mecánica
+- Es mi primera vez siendo ayudante de este curso
+- Coordinadora del cuerpo de tutores y de GoIng
+
+### Hobbies
+
+- Pintar 🖌️, escribir poemas 🖊️, ir al teatro 🎭 y tocar el bajo 🎸
+
+### Dato freak (kinda cringe)
+
+- No siento nada en la mitad derecha de mi lengua
+
+::right::
+
+<div class="block relative">
+<img src="/kris.jpeg" alt="Kris pulgar" class="object-none drop-shadow-sm aspect-square rounded-full border-none object-top" />
+</div>
+
+---
+layout: center
+level: 3
+title: ¿Quiénes son ustedes?
+hideInToc: true
+---
+
+# ¿Quiénes son ustedes?
+
+<img class="w-50 mx-auto" src="/content/QR_clase.png" />
+
+---
 layout: center
 level: 2
 ---
@@ -296,8 +333,6 @@ El equipo de coordinación de desarrollo está liderado por:
 
 <CoordinacionDes />
 
-
-
 ---
 layout: default
 level: 3
@@ -307,8 +342,8 @@ level: 3
 
 - Tres pruebas: I1, I2, Examen
 - Todas las pruebas **son en computador** 💻
-- <p class="flex space-between align-center text-center items-center"> Se utilizará la plataforma Clearn &nbsp; <LogoMini /></p>
-- Más instrucciónes vendrán en el llegando a la evaluación. Coordinación enviará vaarios anuncios al respecto.
+- Se utilizará la plataforma <span class="text-purple-500 font-bold">Clearn</span>
+- Más instrucciónes vendrán llegando a la evaluación. Coordinación enviará _vaaaarios_ anuncios al respecto.
 - Deben traer su propio computador, habrán muchos enchufes y zapatillas.
 - Deben asegurarse que su computador tenga 🔋 suficiente para la evaluación.
 
@@ -334,7 +369,7 @@ hideInToc: true
 
 > ¿Ni si quiera un poquito de ayuda?
 
-**NO. NADA. ZERO. NULO**
+**NO. NADA. ZERO. NULO** <span v-click>🤠</span>
 
 ---
 layout: center
@@ -366,8 +401,8 @@ level: 3
   puntos para la nota de participación.
 - **No son clases**. No se explicará materia nueva. Se resolverán dudas particulares
   y se ejercitará.
-- Disponibles de lunes a viernes, módulos 5 y 6. **Deben asistir a al menos dos módulos** en
-  la semana para obtener los puntos de asistencia por esa semana. (Pueden no ser consecutivos)
+- Disponibles de lunes a viernes, módulos 5 y 6. **Para obtener puntos por asistencia a SAP deben asistir a al menos dos módulos** en
+  la semana. (Pueden no ser consecutivos)
 
 ℹ️ El equipo de coordinación enviará un anuncio con más detalles cuando vayan a comenzar
 (en dos semanas aproximadamente)
@@ -396,13 +431,24 @@ title: Ética e Integridad Académica
 ## “Cómo hacer que me expulsen de la U”
 
 ---
-layout: image
+layout: center
 level: 2
 title: Ejemplo 1
 hideInToc: true
 ---
 
-# Foto de ejemplo
+# Histórico
+
+<img class="rounded w-100" src="/content/asado_familiar.png" />
+
+---
+layout: center
+level: 2
+title: Ejemplo 1
+hideInToc: true
+---
+
+<img class="rounded w-100" src="/content/chat_gpt.jpeg" />
 
 ---
 layout: statement
@@ -519,9 +565,11 @@ hideInToc: true
 
 <v-clicks>
 
-- Compartir ideas de cómo resolver la tarea (sin código) después de la entrega
+- Compartir ideas de cómo resolver la tarea (sin código) después del cierre de la evaluación
 - Pedir ayuda a un/a ayudante del curso o profesor/a del curso para entender el enunciado
 - Pedir ayuda a un/a ayudante del curso o profesor/a del curso para entender un error
+- **SIEMPRE** que estén complicados o algo les pase, contactar [iic1103@uc.cl](mailto:iic1103@uc.cl) con copia mí [naquiroz@uc.cl](mailto:naquiroz@uc.cl)
+  o a Pablo o Kris.
 </v-clicks>
 
 <style>
@@ -529,6 +577,57 @@ hideInToc: true
   @apply text-6xl;
   }
 </style>
+
+---
+layout: two-cols
+level: 3
+title: Historias reales
+hideInToc: true
+---
+
+# Historias reales
+
+<v-clicks>
+
+- No cachaba nada
+- Nos compartimos las contraseñas de todo
+- Un profesor particular nos ayudó
+- Mi amigo sólo quería ayudarme. ¡No lo reprueben por favor!
+- No nos conocemos
+- Vivimos en el mismo departamento
+- Trabajé en su computador y quedó allí
+- No tenía internet y se lo pasé para que lo enviara
+</v-clicks>
+
+::right::
+
+<v-clicks>
+
+- Siempre trabajamos juntos
+- Intenté explicárselo pero como no tenía tiempo se lo envié
+- Es el único amigo que tengo
+- Me robó la tarea (!!!!!!)
+- Se lo pasé para que lo entendiera sin copiar, pero me cagó
+- LE DIJE que lo cambiara!
+- Solo le expliqué una pequeña cosa
+- Se lo expliqué pero no le enseñé el código
+- Es que tuve problemas personales/familiares/...
+- Otros semestres/secciones/ramos/ ...
+</v-clicks>
+
+---
+layout: statement
+level: 2
+title: Política de arrepentimiento
+hideInToc: true
+---
+
+# Copié en una evaluación, ¿qué hago?
+## Política de arrepentimiento temprano
+
+Si cometiste alguna falta a la integridad académica, puedes comunicarte a iic1103@uc.cl luego de que finalice el plazo oficial de la evaluación **previo a ser citados por faltas a la integridad**. Se tendrá **especial consideración** con quienes opten por asumir su error de forma temprana,
+no así con los demás casos.
+
 ---
 layout: statement
 level: 2
@@ -545,12 +644,11 @@ level: 2
 hideInToc: true
 ---
 
-# Preguntas hasta ahora ?
+# ¿ Preguntas hasta ahora ?
 ---
 layout: section
 level: 1
 title: Introducción al curso
-hideInToc: true
 ---
 # Empecemos
 
@@ -562,6 +660,41 @@ title: Qué es la computación
 
 # Qué es la computación
 ## Mythbusters
+
+### 5 bitpoints por responder al menos una pregunta
+
+---
+layout: center
+level: 3
+title: ¿Qué es la computación?
+hideInToc: true
+---
+
+# ¿Qué es la computación?
+
+<img class="w-50 mx-auto" src="/content/QR_clase.png" />
+
+---
+layout: center
+level: 3
+title: ¿Qué es lo malo de la computación?
+hideInToc: true
+---
+
+# ¿Qué es lo malo de la computación?
+
+<img class="w-50 mx-auto" src="/content/QR_clase.png" />
+
+---
+layout: center
+level: 3
+title: ¿Qué es la computación?
+hideInToc: true
+---
+
+# ¿Es la computación diversa?
+
+<img class="w-50 mx-auto" src="/content/QR_clase.png" />
 
 ---
 layout: default
@@ -581,6 +714,25 @@ La computación hoy en día se usa en todas partes 💻
 </div>
 
 ---
+layout: center
+level: 3
+title: Diversidad en la computación
+hideInToc: true
+---
+
+# El ambiente laboral
+
+<img class="w-100 mx-auto bg-white rounded" src="/content/offices.jpeg" />
+---
+layout: center
+level: 3
+title: Mujeres en la computación
+---
+
+# Mujeres en la computación
+
+<img class="w-100 mx-auto bg-white rounded" src="/content/women.svg" />
+---
 layout: default
 level: 2
 title: Objetivos del curso
@@ -588,3 +740,43 @@ title: Objetivos del curso
 
 # Objetivos del curso
 ## ¿Qué aprenderemos?
+
+1. **Pensamiento algorítmico**: Descomponer problemas en pasos simples y secuenciales
+2. **Programación**: Aprender a programar en Python (3) para resolver problemas
+
+Aprenderemos un pensamiento que nos permitirá **resolver problemas de forma sistemática y programaremos en un nuevo lenguaje**, un lenguaje de programación que nos permitirá resolver problemas de forma sistemática.
+
+---
+layout: center
+level: 2
+title: Tips
+---
+
+# Tips para el curso
+
+1. **No te quedes atrás**: Si no entiendes algo, pregunta, el curso es muy acumulativo. **PRACTICA**
+2. **No memorices**: Entiende los conceptos, no los memorices. **PRACTICA**
+3. **PRACTICA**, **PRACTICA**, **PRACTICA**
+---
+layout: end
+level: 1
+title: Créditos
+hideInToc: true
+---
+
+# Créditos
+
+Esta clase fue preparada con el apoyo de Valeria Herskovic, Jorge Muñoz, Cristian Ruz, Nicolás Alvarado y José Tomás Marquinez
+
+<Profesores class="mx-auto" />
+
+¡Muchas gracias a todos/as!
+
+---
+layout: end
+level: 1
+title: Fin de la clase
+hideInToc: true
+---
+
+# ¡Nos vemos en la próxima clase!
