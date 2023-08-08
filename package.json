@@ -2,7 +2,7 @@
   "name": "iic1103",
   "private": true,
   "scripts": {
-    "build": "slidev build *.md",
+    "build": "slidev build clase_*.md",
     "dev": "slidev",
     "export": "slidev export"
   },
