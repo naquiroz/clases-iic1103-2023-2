@@ -2,6 +2,10 @@ h1 {
   @apply font-extrabold bg-gradient-to-r from-orange-400 to-rose-500 bg-clip-text text-transparent leading-loose;
 }
 
+h3 {
+  @apply text-slate-950 font-medium
+}
+
 .slidev-layout.section h1 {
   @apply font-bold
 }
