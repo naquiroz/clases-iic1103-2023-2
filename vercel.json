@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
+      "source": "/:clase(.*)/:extra(.*)",
+      "destination": "/:clase/index.html/:extra"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/index.html/"
     }
   ],
   "buildCommand": "npm run build",
