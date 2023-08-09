@@ -272,7 +272,7 @@ level: 3
     al 90% o más. Se entregará bonus por completarlo en la semana que se publica, o bien antes de la evaluación correspondiente (I1, I2, Examen)
   - **Participación en clases**: Ejercicios que realizo yo en clases
   - **Asistencia a clases**: Asistencia a clases, controlado por canvas con bloqueo por IP (deben estar en la sala de clases)
-  - **Asistencias a salas de ayudante SAP**: Asistencia a salas de ayudante SAP, controlado por canvas con bloqueo por IP (deben estar en alguna sala de SAP).
+  - **Asistencias a salas de ayudante SAP**: Asistencia a salas de ayudante SAP, a través de control de asistencia via los/as ayudantes. Más instrucciones vendrán llegando las instancias.
   - **Actividades de bienestar**: Actividades que el equipo de bienestar realizará durante el semestre
 
 ---
