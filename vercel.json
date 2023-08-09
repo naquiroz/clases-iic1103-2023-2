@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/:clase(.*)/:extra(.*)",
-      "destination": "/:clase/index.html/:extra"
+      "destination": "/:clase/index.html"
     },
     {
       "source": "/(.*)",
