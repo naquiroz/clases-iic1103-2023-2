@@ -25,7 +25,42 @@ presenter: dev
 ## Clase 02 | Introducción a la programación
 
 ### Nicolás Quiroz | <naquiroz@uc.cl> | <iic1103@uc.cl>
+
 ---
+layout: center
+level: 1
+title: Anuncios
+hideInToc: true
+---
+# Anuncios
+
+1. Primer set se publica la próxima semana (recordar bonus por hacerlos a tiempo)
+   - Para los primeros 3 sets, se puede entregar hasta 1 semana después. Publicaremos un calendario con las fechas máximas para cada bonus.
+2. SAP comienzan **en dos semanas**
+3. Para **todo** lo de este curso (incluso slido, deben usar su correo UC)
+
+---
+layout: center
+level: 1
+title: Salas SAP
+hideInToc: true
+---
+
+# Salas SAP
+
+<img class="w-200 mx-auto" src="/content/clase_02/salas.jpeg" />
+
+🚨 **Para todas las salas, están disponibles en módulos 5,6**
+---
+layout: center
+level: 1
+title: Repaso clase anterior
+hideInToc: true
+---
+
+# Repaso clase anterior
+
+<div class="slidev-toc" style="column-count: 1;"><ol class="slidev-toc-list slidev-toc-list-level-1"><li class="slidev-toc-item"><a class=""><div><p>Presentación</p></div></a><ol class="slidev-toc-list slidev-toc-list-level-2"><li class="slidev-toc-item"><a class=""><div><p>Quiénes somos</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a class=""><div><p>La coordinación</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a class=""><div><p>Cómo se evalúa el curso</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a class=""><div><p>Nota de participación</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a class=""><div><p>Cómo será el curso</p></div></a><!--v-if--></li></ol></li><li class="slidev-toc-item"><a class=""><div><p>Ética e Integridad Académica</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a class=""><div><p>Introducción al curso</p></div></a><ol class="slidev-toc-list slidev-toc-list-level-2"><li class="slidev-toc-item"><a class=""><div><p>Qué es la computación</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a class=""><div><p>Objetivos del curso</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a class=""><div><p>Tips</p></div></a><!--v-if--></li></ol></li></ol></div>
 
 ---
 layout: section
@@ -42,7 +77,6 @@ title: Calibración
 
 ¿Qué es software?
 
-
 ---
 layout: center
 level: 3
@@ -52,8 +86,7 @@ hideInToc: true
 
 # ¿Qué tanto saben programar?
 
-<img class="w-50 mx-auto" src="/content/QR_clase.png" />
-
+<img class="w-50 mx-auto" src="/content/clase_02/qr_clase_02.png" />
 
 ---
 layout: center
@@ -77,7 +110,7 @@ clicks: 4
 ## ¿Por qué es necesario el pensamiento algorítmico?
 ### ¿Por qué es necesario pensar en pasos ordenados?
 
-<ImgGrid :images="['content/clase_02/mess_kitchen.avif', 'content/clase_02/cau_cau.jpeg', 'content/clase_02/music.jpeg']" do-clicks class="w-250" v-click-hide="4"/>
+<ImgGrid :images="['content/clase_02/mess_kitchen.avif', 'content/clase_02/cau_cau.jpeg', 'content/clase_02/music.jpeg']" do-clicks class="w-full" v-click-hide="4"/>
 <img class="w-60 mx-auto absolute left-80 top-50" src="/content/clase_02/manual.jpeg" v-click="4"/>
 
 ---
@@ -91,7 +124,6 @@ hideInToc: true
 <img class="w-90 mx-auto rounded" src="/content/clase_02/formula_1.gif" />
 
 El pensamiento algorítmico es una herramienta que nos permite resolver problemas de manera ordenada y sistemática.
-
 
 ---
 layout: center
@@ -111,7 +143,6 @@ flowchart LR
 ```
 
 <p class="ml-10 text-6xl">😖 -> &nbsp;🧑🏼‍💻 -> &nbsp; 🤩</p>
-
 
 ---
 layout: section
@@ -135,7 +166,6 @@ hideInToc: false
 - Nosotros nos enfocaremos en el pensamiento algorítmico, introduciendo conceptos básicos para poder resolver a la velocidad de la luz ⚡️
 - Los algoritmos son una herramienta bastante estudiada que permiten dividir un problema en pasos ordenados más sencillos de abordar y ordenar.
 
-
 ---
 layout: center
 level: 2
@@ -149,7 +179,6 @@ hideInToc: false
 - Por ejemplo, para que **un computador** pueda realizar una suma, **debe seguir un algoritmo que le indique cómo hacerlo**.
 
 - ¿ Qué algoritmos (además de los de un computador) se les ocurren de la vida diaria?
-
 
 <div class="flex justify-center">
   <span class="text-6xl" v-click="1">🧑‍🍳</span>
@@ -166,8 +195,7 @@ hideInToc: true
 ---
 # Ejemplos de algoritmos
 
-<ImgGrid :images="['content/clase_02/lego.jpeg', 'content/clase_02/musica.jpg', 'content/clase_02/terremoto.png']" do-clicks class="w-300" v-click-hide="4"/>
-
+<ImgGrid :images="['content/clase_02/lego.jpeg', 'content/clase_02/musica.jpg', 'content/clase_02/terremoto.png']" do-clicks class="sm:100 md:w-300" v-click-hide="4"/>
 
 ---
 layout: center
@@ -184,7 +212,6 @@ hideInToc: true
 
 - Para entregarle un algoritmo a un computador, es necesario utilizar un **lenguaje de programación**.
 
-
 ---
 layout: statement
 level: 2
@@ -195,7 +222,6 @@ hideInToc: true
 # Lenguaje de programación
 
 Un lenguaje de programación es un **lenguaje formal** que especifica una serie de instrucciones para que una computadora produzca diversas clases de datos.
-
 
 ---
 layout: section
@@ -226,7 +252,6 @@ En este curso intentaremos siempre llevar los problemas a nivel de computador.
 - **Salida**: Resultado del algoritmo, que puede ser un dato o un recurso.
 
 ::right::
-
 
 ### A nivel de problema
 
@@ -260,6 +285,7 @@ hideInToc: true
 - **Entrada**: Las letras del abecedario.
 - **Proceso**: Por cada letra intentar una combinación de 5 letras. Repetir hasta que todas sean verdes.
 - **Salida**: La combinación de letras que resultó en todas las letras verdes.
+
 ---
 layout: two-cols
 level: 2
@@ -280,7 +306,6 @@ hideInToc: true
    4. Calcular NF
 3. **Salida**: Nota final del curso.
 
-
 ::right::
 
 ```mermaid {theme: 'neutral', scale: 0.8}
@@ -292,3 +317,115 @@ flowchart TD;
     E --> F[Calcular NF];
     F --> G([Salida: Nota final del curso]);
 ```
+
+---
+layout: center
+level: 3
+title: ¿Quiénes son ustedes?
+hideInToc: true
+---
+
+# ¿Se les ocurre alguno?
+
+<img class="w-50 mx-auto" src="/content/clase_02/qr_clase_02.png" />
+
+---
+layout: center
+level: 2
+title: Preguntas
+hideInToc: true
+---
+
+# ¿Preguntas?
+
+---
+layout: section
+level: 1
+title: Ejercicios programación
+hideInToc: false
+---
+
+# Ejercicios programación
+## ¿Cómo programar un algoritmo?
+### Primer acercamiento, programación en bloques
+
+---
+layout: center
+level: 1
+title: Salas SAP
+hideInToc: true
+---
+
+# Cómo usar bloques
+
+<img class="w-200 mx-auto" src="/content/clase_02/ejemplo.jpeg" />
+
+---
+layout: center
+level: 1
+title: Inscripción
+hideInToc: true
+---
+
+# Inscripción
+## Con correo UC (No iniciar sesión con cuenta de microsoft)
+### **USAR NOMBRE REAL**
+
+[https://forms.office.com/r/uPZZGPqEea](https://forms.office.com/r/uPZZGPqEea)
+
+<img class="w-50 mx-auto" src="/content/clase_02/qr_form.png" />
+
+---
+layout: two-cols
+level: 2
+title: Ejercicios
+hideInToc: true
+---
+
+# Comencemos
+## 🌟 **5** Puntos de participación por hacerlos todos (haré 14)
+
+- **Ejercicio 1**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 2**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 3**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 4**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 5**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 6**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 7**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 8**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+- **Ejercicio 9**: <span v-click>¡Comiencen! (2 min).</span> <span v-click>Solución</span>
+
+::right::
+
+- **Ejercicio 10**: <span v-click>¡Comiencen! (5 min).</span> <span v-click>Solución</span>
+- **Ejercicio 11**: <span v-click>¡Comiencen! (5 min).</span> <span v-click>Solución</span>
+- **Ejercicio 12**: <span v-click>¡Comiencen! (5 min).</span> <span v-click>Solución</span>
+- **Ejercicio 13**: <span v-click>¡Comiencen! (5 min).</span> <span v-click>Solución</span>
+- **Ejercicio 14**: <span v-click>¡Comiencen! (5 min).</span> <span v-click>Solución</span>
+
+**Tienen hasta el final de la clase para entregar todos los ejercicios**
+
+---
+layout: end
+level: 1
+title: Créditos
+hideInToc: true
+---
+
+# Créditos
+
+Esta clase fue preparada con el apoyo de Valeria Herskovic, Jorge Muñoz, Cristian Ruz, Nicolás Alvarado y José Tomás Marquinez
+
+<Profesores class="mx-auto" />
+
+¡Muchas gracias a todos/as!
+
+---
+layout: end
+level: 1
+title: Fin de la clase
+hideInToc: true
+---
+
+# ¡Nos vemos en la próxima clase!
+**Traigan Computador 💻**
