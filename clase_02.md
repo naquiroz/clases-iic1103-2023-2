@@ -32,6 +32,15 @@ level: 1
 title: Anuncios
 hideInToc: true
 ---
+# Asistencia
+
+1. Por mientras, va a ser con slido
+---
+layout: center
+level: 1
+title: Anuncios
+hideInToc: true
+---
 # Anuncios
 
 1. Primer set se publica la próxima semana (recordar bonus por hacerlos a tiempo)
