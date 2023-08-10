@@ -35,6 +35,7 @@ hideInToc: true
 # Asistencia
 
 1. Por mientras, va a ser con slido
+
 ---
 layout: center
 level: 1
