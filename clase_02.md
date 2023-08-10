@@ -36,6 +36,18 @@ hideInToc: true
 
 1. Por mientras, va a ser con slido
 
+<img class="w-50 mx-auto" src="/content/clase_02/qr_clase_02.png" />
+
+---
+layout: center
+level: 1
+title: Grupo telegram
+hideInToc: true
+---
+# Grupo telegram
+
+Informal pero, oficial.
+
 ---
 layout: center
 level: 1
