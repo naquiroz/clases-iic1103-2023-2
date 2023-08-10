@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/:clase(clase_[0-9].)/:extra(.*)",
+      "source": "/:clase(.*)/:extra(.*)",
       "destination": "/:clase/index.html"
     },
     {

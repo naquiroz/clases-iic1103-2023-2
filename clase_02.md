@@ -77,7 +77,7 @@ clicks: 4
 ## ¿Por qué es necesario el pensamiento algorítmico?
 ### ¿Por qué es necesario pensar en pasos ordenados?
 
-<ImgGrid :images="['/content/clase_02/mess_kitchen.avif', '/content/clase_02/cau_cau.jpeg', '/content/clase_02/music.jpeg']" do-clicks class="w-250" v-click-hide="4"/>
+<ImgGrid :images="['content/clase_02/mess_kitchen.avif', 'content/clase_02/cau_cau.jpeg', 'content/clase_02/music.jpeg']" do-clicks class="w-250" v-click-hide="4"/>
 <img class="w-60 mx-auto absolute left-80 top-50" src="/content/clase_02/manual.jpeg" v-click="4"/>
 
 ---
@@ -166,7 +166,7 @@ hideInToc: true
 ---
 # Ejemplos de algoritmos
 
-<ImgGrid :images="['/content/clase_02/lego.jpeg', '/content/clase_02/musica.jpg', '/content/clase_02/terremoto.png']" do-clicks class="w-300" v-click-hide="4"/>
+<ImgGrid :images="['content/clase_02/lego.jpeg', 'content/clase_02/musica.jpg', 'content/clase_02/terremoto.png']" do-clicks class="w-300" v-click-hide="4"/>
 
 
 ---
