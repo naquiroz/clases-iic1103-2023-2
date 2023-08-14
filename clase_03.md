@@ -575,7 +575,6 @@ hideInToc: false
 # Variables
 ## ¿Qué son y para qué sirven?
 
-
 ---
 layout: end
 level: 1
