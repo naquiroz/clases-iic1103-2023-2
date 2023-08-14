@@ -46,6 +46,9 @@ hideInToc: true
 ---
 # Grupo telegram
 
+<img class="w-50 mx-auto" src="/content/clase_02/telegram.jpg" />
+
+
 Informal pero, oficial.
 
 ---

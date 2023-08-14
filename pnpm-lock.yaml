@@ -17,6 +17,12 @@ dependencies:
   '@slidev/theme-seriph':
     specifier: latest
     version: 0.21.3
+  codemirror:
+    specifier: ^5.65.12
+    version: 5.65.14
+  codemirror-editor-vue3:
+    specifier: ^2.3.0
+    version: 2.3.0(codemirror@5.65.14)(diff-match-patch@1.0.5)(vue@3.3.4)
 
 devDependencies:
   playwright-chromium:
@@ -1685,6 +1691,18 @@ packages:
       wrap-ansi: 7.0.0
     dev: false
 
+  /codemirror-editor-vue3@2.3.0(codemirror@5.65.14)(diff-match-patch@1.0.5)(vue@3.3.4):
+    resolution: {integrity: sha512-e6y/2wBL4Xb4SD10e/jq/lcoIeiWPMw2XnF6KePLlbmOphZ830XGU3kSz52qkoa9RUjaY6zHuSlwd09o13O/oQ==}
+    peerDependencies:
+      codemirror: ^5.x
+      diff-match-patch: ^1.0.5
+      vue: ^3.x
+    dependencies:
+      codemirror: 5.65.14
+      diff-match-patch: 1.0.5
+      vue: 3.3.4
+    dev: false
+
   /codemirror-theme-vars@0.1.2:
     resolution: {integrity: sha512-WTau8X2q58b0SOAY9DO+iQVw8JKVEgyQIqArp2D732tcc+pobbMta3bnVMdQdmgwuvNrOFFr6HoxPRoQOgooFA==}
     dev: false
@@ -2176,6 +2194,10 @@ packages:
 
   /destr@2.0.0:
     resolution: {integrity: sha512-FJ9RDpf3GicEBvzI3jxc2XhHzbqD8p4ANw/1kPsFBfTvP1b7Gn/Lg1vO7R9J4IVgoMbyUmFrFGZafJ1hPZpvlg==}
+    dev: false
+
+  /diff-match-patch@1.0.5:
+    resolution: {integrity: sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==}
     dev: false
 
   /diff@5.1.0:
