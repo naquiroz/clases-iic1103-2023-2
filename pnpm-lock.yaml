@@ -25,6 +25,9 @@ dependencies:
     version: 2.3.0(codemirror@5.65.14)(diff-match-patch@1.0.5)(vue@3.3.4)
 
 devDependencies:
+  '@iconify-json/twemoji':
+    specifier: ^1.1.12
+    version: 1.1.12
   playwright-chromium:
     specifier: ^1.36.2
     version: 1.36.2
@@ -571,9 +574,14 @@ packages:
       '@iconify/types': 2.0.0
     dev: false
 
+  /@iconify-json/twemoji@1.1.12:
+    resolution: {integrity: sha512-8F3z+0+NYO/qeCiyjeWJ9ozkBvPmXsK+4pkQynUuILyXDIi8ddBHb1DJ6O2Qp5M23LzaA/Gkg8/8CQwgGslGmQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: false
 
   /@iconify/utils@2.1.7:
     resolution: {integrity: sha512-P8S3z/L1LcV4Qem9AoCfVAaTFGySEMzFEY4CHZLkfRj0Fv9LiR+AwjDgrDrzyI93U2L2mg9JHsbTJ52mF8suNw==}

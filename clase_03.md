@@ -105,7 +105,6 @@ hideInToc: true
 # A programar
 Comencemos con la programación
 
-
 ---
 layout: intro-image
 level: 1
@@ -305,7 +304,7 @@ hideInToc: true
 
 # Operaciones básicas
 ## Ejemplos con números
-
+<v-clicks>
 Fui a comprar un almuerzo al hall y compré una bebida ($1000), un sándwich ($3000) y un helado ($1200). ¿Cuánto gasté?
 
 ```python
@@ -325,8 +324,9 @@ Cuantos billetes de $1000 necesito para pagar lo anterior? ¿Cuánto me faltarí
 print(3300 // 1000) # Esto imprime 3
 print(3300 % 1000) # Esto imprime 300
 ```
+</v-clicks>
 
-ℹ️ Es posible imprimir el resultado de una operación directamente en la consola.
+ℹ️ Es posible imprimir el resultado de una operación directamente en la consola, usando el `print`.
 
 ---
 layout: default
@@ -350,6 +350,32 @@ El módulo se pueden hacer con números enteros (`int`) y con decimales (`float`
 >>> 3.0 % 2
 1.0
 ```
+<!-- Examples slides from the above-->
+
+---
+layout: default
+level: 2
+title: Operaciones básicas - ejemplos (cont.)
+hideInToc: true
+---
+
+# Operaciones básicas
+## Ejemplos con números (cont.)
+
+```python {monaco}
+# Cómo determinar si un número es par
+
+>>> 4 % 2 == 0
+True
+
+>>> 5 % 2 == 0
+False
+# Pregunta: Por qué arriba retorna booleanos?
+
+# Propuesto: retornar 0 si es impar, 1 si es par
+
+>>>
+```
 
 ---
 layout: section
@@ -367,10 +393,9 @@ title: Operaciones básicas - booleanos
 hideInToc: true
 ---
 
-# Operaciones básicas
-## Booleanos
+# Operaciones básicas - booleanos
 
-En Python podemos realizar comparaciones entre números y textos —y otras cosas—, y el resultado será un booleano, que es simplemente un valor que puede ser `True`(verdadero) o `False` (falso). Algunos ejemplos de comparadores son:
+En Python podemos realizar comparaciones entre números y textos —y otras cosas—, y el resultado será un booleano, que es simplemente `True`(verdadero) o `False` (falso). Algunos ejemplos son:
 
 | Operación | Descripción | Ejemplo | Resultado |
 | --------- | ----------- | ------- | --------- |
@@ -547,15 +572,20 @@ False
 
 ---
 layout: center
+level: 2
+title: Contexto Ejercicio Propuesto
+hideInToc: true
+---
+<Youtube class="aspect-video w-200" id="SLM0S1rC0cE" />
+---
+layout: center
 level: 1
 title: Ejercicio avanzado
 hideInToc: true
 ---
 # Ejercicio propuesto
 
-¡Entendido! Vamos a añadir un poco más de complejidad:
-
-Estás organizando una fiesta para el 18 de septiembre en Chile. Decides escribir un mensaje secreto para tus amigos utilizando empanadas (🥟), choripanes (🌭), bebidas (🥤) y banderas chilenas (🇨🇱) como forma de codificar la información.
+Estás organizando una fondita para el 18 de septiembre en Chile. Decides escribir un mensaje secreto para tus amigos utilizando empanadas (🥟), choripanes (🌭), bebidas (🥤) y banderas chilenas (🇨🇱) como forma de codificar la información.
 
 Por cada amigo que invites, enviarás un mensaje que consiste en:
 
@@ -576,12 +606,84 @@ hideInToc: false
 ## ¿Qué son y para qué sirven?
 
 ---
+layout: center
+level: 2
+title: Motivación
+hideInToc: true
+---
+# Motivación
+Habrán notado que en el ejercicio anterior, tuvimos que repetir varias veces el número de amigos que teníamos. Esto es un poco tedioso, y además, si cambia el número de amigos, tenemos que cambiarlo en todos lados.
+
+<v-click>
+
+**¿Cómo podemos solucionar esto?**
+</v-click>
+
+<v-click>
+
+## 🤩 ¡ Con variables ! 🤩
+</v-click>
+
+---
+layout: fact
+level: 2
+title: Definición de variables
+hideInToc: false
+---
+
+# Variables
+
+Una variable nos permite guardar información o valores, que pueden ser referenciados más adelante en el código.
+
+---
+layout: fact
+level: 2
+title: Demostración
+hideInToc: true
+---
+
+# Demostración
+
+5 Bitpoints a quienes me ayuden a demostrar esto.
+
+---
+layout: default
+level: 2
+title: Definición de variables
+hideInToc: true
+---
+
+# Definición de variables
+
+Pueden pensar en una variable como una caja, que tiene un nombre y un contenido. El nombre de la variable es como la etiqueta de la caja, y el contenido es lo que está dentro de la caja.
+
+🧠 Le da un contexto más semántico al programa. Es decir, podemos entenderlo mejor.
+
+Mejores variables -> mejores programas
+
+Por ejemplo:
+
+```python
+print(5 * 10 / 2) # Sacar el area de un triangulo de base 5 y altura 10
+```
+
+No es lo mismo que
+
+```python
+base = 5
+altura = 10
+area = base * altura / 2
+print(area)
+```
+
+💡 **En las variables, podemos guardar valores, y resultados de operaciones.**
+
+---
 layout: end
 level: 1
 title: Créditos
 hideInToc: true
 ---
-
 
 # Créditos
 

@@ -18,6 +18,7 @@
     "colorSchema": "light"
   },
   "devDependencies": {
+    "@iconify-json/twemoji": "^1.1.12",
     "playwright-chromium": "^1.36.2"
   }
 }
