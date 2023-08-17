@@ -589,7 +589,7 @@ hideInToc: true
 ---
 # Ejercicio propuesto
 
-Estás organizando una fondita para el 18 de septiembre en Chile. Decides escribir un mensaje secreto para tus amigos utilizando empanadas (🥟), choripanes (🌭), bebidas (🥤) y banderas chilenas (🇨🇱) como forma de codificar la información.
+Estás organizando una fondita para el 18 de septiembre en Chile. Decides escribir un mensaje secreto para tus amigos utilizando empanadas ("E"), choripanes ("P"), bebidas ("B") y banderas chilenas ("C") como forma de codificar la información.
 
 Por cada amigo que invites, enviarás un mensaje que consiste en:
 
