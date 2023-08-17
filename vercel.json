@@ -5,11 +5,7 @@
       "destination": "/:clase/index.html"
     },
     {
-      "source": "/[0-9]+(.*)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
