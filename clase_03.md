@@ -152,7 +152,7 @@ Podemos agregar comentarios en nuestro código para que sea más fácil de enten
 
 Los comentarios son líneas que comienzan con `#` y son ignoradas por el computador.
 
-```python {monaco}
+```python
 print("Hola mundo!") # Un saludo pal mundo
 ```
 
@@ -362,7 +362,7 @@ hideInToc: true
 # Operaciones básicas
 ## Ejemplos con números (cont.)
 
-```python {monaco}
+```python
 # Cómo determinar si un número es par
 
 >>> 4 % 2 == 0
