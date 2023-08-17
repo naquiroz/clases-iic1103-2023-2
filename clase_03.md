@@ -529,7 +529,7 @@ hideInToc: true
 
 # Precedencia de operadores
 
-<div class="w-full">
+<div class="w-ful -m-2">
   <img src="/content/clase_03/precedencia.jpg" class="mx-auto rounded w-125" />
 </div>
 
@@ -576,7 +576,7 @@ level: 2
 title: Contexto Ejercicio Propuesto
 hideInToc: true
 ---
-<Youtube class="aspect-video w-200" id="SLM0S1rC0cE" />
+<iframe class="aspect-video w-200" src="https://www.youtube.com/embed/SLM0S1rC0cE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 layout: center
