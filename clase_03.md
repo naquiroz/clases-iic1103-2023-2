@@ -56,7 +56,7 @@ hideInToc: true
 ---
 # Anuncios
 
-1. Ayer se publicó el primer set de ejercicios de programación. Tienen hasta el POR_DEFINIR para entregarlos.
+1. Ayer se publicó el primer set de ejercicios de programación. Tienen hasta el 28 de agosto para entregarlos (con bonus).
 2. Las SAP (Salas de ayudantes presenciales) comienzan la próxima semana. Estarán disponibles en módulos 5 y 6.
 
 Dato freak: Yo inventé Programanji 🤠
@@ -298,6 +298,30 @@ En la división parte entera, el resultado es un número entero (`int`), que cor
 ---
 layout: default
 level: 2
+title: Operaciones básicas - módulo
+hideInToc: true
+---
+
+# Módulo (resto)
+
+El módulo se pueden hacer con números enteros (`int`) y con decimales (`float`). El resultado es simplemente el resto de la división si fuera entera.
+
+```python
+>>> 3 % 2
+1
+```
+
+👀 **Ojo**: Si alguno de los dos números es un `float`, el resultado será un `float`.
+
+```python
+>>> 3.0 % 2
+1.0
+```
+<!-- Examples slides from the above-->
+
+---
+layout: default
+level: 2
 title: Operaciones básicas - ejemplos
 hideInToc: true
 ---
@@ -331,30 +355,6 @@ print(3300 % 1000) # Esto imprime 300
 ---
 layout: default
 level: 2
-title: Operaciones básicas - módulo
-hideInToc: true
----
-
-# Módulo (resto)
-
-El módulo se pueden hacer con números enteros (`int`) y con decimales (`float`). El resultado es simplemente el resto de la división si fuera entera.
-
-```python
->>> 3 % 2
-1
-```
-
-👀 **Ojo**: Si alguno de los dos números es un `float`, el resultado será un `float`.
-
-```python
->>> 3.0 % 2
-1.0
-```
-<!-- Examples slides from the above-->
-
----
-layout: default
-level: 2
 title: Operaciones básicas - ejemplos (cont.)
 hideInToc: true
 ---
@@ -370,7 +370,7 @@ True
 
 >>> 5 % 2 == 0
 False
-# Pregunta: Por qué arriba retorna booleanos?
+# Pregunta: Por qué arriba retorna booleanos? (True o False)
 
 # Propuesto: retornar 0 si es impar, 1 si es par
 
