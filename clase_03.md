@@ -576,7 +576,10 @@ level: 2
 title: Contexto Ejercicio Propuesto
 hideInToc: true
 ---
-<iframe class="aspect-video w-200" src="https://www.youtube.com/embed/SLM0S1rC0cE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+# Contexto Ejercicio Propuesto
+
+[https://www.youtube.com/embed/SLM0S1rC0cE](https://www.youtube.com/embed/SLM0S1rC0cE)
 
 ---
 layout: center
