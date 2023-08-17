@@ -34,7 +34,7 @@ hideInToc: true
 ---
 # Asistencia
 
-<img class="w-50 mx-auto" src="/content/clase_02/qr_clase_02.png" />
+<img class="w-50 mx-auto" src="/content/clase_03/qr_clase_03.png" />
 
 ---
 layout: center
@@ -235,7 +235,7 @@ hideInToc: false
 
 # Operaciones básicas
 
-En Python podemos realizar operaciones básicas con los tipos de datos básicos. Estos se pueden hacer con números o textos.
+En Python podemos realizar operaciones básicas con los tipos de datos básicos. Estos se pueden hacer con números o textos (veremos textos más adelante).
 
 <!-- Tabla con todas las operaciones simples (suma, resta, multiplicación, potencia, inverso aditivo, división normal, parte entera y resto o modulo).Mostrar el operador y una descripción. Mostrar un ejemplo y su resultado como columnas tambien -->
 
@@ -275,14 +275,14 @@ La división parte entera se pueden hacer con números enteros (`int`) y con dec
 En la división normal, el resultado es un número con decimales (`float`).
 
 ```python
->>> 3 / 2
+>>> print(3 / 2)
 1.5
 ```
 
 En la división parte entera, el resultado es un número entero (`int`), que corresponde a la parte entera del resultado de la división normal.
 
 ```python
->>> 3 // 2
+>>> print(3 // 2)
 1
 ```
 
@@ -291,7 +291,7 @@ En la división parte entera, el resultado es un número entero (`int`), que cor
 👀 **Ojo**: Si alguno de los dos números es un `float`, el resultado será un `float`.
 
 ```python
->>> 3.0 // 2
+>>> print(3.0 // 2)
 1.0
 ```
 
@@ -307,14 +307,14 @@ hideInToc: true
 El módulo se pueden hacer con números enteros (`int`) y con decimales (`float`). El resultado es simplemente el resto de la división si fuera entera.
 
 ```python
->>> 3 % 2
+>>> print(3 % 2)
 1
 ```
 
 👀 **Ojo**: Si alguno de los dos números es un `float`, el resultado será un `float`.
 
 ```python
->>> 3.0 % 2
+>>> print(3.0 % 2)
 1.0
 ```
 <!-- Examples slides from the above-->
@@ -365,10 +365,10 @@ hideInToc: true
 ```python {monaco}
 # Cómo determinar si un número es par
 
->>> 4 % 2 == 0
+>>> print(4 % 2 == 0)
 True
 
->>> 5 % 2 == 0
+>>> print(5 % 2 == 0)
 False
 # Pregunta: Por qué arriba retorna booleanos? (True o False)
 
@@ -452,6 +452,10 @@ print(26 + 5 > 30) # True
 # Mi nombre (Nicolás) no es "Roberto"
 print("Nicolás" != "Roberto") # True
 
+# Mi nombre (Nicolás) no es "Roberto" y mi edad en 5 años más será más que 30
+
+print("Nicolás" != "Roberto" and 26 + 5 > 30) # True
+
 ```
 
 ---
@@ -511,6 +515,35 @@ Y es posible compararlos también:
 </v-click>
 
 ---
+layout: default
+level: 3
+title: Operaciones básicas - strings - ejemplos
+hideInToc: true
+---
+# Operaciones básicas
+## Strings - Ejemplos
+
+```python
+# Concatenación
+print("A mi me gusta el" + "tangananica") # Esto imprime "A mi me gusta eltangananica" <- falto un espacio
+
+# Repetición
+print("Tangana"+ "nica" * 3) # Esto imprime "Tangananicanicanica"
+
+# Comparación
+print("Tangananica" == "Tanganana") # Esto imprime False
+print("Tangananica" != "Tanganana") # Esto imprime True
+
+# Comparación alfabética
+print("Yo nunca vi television" > "Porque es muy fome") # Esto imprime True
+print("Yo preferia" < "Estudiar y hasta leer") # Esto imprime False
+```
+
+🚨 Notar que las mayúsculas y minúsculas son distintas, por lo que `"Hola" != "hola"` y al comparar alfabéticamente, las mayúsculas son "menores" que las minúsculas.
+
+Tulio triviño estaría orgulloso de ustedes.
+
+---
 layout: section
 level: 1
 title: Precedencia de operadores
@@ -547,9 +580,9 @@ hideInToc: true
 Usar paréntesis es una buena práctica para agrupar operaciones y hacer más legible el código.
 
 ```python
->>> 1 + 2 * 3
+>>> print(1 + 2 * 3)
 7
->>> (1 + 2) * 3
+>>> print((1 + 2) * 3)
 9
 ```
 
@@ -557,18 +590,28 @@ Y se puede usar con operaciones más complejas
 
 ```python
 # La edad que tenía hace 5 años, sumado a tres veces la edad que tendré en 5 años, es mayor que 100
->>> (26 - 5) + 3 * (26 + 5) > 100
+>>> print((26 - 5) + 3 * (26 + 5) > 100)
 True
 ```
 
 Y se puede usar con operadores lógicos y strings
 
 ```python
->>> ("hola" + " " + "mami") == ("hola mami")
+>>> print(("que gran" + " " + "onda chiqui!") == ("que gran onda chiqui!")) # Suuuuuave
 True
->>> ("hola" + " " + "mami") == ("hola" + "mami")
+>>> print(("que gran" + " " + "onda chiqui!") == ("que gran" + "onda chiqui!"))
 False
 ```
+
+---
+layout: center
+level: 2
+title: Nemo
+hideInToc: true
+---
+
+<img src="/content/clase_03/buscando-a-nemo-que-onda.gif" class="mx-auto w-130" />
+
 
 ---
 layout: center
