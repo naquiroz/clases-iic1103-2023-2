@@ -5,8 +5,13 @@ h2 {
   @apply leading-loose;
 }
 h3 {
-  @apply text-slate-950 font-medium
+  @apply text-slate-950 dark:text-slate-100 font-medium
 }
+
+.like-h3 {
+  @apply uppercase text-slate-950 dark:text-slate-100 font-medium opacity-40 text-sm tracking-widest leading-5 pt-2
+}
+
 
 .slidev-layout.section h1 {
   @apply font-bold

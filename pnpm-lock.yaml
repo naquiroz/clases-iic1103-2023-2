@@ -17,8 +17,17 @@ dependencies:
   '@slidev/theme-seriph':
     specifier: latest
     version: 0.21.3
+  codemirror:
+    specifier: ^5.65.12
+    version: 5.65.14
+  codemirror-editor-vue3:
+    specifier: ^2.3.0
+    version: 2.3.0(codemirror@5.65.14)(diff-match-patch@1.0.5)(vue@3.3.4)
 
 devDependencies:
+  '@iconify-json/twemoji':
+    specifier: ^1.1.12
+    version: 1.1.12
   playwright-chromium:
     specifier: ^1.36.2
     version: 1.36.2
@@ -565,9 +574,14 @@ packages:
       '@iconify/types': 2.0.0
     dev: false
 
+  /@iconify-json/twemoji@1.1.12:
+    resolution: {integrity: sha512-8F3z+0+NYO/qeCiyjeWJ9ozkBvPmXsK+4pkQynUuILyXDIi8ddBHb1DJ6O2Qp5M23LzaA/Gkg8/8CQwgGslGmQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: false
 
   /@iconify/utils@2.1.7:
     resolution: {integrity: sha512-P8S3z/L1LcV4Qem9AoCfVAaTFGySEMzFEY4CHZLkfRj0Fv9LiR+AwjDgrDrzyI93U2L2mg9JHsbTJ52mF8suNw==}
@@ -1685,6 +1699,18 @@ packages:
       wrap-ansi: 7.0.0
     dev: false
 
+  /codemirror-editor-vue3@2.3.0(codemirror@5.65.14)(diff-match-patch@1.0.5)(vue@3.3.4):
+    resolution: {integrity: sha512-e6y/2wBL4Xb4SD10e/jq/lcoIeiWPMw2XnF6KePLlbmOphZ830XGU3kSz52qkoa9RUjaY6zHuSlwd09o13O/oQ==}
+    peerDependencies:
+      codemirror: ^5.x
+      diff-match-patch: ^1.0.5
+      vue: ^3.x
+    dependencies:
+      codemirror: 5.65.14
+      diff-match-patch: 1.0.5
+      vue: 3.3.4
+    dev: false
+
   /codemirror-theme-vars@0.1.2:
     resolution: {integrity: sha512-WTau8X2q58b0SOAY9DO+iQVw8JKVEgyQIqArp2D732tcc+pobbMta3bnVMdQdmgwuvNrOFFr6HoxPRoQOgooFA==}
     dev: false
@@ -2176,6 +2202,10 @@ packages:
 
   /destr@2.0.0:
     resolution: {integrity: sha512-FJ9RDpf3GicEBvzI3jxc2XhHzbqD8p4ANw/1kPsFBfTvP1b7Gn/Lg1vO7R9J4IVgoMbyUmFrFGZafJ1hPZpvlg==}
+    dev: false
+
+  /diff-match-patch@1.0.5:
+    resolution: {integrity: sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==}
     dev: false
 
   /diff@5.1.0:

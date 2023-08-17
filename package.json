@@ -10,12 +10,15 @@
     "@slidev/cli": "^0.42.5",
     "@slidev/theme-apple-basic": "^0.20.0",
     "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest"
+    "@slidev/theme-seriph": "latest",
+    "codemirror": "^5.65.12",
+    "codemirror-editor-vue3": "^2.3.0"
   },
   "slidev": {
     "colorSchema": "light"
   },
   "devDependencies": {
+    "@iconify-json/twemoji": "^1.1.12",
     "playwright-chromium": "^1.36.2"
   }
 }
