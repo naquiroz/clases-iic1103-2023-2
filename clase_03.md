@@ -576,7 +576,9 @@ level: 2
 title: Contexto Ejercicio Propuesto
 hideInToc: true
 ---
-<Youtube class="aspect-video w-200" id="SLM0S1rC0cE" />
+# Contexto Ejercicio Propuesto
+<!-- <Youtube class="aspect-video w-200" id="SLM0S1rC0cE" /> -->
+
 ---
 layout: center
 level: 1
