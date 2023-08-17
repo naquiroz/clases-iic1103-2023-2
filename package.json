@@ -2,7 +2,8 @@
   "name": "iic1103",
   "private": true,
   "scripts": {
-    "build": "for clase in clase_*.md; do slidev build ${clase%%.*}.md --base /${clase%%.*}/ --out dist/${clase%%.*}; done",
+    "build": "npm run build-index; for clase in clase_*.md; do slidev build ${clase%%.*}.md --base /${clase%%.*}/ --out dist/${clase%%.*}; done",
+    "build-index": "slidev build index.md --base / --out dist",
     "dev": "echo Password;read passwd; slidev --remote=$passwd",
     "export": "slidev export"
   },

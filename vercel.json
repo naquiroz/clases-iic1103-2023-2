@@ -5,8 +5,16 @@
       "destination": "/:clase/index.html"
     },
     {
+      "source": "/[0-9]+(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html/"
+      "destination": "/index.html"
     }
   ],
   "buildCommand": "npm run build",
