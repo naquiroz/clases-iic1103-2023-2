@@ -450,11 +450,11 @@ print(not True) # False
 # Mi edad en 5 años más será más que 30 (que terrible)
 print(26 + 5 > 30) # True
 
-# Mi nombre (Nicolás) no es "Roberto"
+# Mi nombre (Nicolás) no es "Roberto". Veremos comparaciones de strings más adelante
 print("Nicolás" != "Roberto") # True
 
-# Mi nombre (Nicolás) no es "Roberto" y mi edad en 5 años más será más que 30
-
+# Mi nombre (Nicolás) no es "Roberto" y mi edad en 5 años más será más que 30.
+# Veremos comparaciones de strings más adelante en las diapositivas de strings
 print("Nicolás" != "Roberto" and 26 + 5 > 30) # True
 
 ```
@@ -482,8 +482,8 @@ Los textos o strings también pueden ser operados, pero de una forma distinta a 
 
 | Operación | Descripción | Ejemplo | Resultado |
 | --------- | ----------- | ------- | --------- |
-| `+` | Concatenación | `Sa` + `shei!` | `Sashei!` |
-| `*` | Repetición | `Le!` * 3 | `Le!Le!Le!` |
+| `+` | Concatenación | `"Sa" + "shei!"` | `"Sashei!"` |
+| `*` | Repetición | `"Le!"` * 3 | `"Le!Le!Le!"` |
 
 La resta, división, etc. no están definidas para los strings.
 
