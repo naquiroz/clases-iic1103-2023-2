@@ -17,6 +17,12 @@ h3 {
   @apply font-bold
 }
 
+/* Remove backticks from code tags */
+:not(pre) > code:before,
+:not(pre) > code:after {
+  content: none;
+}
+
 ul li {
   @apply list-image-[url(chevron-right.svg)] dark:list-image-[url(chevron-right-white.svg)];
 }
