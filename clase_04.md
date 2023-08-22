@@ -1,7 +1,7 @@
 ---
 theme: apple-basic
 info: |
-  ## Clase 03 IIC1103 - 2023-2 - Sección 12
+  ## Clase 04 IIC1103 - 2023-2 - Sección 12
 drawings:
   persist: false
 transition: slide-left
@@ -192,7 +192,7 @@ EEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPBBBC
 ```
 
 ```python
-print("C" * (1 - (14 % 2)) + "EEEPP" * 14 + "B" * (14 // 4) + "C" * (14 % 2))
+print("C" * (1 - (13 % 2)) + "EEEPP" * 13 + "B" * (13 // 4) + "C" * (13 % 2))
 ```
 
 Ahora, esto sería mucho más fácil de entender si usamos variables:
@@ -289,8 +289,7 @@ hideInToc: false
 # Variables
 ## Que se puede hacer con ellas
 
-- Podemos guardar cualquier tipo de dato en una variable.
-- Podemos cambiar el valor de una variable.
+- Podemos guardar cualquier tipo de dato en una variable y podemos cambiarlo.
 - Podemos usar el valor de una variable para calcular otro valor.
 - Podemos usar el valor anterior de una variable para calcular su nuevo valor.
 
