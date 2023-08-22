@@ -29,3 +29,4 @@ exportFilename: landing
 2. [Clase 02 - Algoritmos](/clase_02)
 3. [Clase 03 - Variables y expresiones](/clase_03)
 4. [Clase 04 - Variables y expresiones II](/clase_04)
+5. [Clase 05 - Variables y expresiones II](/clase_05)
