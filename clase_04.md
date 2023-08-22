@@ -22,7 +22,7 @@ presenter: dev
 exportFilename: clase_04
 ---
 # Variables y expresiones II
-## Clase 03 | Introducción a la programación
+## Clase 04 | Introducción a la programación
 
 ### Nicolás Quiroz | <naquiroz@uc.cl> | <iic1103@uc.cl>
 
