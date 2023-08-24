@@ -35,6 +35,7 @@ hideInToc: true
 # Anuncios
 
 1. Segundo set de ejercicios de programación. Consultar fechas en el calendario de Bitpoints.
+2. Coffee break hoy! Vayan, yo iré 😄
 
 ---
 layout: center
@@ -115,7 +116,6 @@ if CONDICION:
 
 - Si la condición es `True`, se ejecuta el **código indentado**.
 - Es super importante la indentación, ya que es lo que le dice a Python que se ejecute `instruccion` si la condición es `True`.
-- Si la condición es `False`, no se ejecuta el código indentado.
 - Si hubiera más instrucciones indentadas, se ejecutarían todas única y exclusivamente si la condición es `True`.
 
 ::right::
@@ -174,394 +174,314 @@ hideInToc: true
 | `<=` | Menor o igual que | `1 <= 2` | `True` |
 
 💡 Ahora que sabemos lo que son las **variables**, también podemos usarlas en las comparaciones.
+
 ---
 layout: default
 level: 2
-title: If - sintaxis
-hideInToc: false
+title: If - condiciones - ejemplos
+hideInToc: true
 ---
-# If/else
 
-<div class="flex flex-row w-full justify-around">
+# If
+## Ejemplos
 
-<div class="flex flex-col w-1/2 items-center" v-click>
+Un programa que diga "PASEEE INTRO" solamente si el usuario ingresa una nota mayor a 3.95, pueden asumir que el usuario siempre ingresa un número decimal (float), y luego diga "Hasta luigi. Fin del algoritmo"
 
-## Opción 1
-
-<div class="mx-auto">
-
-```mermaid {theme: 'neutral', scale: 0.8, flowchart: { curve: 'stepAfter' }}
-flowchart TD
-    A[Algoritmo antes] --> B{CONDICION}
-    B --- |True| C[instruccion]
-    C --- D[ ]
-    B --- |FALSE| D
-    D --- E[Algoritmo después]
-    style D width:0;
+```python
+nota = float(input())
+if nota > 3.95:
+    print("PASEEE INTRO")
+print("Hasta luigi. Fin del algoritmo")
 ```
 
-</div>
+---
+layout: default
+level: 2
+title: If - condiciones - ejemplos
+hideInToc: true
+---
 
-</div>
+# If
+## Ejemplos
 
-<div class="flex flex-col w-1/2 justify-around items-center" v-click>
+Un programa super seguro que, pida una contraseña para ingresar al sistema. Si la contraseña es "mi_password" entonces imprime "Bienvenido al sistema", y luego diga "Disfurta!". Luego, aún cuando la contraseña sea incorrecta, diga "Fin del algoritmo".
 
-## Opción 1
+```python
+password = input()
+if password == "mi_password":
+    print("Bienvenido al sistema")
+    print("Disfurta!")
+print("Fin del algoritmo")
+```
+
+---
+layout: center
+level: 1
+title: Y si quiero hacer algo si la condición es `False`?
+hideInToc: true
+---
+
+# Y el "sino"?
+## Si quiero hacer algo si la condición es `False`
+
+---
+layout: two-cols
+level: 1
+title: If/else - introducción
+hideInToc: false
+---
+
+# If/else
+## Introducción
+
+❓¿Qué ocurre si ahora quiero hacer algo solamente cuando la condición no se cumple?
+
+```python {2-5} {lines:true}
+... # Algoritmo antes
+if CONDICION:
+    instruccion
+else:
+    otra_instruccion
+... # Algoritmo después
+```
+
+- Si la condición es `True` (se cumple), se ejecuta la `instruccion` indentada.
+- Si la condición es `False`, solamente se ejecuta la `otra_instruccion` indentada.
+- En ambos casos, se ejecuta el "Algoritmo después".
+
+::right::
 
 ```mermaid {theme: 'neutral', scale: 0.8, flowchart: { curve: 'stepAfter' }}
 flowchart TD
     A[Algoritmo antes] --> B{CONDICION}
-    B -->|True| C[Ejecutar si es True]
+    B -->|True| C[instruccion]
     C --- D[ ]
-    B --- |FALSE| F[Ejecutar si es FALSE]
+    B --- |FALSE| F[otra_instruccion]
     F --- D
     D --- E[Algoritmo después]
     style D width:0;
 ```
 
-</div>
-</div>
+---
+layout: default
+level: 2
+title: If/else - ejemplos
+hideInToc: true
+---
+
+# If/else
+## Ejemplos
+
+Un programa que diga "PASEEE INTRO" solamente si el usuario ingresa una nota mayor a 3.95. Si la nota es menor o igual a 3.95, entonces diga "No pase intro", y luego diga "Hasta luigi. Fin del algoritmo"
+
+```python
+nota = float(input())
+if nota > 3.95:
+    print("PASEEE INTRO")
+else:
+    print("No pase intro")
+print("Hasta luigi. Fin del algoritmo")
+```
 
 ---
 layout: default
 level: 2
-title: Solución ejercicio propuesto clase anterior
+title: If/else - ejemplos
 hideInToc: true
+---
+
+# If/else
+## Ejemplos
+
+Un programa que diga clasifique un restaurant con "Bueno/Malo" según el puntaje (de 0 a 100).
+Si es menos que 30 es "Malo", si es mayor o igual que 30 es "Bueno".
+
+```python
+puntaje = int(input())
+if puntaje >= 30:
+    print("Bueno")
+else:
+    print("Malo")
+```
+
+❓ Y si quiero que sea "Bueno" si es mayor o igual que 60, "Regular" si es
+mayor o igual que 30 y menor que 60, y "Malo" si es menor que 30?
+
+```python
+puntaje = int(input())
+if puntaje >= 60:
+    print("Bueno")
+else:
+    if puntaje >= 30:
+        print("Regular")
+    else:
+        print("Malo")
+```
+
+❓ No hay una forma más fácil de hacerlo?
+
+---
+layout: section
+level: 1
+title: If/elif/else
+hideInToc: false
+---
+
+# If/elif/else
+
+---
+layout: two-cols
+level: 2
+title: If/elif/else - introducción
+hideInToc: true
+---
+
+# If/elif/else
+## Introducción
+
+```python {2-3|4-5|6|7-8|9-10|2-10} {lines:true}
+... # Algoritmo antes
+if CONDICION_1:
+    instruccion_1
+elif CONDICION_2:
+    instruccion_2
+... # Varios elif
+elif CONDICION_N:
+    instruccion_N
+else:
+    otra_instruccion
+... # Algoritmo después
+```
+
+::right::
+
+- Si la `CONDICION_1` es `True`, se ejecuta la `instruccion_1` indentada.
+- Si la `CONDICION_1` es `False`, se evalúa la `CONDICION_2`.
+- Si la `CONDICION_2` es `True`, se ejecuta la `instruccion_2` indentada.
+- Si la `CONDICION_2` es `False`, se evalúa la `CONDICION_3` y así sucesivamente.
+- Si ninguna de las condiciones es `True`, se ejecuta la `otra_instruccion` indentada.
+- En todos los casos, se ejecuta el "Algoritmo después".
+
+❗ **IMPORTANTE**: Si una condición es `True`, no se evalúan las siguientes condiciones, ni siquiera si son `True`.
+
+
+---
+layout: center
+level: 2
+title: If/elif/else - diagrama
+hideInToc: true
+---
+
+# If/elif/else
+## Diagrama
+
+```mermaid {theme: 'neutral', scale: 0.8, flowchart: { curve: 'stepAfter' }}
+flowchart LR
+    A[Algoritmo antes] --> B{CONDICION_1}
+    B --- |True| C[instruccion]
+    C --- D[ ]
+    B --- |FALSE| F{CONDICION_2}
+    G --- D
+    F --- |False| D
+    F --- |True| G[instruccion_2]
+    D --- E[Algoritmo después]
+    style D width:0;
+```
+
+Y así sucesivamente para cada `elif` y `else` al final.
+---
+layout: default
+level: 2
+title: If/elif/else - ejemplos
+hideInToc: true
+---
+
+Usando el ejemplo anterior, ahora queremos que sea "Bueno" si es mayor o igual que 60, "Regular" si es mayor o igual que 30 y menor que 60, y "Malo" si es menor que 30.
+
+```python {1-7} {lines:true}
+puntaje = int(input())
+if puntaje >= 60:
+    print("Bueno")
+elif puntaje >= 30:
+    print("Regular")
+else:
+    print("Malo")
+```
+
+Y si le agregamos un `elif` más?
+
+```python {1-9} {lines:true}
+puntaje = int(input())
+if puntaje >= 90:
+    print("Excelente")
+elif puntaje >= 60:
+    print("Bueno")
+elif puntaje >= 30:
+    print("Regular")
+else:
+    print("Malo")
+```
+
+---
+layout: default
+level: 2
+title: Ejemplo avanzado
+hideInToc: false
+---
+
+# Ejemplo avanzado
+
+
+Eres un periodista que está escribiendo un artículo sobre J. Robert Oppenheimer y la creación de la bomba atómica. Durante tu investigación, decides hacer algunos cálculos relacionados con los eventos históricos.
+
+1. Pregunte al usuario sobre cuántos años Oppenheimer enseñó en la Universidad de California. Debes imprimir un mensaje que pregunte: "Responde a las siguientes preguntas basadas en la vida y carrera de J. Robert Oppenheimer:"
+2. Pregunte al usuario sobre cuántos años Oppenheimer enseñó en caltech. (Valor esperado: 3 años)
+3. Se la suma de los años entregados es exactamente 8, debes decir "Estudios correctos". luego, se te pedirá que indiques la energía (en joules) liberada por cada bomba atómica. Puedes asumir que es un número entero.
+4. Si los años no suman 8, deberás decir "Incorrecto en la primera pregunta. Oppenheimer enseñó un total de 8 años entre ambas instituciones."
+5. Finalmente, si la energía total lanzada equivale justo a 400000 deberás decir "Wow, mucha energía." De lo contrario, deberás decir "Esto no es una bomba atómica. Buuuu"
+
 ---
 
 # Solución
 
-```python
-print("C" * (1 - (14 % 2)) + "EEEPP" * 14 + "B" * (14 // 4) + "C" * (14 % 2))
-```
-
-Si el número de amigos es 14, el mensaje se verá así:
-
-```text
-CEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPBBB
-```
-
-Si el número de amigos es 13, el mensaje se verá así:
-
-```text
-EEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPBBBC
-```
-
-```python
-print("C" * (1 - (14 % 2)) + "EEEPP" * 14 + "B" * (14 // 4) + "C" * (14 % 2))
-```
-
-Ahora, esto sería mucho más fácil de entender si usamos variables:
-
-```python
-amigos = 14
-bebidas = amigos // 4
-print("C" * (1 - (amigos % 2)) + "EEEPP" * amigos + "B" * bebidas + "C" * (amigos % 2))
-```
-
-Pregunta, y que pasa si quiero dejar que el usuario ingrese el número de amigos?
-
----
-layout: section
-level: 1
-title: Input y output (I/O)
-hideInToc: false
----
-
-# Input y output (I/O)
-## Recibir y entregar información al usuario
-
----
-layout: default
-level: 2
-title: Input — pedir información
-hideInToc: true
----
-
-# Input
-## Pedir información
-
-Hasta el momento fijado lo que necesitamos, pero ¿y si queremos que nos entreguen información?
-
-👉🏻 **`input()`** es la función que nos permite pedir información al usuario.
-
-```python
-nombre = input()
-print("Hola", nombre)
-```
-
-`input()` siempre retorna un `str`, por lo que si queremos un número, debemos convertirlo.
-
-```python
-edad = int(input())
-print("El próximo año tendrás", edad + 1)
-
-# Con float también funciona
-altura = float(input())
-print("Tu altura es", altura)
-```
-
-💡 Notar que guardamos el resultado de `input()` en una variable, para poder usarlo después.
-
-💡 Notar que el `print()` puede separar los argumentos con `,` y los imprime separados por un espacio.
-
----
-layout: section
-level: 1
-title: Variables
-hideInToc: false
----
-
-# Variables
-## Almacenar información
-
----
-layout: default
-level: 2
-title: Variables - continuación
-hideInToc: false
----
-
-# Variables
-## Almacenar información
-
-- Las variables nos sirven para almacenar información.
-- Pueden tomar cualquier valor, y podemos ponerle el nombre que queramos, con algunas restricciones:
-
-  - No pueden empezar con un número.
-  - No pueden tener espacios.
-  - No pueden tener caracteres especiales (excepto `_`).
-  - No pueden ser palabras reservadas:
-    - `and`, `as`, `assert`, `break`, `class`, `continue`, `def`, `del`, `elif`, `else`, `except`, `False`, `finally`, `for`, `from`, `global`, `if`, `import`, `in`, `is`, `lambda`, `None`, `nonlocal`, `not`, `or`, `pass`, `raise`, `return`, `True`, `try`, `while`, `with`, `yield`
-    - Para ver la lista completa ir a [https://docs.python.org/3/reference/lexical_analysis.html#keywords](https://docs.python.org/3/reference/lexical_analysis.html#keywords)
-
----
-layout: default
-level: 2
-title: Variables - que se puede hacer con ellas
-hideInToc: false
----
-
-# Variables
-## Que se puede hacer con ellas
-
-- Podemos guardar cualquier tipo de dato en una variable y podemos cambiarlo.
-- Podemos usar el valor de una variable para calcular otro valor.
-- Podemos usar el valor anterior de una variable para calcular su nuevo valor.
-
-```python
-# Podemos actualizar el valor de una variable
-nombre = "Nico"
-print("Mucho gusto", nombre)
-nombre = "Juan"
-print("Mucho gusto", nombre)
-
-# Podemos usar el valor de una variable para calcular su nuevo valor u otro valor
-edad = 20
-print("El próximo año tendrás", edad + 1)
-edad = edad + 1
-print("El próximo año tendrás", edad)
-altura = 1.8
-peso = 80
-imc = peso / altura ** 2
-print("Tu IMC es", imc)
-```
-
----
-layout: default
-level: 2
-title: Variables - operadores compuestos
-hideInToc: false
----
-
-# Variables
-## Operadores de asignación compuestos
-
-❗ Usar `=` no es lo mismo que usar `==`.
-> `=` es para asignar un valor a una variable. `==` es para comparar dos valores.
-
-La operación tipo `edad = edad + 1` es muy común, por lo que existe una forma más corta de escribirla:
-
-```python
-edad = 20
-edad += 1
-print("El próximo año tendrás", edad)
-```
-
-💡 Esto es equivalente a `edad = edad + 1`. Esto funciona con todos los operadores aritméticos.
-
----
-layout: center
-level: 2
-title: Tabla de operadores compuestos
-hideInToc: true
----
-
-# Tabla de operadores compuestos
-
-| Operador | Ejemplo | Equivalente |
-| -------- | ------- | ----------- |
-| `+=`     | `a += b` | `a = a + b` |
-| `-=`     | `a -= b` | `a = a - b` |
-| `*=`     | `a *= b` | `a = a * b` |
-| `/=`     | `a /= b` | `a = a / b` |
-| `**=`    | `a **= b` | `a = a ** b` |
-| `//=`    | `a //= b` | `a = a // b` |
-| `%=`     | `a %= b` | `a = a % b` |
-
----
-layout: default
-level: 2
-title: Variables - participación
-hideInToc: false
----
-
-# Variables
-## Participación
-
-¿Cómo hacemos el siguiente programa?
-
-```text
-Dime un numero
-5
-Te gano con el numero 6
-```
-
-3 bitpoints a quien me ayude a hacerlo.
-
----
-layout: default
-level: 2
-title: Variables - ejemplos
-hideInToc: false
----
-
-# Variables - ejemplos
-
-Eres un pescador en el juego "Ocean's Call", un popular juego de pesca online. Tienes un barco, una caña de pescar y una serie de cebos que puedes usar para atrapar diferentes tipos de peces.
-Hay tres tipos de peces (10, 20 y 30 kg) y cada uno tiene un valor en monedas de oro (50, 100, 150 respectivamente), además de bonificaciones especiales por atrapar ciertos tipos de peces.
-
-1. **Barco**: Tu barco tiene un límite de capacidad de 180 kg. Cada vez que atrapas un pez, debes restar su peso de la capacidad total.
-
-2. **Caña de pescar**: Tu caña de pescar tiene una resistencia de 15 kg. Por cada pez que atrapes, debes restar un 10% de su peso de la resistencia total. Si la resistencia de la caña de pescar llega a 0, se romperá y tendrás que comprar una nueva al final del día.
-
-3. **Cebos**: Tienes 2 tipos de cebos que puedes usar:
-   - Cebo brillante (representado por el número 1): Si usas este cebo y atrapas peces de 20kg, recibirás una bonificación de 500 monedas de oro por cada pez de 20kg.
-   - Cebo mágico (representado por el número 0): Si usas este cebo y atrapas peces de 30kg, recibirás una bonificación de 1000 monedas de oro por cada pez de 30kg.
-
----
-layout: default
-level: 2
-title: Variables - ejemplos - continuación
-hideInToc: true
----
-# Variables - ejemplos
-
-## Objetivo
-
-Escribe un programa que reciba 4 entradas:
-
-1. Las primeras tres serán enteros que determinan la cantidad de peces que pescarás de 10 kg, 20 kg y 30 kg.
-2. La cuarta entrada será un entero que determina el tipo de cebo que usarás para todos ellos (1 para cebo brillante y 0 para cebo mágico).
-
-El programa deberá imprimir:
-
-- Cuánto oro ganarás en total.
-- Si necesitas comprar una nueva caña de pescar (True si se rompe, False si no) al final del día.
-- Cuánta capacidad te queda en el barco.
-
----
-layout: default
-level: 2
-title: Variables - ejemplos - continuación
-hideInToc: true
----
-
-**Ejemplo**:
-
-Entradas:
-
-```python
-5
-3
-2
-1
-```
-
-Salida:
-
-```text
-Oro total ganado: 17500
-¿Necesitas comprar una nueva caña de pescar? True
-Capacidad restante en el barco: 10 kg
-```
-
-Explicación: El usuario decide pescar 5 peces de 10 kg, 3 peces de 20 kg y 2 peces de 30 kg, y usa cebos brillantes para todos ellos.
-Por lo tanto, gana 17500   monedas de oro en total, necesita comprar una nueva caña de pescar porque la resistencia de la caña de pescar llega a 17kg lo que es superior a 15kg, y le queda 10 kg de capacidad en el barco.
-
----
-layout: default
-level: 2
-title: Variables - ejemplos - solución
-hideInToc: true
----
-
-# Variables - ejemplos
-## Solución
-
 ```python {monaco}
-# Entradas del usuario
-peces_10kg = int(input())
-peces_20kg = int(input())
-peces_30kg = int(input())
-tipo_cebo = int(input())
+print("Responde a las siguientes preguntas basadas en la vida y carrera de J. Robert Oppenheimer:")
 
-# Variables iniciales
-capacidad_barco = 180
-resistencia_caña = 15
-oro = 0
+# Años enseñados en la Universidad de California.
+años_UC = int(input())
+# Años enseñados en caltech.
+años_caltech = int(input())
 
-# Pesca de peces de 10 kg
-capacidad_barco -= 10 * peces_10kg
-oro += peces_10kg * 50
-resistencia_caña -= peces_10kg * 10 * 0.1
+if años_UC + años_caltech == 8:
+    print("Estudios correctos")
 
-# Pesca de peces de 20 kg
-capacidad_barco -= 20 * peces_20kg
-oro += peces_20kg * 100
-resistencia_caña -= peces_20kg * 20 * 0.1
-bono_20kg = 500 * tipo_cebo
-oro += bono_20kg * peces_20kg
+    # Energía liberada por cada bomba atómica.
+    energia_bomba = int(input())
+    # Número de bombas atómicas lanzadas.
+    numero_bombas = int(input())
 
-# Pesca de peces de 30 kg
-capacidad_barco -= 30 * peces_30kg
-oro += peces_30kg * 150
-resistencia_caña -= peces_30kg * 30 * 0.1
-bono_30kg = 1000 * (1 - tipo_cebo)
-oro += bono_30kg * peces_30kg
-
-# Verificar si la caña se rompe
-caña_rota = resistencia_caña <= 0
-
-print("Oro total ganado:", oro)
-print("¿Necesitas comprar una nueva caña de pescar?", caña_rota)
-print("Capacidad restante en el barco:", capacidad_barco, "kg")
+    if energia_bomba * numero_bombas == 400000:
+        print("Wow, mucha energía.")
+    else:
+        print("Esto no es una bomba atómica. Buuuu")
+else:
+    print("Incorrecto en la primera pregunta. Oppenheimer enseñó un total de 8 años entre ambas instituciones.")
 ```
 
 ---
 layout: center
 level: 1
-title: Spoiler if/else
+title: Spoiler while
 hideInToc: true
 ---
 
 # Coming soon...
 
-En el último ejemplo, tuvimos que repetir varias veces el mismo código. ¿Cómo podemos evitar esto?
+En el último ejemplo, pudimos preguntar una sola vez por la energía de la bomba atómica, y luego preguntar por el número de bombas atómicas lanzadas. Qué pasa si queremos preguntar por la energía de cada bomba atómica?
+O si queremos preguntar por el número de bombas atómicas lanzadas, y luego por la energía de cada bomba atómica?
 
-Con `if` y `else` podemos hacer que el programa tome decisiones! 🤯
+Para eso sirve el `while` y el `for`, que comenzaremos a ver en la próxima clase.
 
-Lo veremos en la próxima clase.
 
 ---
 layout: end
