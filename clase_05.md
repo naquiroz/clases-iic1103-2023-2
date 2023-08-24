@@ -8,11 +8,11 @@ transition: slide-left
 title: IIC1103 - Introducción a la programación - Clase 05
 fonts:
   # basically the text
-  sans: 'Inter,Apple Color Emoji,Noto Color Emoji'
+  sans: 'Inter,Noto Color Emoji'
   # use with `font-serif` css class from windicss
-  serif: 'Inter,Apple Color Emoji,Noto Color Emoji'
+  serif: 'Inter,Noto Color Emoji'
   # for code blocks, inline code, etc.
-  mono: 'Fira Code,Apple Color Emoji,Noto Color Emoji'
+  mono: 'Fira Code,Noto Color Emoji'
   weights: '300,700,900'
 layout: intro
 level: 1
@@ -143,6 +143,7 @@ hideInToc: false
 💡 Es cualquier expresión que se pueda evaluar como `True` o `False` (es cualquier expresión que entregue un valor booleano).
 
 ❓ ¿Se les ocurren ejemplos?
+💯
 
 <v-clicks>
 
