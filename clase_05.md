@@ -441,6 +441,11 @@ Eres un periodista que está escribiendo un artículo sobre J. Robert Oppenheime
 5. Finalmente, si la energía total lanzada equivale justo a 400000 deberás decir "Wow, mucha energía." De lo contrario, deberás decir "Esto no es una bomba atómica. Buuuu"
 
 ---
+layout: default
+level: 2
+title: Solución
+hideInToc: false
+---
 
 # Solución
 
