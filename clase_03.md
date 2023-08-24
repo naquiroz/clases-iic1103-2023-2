@@ -8,11 +8,11 @@ transition: slide-left
 title: IIC1103 - Introducción a la programación - Clase 03
 fonts:
   # basically the text
-  sans: 'Inter'
+  sans: 'Inter,Noto Color Emoji'
   # use with `font-serif` css class from windicss
-  serif: 'Inter'
+  serif: 'Inter,Noto Color Emoji'
   # for code blocks, inline code, etc.
-  mono: 'Fira Code'
+  mono: 'Fira Code,Noto Color Emoji'
   weights: '300,700,900'
 layout: intro
 level: 1
@@ -349,6 +349,7 @@ Cuantos billetes de $1000 necesito para pagar lo anterior? ¿Cuánto me faltarí
 print(3300 // 1000) # Esto imprime 3
 print(3300 % 1000) # Esto imprime 300
 ```
+
 </v-clicks>
 
 ℹ️ Es posible imprimir el resultado de una operación directamente en la consola, usando el `print`.
@@ -612,7 +613,6 @@ hideInToc: true
 ---
 
 <img src="/content/clase_03/buscando-a-nemo-que-onda.gif" class="mx-auto w-130" />
-
 
 ---
 layout: center

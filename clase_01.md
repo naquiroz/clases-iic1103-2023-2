@@ -8,11 +8,11 @@ transition: slide-left
 title: IIC1103 - Introducción a la programación
 fonts:
   # basically the text
-  sans: 'Inter'
+  sans: 'Inter,Noto Color Emoji'
   # use with `font-serif` css class from windicss
-  serif: 'Inter'
+  serif: 'Inter,Noto Color Emoji'
   # for code blocks, inline code, etc.
-  mono: 'Fira Code'
+  mono: 'Fira Code,Noto Color Emoji'
   weights: '300,700,900'
 layout: intro
 level: 1
@@ -760,6 +760,7 @@ title: Tips
 1. **No te quedes atrás**: Si no entiendes algo, pregunta, el curso es muy acumulativo. **PRACTICA**
 2. **No memorices**: Entiende los conceptos, no los memorices. **PRACTICA**
 3. **PRACTICA**, **PRACTICA**, **PRACTICA**
+
 ---
 layout: end
 level: 1

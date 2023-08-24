@@ -8,6 +8,7 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@fontsource/noto-color-emoji": "^5.0.8",
     "@slidev/cli": "^0.42.5",
     "@slidev/theme-apple-basic": "^0.20.0",
     "@slidev/theme-default": "latest",
@@ -19,7 +20,6 @@
     "colorSchema": "light"
   },
   "devDependencies": {
-    "@iconify-json/twemoji": "^1.1.12",
     "playwright-chromium": "^1.36.2"
   }
 }
