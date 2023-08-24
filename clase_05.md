@@ -45,8 +45,6 @@ hideInToc: true
 
 # Repaso clase anterior
 
-
-
 ---
 layout: center
 level: 2
@@ -59,7 +57,7 @@ hideInToc: true
 <Toc maxDepth=2 />
 
 ---
-layout: default
+layout: two-cols
 level: 1
 title: Motivación - blockly
 hideInToc: false
@@ -70,57 +68,158 @@ hideInToc: false
 
 Recuerdan el ejercicio de la clase 02 de blockly?
 
-<img src="/content/clase_05/blockly_if.png" alt="drawing" width="400"/>
+❗ Primero el “jugador” observaba que tenía en su costado izquierdo. Luego, dependiendo de lo que tenía, hacía una acción.
 
-Estás organizando una fondita para el 18 de septiembre en Chile. Decides escribir un mensaje secreto para tus amigos utilizando empanadas ("E"), choripanes ("P"), bebidas ("B") y banderas chilenas ("C") como forma de codificar la información.
+❗Si lo escribiéramos en ingles sería algo así:
 
-Por cada amigo que invites, enviarás un mensaje que consiste en:
+```text
+IF there is a path to the left
+  girar a la izquierda
+ELSE
+  no hacer nada
+```
 
-- 3 empanadas seguidas de 2 choripanes.
-- Luego, por cada 4 amigos, agregarás una bebida al final del mensaje.
-- Si el número de amigos es par, añadirás una bandera chilena al inicio del mensaje. Si es impar, la añadirás al final.
+Notamos que no es necesario escribir el `ELSE`, ya que si no hay un camino a la izquierda, no hacemos nada.
 
-Si decides invitar a 14 amigos, ¿cómo se verá el mensaje?
+::right::
+
+<img class="rounded-xl" src="/content/clase_05/blockly_if.png" alt="blockly if else" width="400"/>
+
+---
+layout: section
+level: 1
+title: If - introducción
+hideInToc: false
+---
+
+# If
+## Introducción
+
+---
+layout: two-cols
+level: 2
+title: If - sintaxis
+hideInToc: false
+---
+
+# If/else
+
+Sintaxis en Python:
+
+```python {2-3} {lines:true}
+... # Algoritmo antes
+if CONDICION:
+    instruccion
+... # Algoritmo después
+```
+
+- Si la condición es `True`, se ejecuta el **código indentado**.
+- Es super importante la indentación, ya que es lo que le dice a Python que se ejecute `instruccion` si la condición es `True`.
+- Si la condición es `False`, no se ejecuta el código indentado.
+- Si hubiera más instrucciones indentadas, se ejecutarían todas única y exclusivamente si la condición es `True`.
+
+::right::
+
+```mermaid {theme: 'neutral', scale: 0.8, flowchart: { curve: 'stepAfter' }}
+flowchart TD
+    A[Algoritmo antes] --> B{CONDICION}
+    B --- |True| C[instruccion]
+    C --- D[ ]
+    B --- |FALSE| D
+    D --- E[Algoritmo después]
+    style D width:0;
+```
+
+---
+layout: full
+level: 2
+title: If - condiciones
+hideInToc: false
+---
+
+# If
+## ¿Qué es una `condición`?
+
+💡 Es cualquier expresión que se pueda evaluar como `True` o `False` (es cualquier expresión que entregue un valor booleano).
+
+❓ ¿Se les ocurren ejemplos?
+
+<v-clicks>
+
+- Que el usuario haya ingresado un número par.
+- Que el usuario haya ingresado un número impar.
+- Que el usuario haya ingresado un número mayor que 10.
+- Que el texto ingresado por el usuario sea `"hola"`.
+- Que el resultado de sumar dos números sea mayor que un numero
+- Que el resultado de unir strings sea igual a otro string
+</v-clicks>
 
 ---
 layout: default
 level: 2
-title: Algunos intentos
+title: If - condiciones tabla
 hideInToc: true
 ---
 
-# Algunos intentos
+**Recordar** que en la [clase 03](/clase_03) vimos los operadores de comparación, todos ellos entregan un valor booleano. Más adelante veremos otras _“cosas”_ que también entregan un valor booleano.
 
-<v-clicks>
+| Operación | Descripción | Ejemplo | Resultado |
+| --------- | ----------- | ------- | --------- |
+| `==` | Igual | `1 == 2` o `"hola" == "chao"` | `False` |
+| `!=` | Distinto | `1 != 2` o `"dormir" != "siesta"` | `True` |
+| `<` | Menor que | `1 < 2` | `True` |
+| `>` | Mayor que | `1 > 2` | `False` |
+| `>=` | Mayor o igual que | `1 >= 2` | `False` |
+| `<=` | Menor o igual que | `1 <= 2` | `True` |
 
-```python
-print('CEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPEEEPPBBB')
+💡 Ahora que sabemos lo que son las **variables**, también podemos usarlas en las comparaciones.
+---
+layout: default
+level: 2
+title: If - sintaxis
+hideInToc: false
+---
+# If/else
+
+<div class="flex flex-row w-full justify-around">
+
+<div class="flex flex-col w-1/2 items-center" v-click>
+
+## Opción 1
+
+<div class="mx-auto">
+
+```mermaid {theme: 'neutral', scale: 0.8, flowchart: { curve: 'stepAfter' }}
+flowchart TD
+    A[Algoritmo antes] --> B{CONDICION}
+    B --- |True| C[instruccion]
+    C --- D[ ]
+    B --- |FALSE| D
+    D --- E[Algoritmo después]
+    style D width:0;
 ```
 
-Razón: _Hardcodear_ el mensaje no es una buena idea, ya que si cambia el número de amigos, el mensaje no funcionará.
+</div>
 
-```python
-print('C' * 1 + 'EEEPP' * 14 + 'B' * 3)
+</div>
+
+<div class="flex flex-col w-1/2 justify-around items-center" v-click>
+
+## Opción 1
+
+```mermaid {theme: 'neutral', scale: 0.8, flowchart: { curve: 'stepAfter' }}
+flowchart TD
+    A[Algoritmo antes] --> B{CONDICION}
+    B -->|True| C[Ejecutar si es True]
+    C --- D[ ]
+    B --- |FALSE| F[Ejecutar si es FALSE]
+    F --- D
+    D --- E[Algoritmo después]
+    style D width:0;
 ```
 
-Razón: No considera el caso de que el número de amigos sea par o impar.
-
-```python
-Amigos=14
-Bebidas=Amigos//4
-print("C"*(Amigos%2+1)+(3*"E"+2*"P")*Amigos+"B"*Bebidas+"C"*(Amigos%2))
-```
-
-Este es un buen intento, pero falla cuando el número de amigos es impar. (Recomiendo usar variables en minúscula con guión bajo para separar palabras)
-
-```python
-# Si Amigos es 13
-# Amigos%2 es 1
-# Amigos%2+1 es 2
-# "C" * 2 es "CC"
-```
-
-</v-clicks>
+</div>
+</div>
 
 ---
 layout: default
