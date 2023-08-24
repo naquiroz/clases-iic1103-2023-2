@@ -8,11 +8,11 @@ transition: slide-left
 title: IIC1103 - Introducción a la programación - Clase 04
 fonts:
   # basically the text
-  sans: 'Inter,Noto Emoji'
+  sans: 'Inter,Apple Color Emoji,Noto Color Emoji'
   # use with `font-serif` css class from windicss
-  serif: 'Inter,Noto Emoji'
+  serif: 'Inter,Apple Color Emoji,Noto Color Emoji'
   # for code blocks, inline code, etc.
-  mono: 'Fira Code,Noto Emoji'
+  mono: 'Fira Code,Apple Color Emoji,Noto Color Emoji'
   weights: '300,700,900'
 layout: intro
 level: 1
