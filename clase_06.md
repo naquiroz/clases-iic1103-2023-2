@@ -19,7 +19,13 @@ level: 1
 hideInToc: true
 download: true
 presenter: dev
-exportFilename: clase_05
+export:
+  format: pdf
+  timeout: 30000
+  dark: false
+  withClicks: true
+  withToc: true
+exportFilename: clase_06
 ---
 # Control de flujo: iteraciones
 ## Clase 06 | Introducción a la programación
