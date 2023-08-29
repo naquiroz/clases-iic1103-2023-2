@@ -192,7 +192,7 @@ Cuando queremos repetir algo una cantidad específica de veces, usamos el `for`,
 ---
 layout: section
 level: 1
-title: If - introducción
+title: While - introducción
 hideInToc: false
 ---
 
@@ -202,7 +202,7 @@ hideInToc: false
 ---
 layout: two-cols
 level: 2
-title: If - sintaxis
+title: While - sintaxis
 hideInToc: false
 ---
 
