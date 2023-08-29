@@ -54,8 +54,8 @@ hideInToc: true
 ---
 
 # Repaso clase anterior
-
-<ol class="slidev-toc-list slidev-toc-list-level-1" style="font-size: 17.6px;"><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/5" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Motivación - blockly</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/6" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">If - introducción</p></div></a><ol class="slidev-toc-list slidev-toc-list-level-2" style="font-size: 17.6px;"><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/7" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">If - sintaxis</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/8" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">If - condiciones</p></div></a><!--v-if--></li></ol></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/13" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">If/else - introducción</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/16" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">If/elif/else</p></div></a><ol class="slidev-toc-list slidev-toc-list-level-2" style="font-size: 17.6px;"><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/20" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Ejemplo avanzado</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_05/21" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Solución</p></div></a><!--v-if--></li></ol></li></ol>
+<!-- markdownlint-disable-next-line -->
+<div class="slidev-toc" style="column-count: 1;"><ol class="slidev-toc-list slidev-toc-list-level-1"><li class="slidev-toc-item"><a href="/clase_06/7" class=""><div><p>Ejemplo - Pre ciclos</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a href="/clase_06/9" class=""><div><p>Motivación - blockly</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a href="/clase_06/10" class=""><div><p>While - introducción</p></div></a><ol class="slidev-toc-list slidev-toc-list-level-2"><li class="slidev-toc-item"><a href="/clase_06/11" class=""><div><p>While - sintaxis</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a href="/clase_06/12" class=""><div><p>While - condiciones</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a href="/clase_06/16" class=""><div><p>Variables acumuladoras y ciclos anidados</p></div></a><!--v-if--></li><li class="slidev-toc-item"><a href="/clase_06/20" class=""><div><p>Ejemplo avanzado</p></div></a><!--v-if--></li></ol></li></ol></div>
 
 ---
 layout: center
@@ -67,17 +67,6 @@ hideInToc: true
 # Agenda
 
 <Toc maxDepth=2 />
-
----
-layout: center
-level: 1
-title: Repaso quiz
-hideInToc: true
----
-
-# Quiz repaso
-
-<img class="w-50 mx-auto" src="/content/clase_07/qr_clase_07.png" />
 
 ---
 layout: center
