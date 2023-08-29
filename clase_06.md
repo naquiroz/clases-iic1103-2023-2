@@ -69,6 +69,31 @@ hideInToc: true
 <Toc maxDepth=2 />
 
 ---
+layout: center
+level: 1
+title: Repaso quiz
+hideInToc: true
+---
+
+# Quiz repaso
+
+<img class="w-50 mx-auto" src="/content/clase_06/qr_clase_06.png" />
+
+---
+layout: center
+level: 2
+title: Agenda
+hideInToc: true
+---
+
+# Instalar Thonny
+# Editor de código
+
+Link: [https://thonny.org/](https://thonny.org/)
+
+Simplemente presionar el botón de descarga, y seguir las instrucciones. Podrán guardar sus programas en su computador, y ejecutarlos desde ahí.
+
+---
 layout: default
 level: 1
 title: Ejemplo - Pre ciclos
@@ -265,7 +290,6 @@ hideInToc: true
 # Ejemplo visualizado
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=numero_objetivo%20%3D%2010%20%23%20por%20ejempl,%20en%20vez%20de%20int%28input%28%29%29%0Anumero_mostrado%20%3D%201%0A%0A%23%20Mientras%20el%20numero%20mostrado%20sea%20menor%20o%20igual%20al%20numero%20objetivo%0Awhile%20numero_mostrado%20%3C%3D%20numero_objetivo%3A%0A%20%20%20%20%23%20Mostrar%20el%20numero%20mostrado%0A%20%20%20%20print%28numero_mostrado%29%0A%20%20%20%20%23%20Aumentar%20el%20numero%20mostrado%20en%201%0A%20%20%20%20numero_mostrado%20%2B%3D%201%20%23%20Equivalente%20a%20numero_mostrado%20%3D%20numero_mostrado%20%2B%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
-
 
 ---
 layout: two-cols
@@ -569,7 +593,6 @@ print(total_madera)
 
 Con las entradas dadas en el ejemplo, este código imprimirá `3` y `2` como salida además del mensaje
  `Resultados de las negociaciones:`.
-
 
 ---
 layout: center
