@@ -46,6 +46,8 @@ hideInToc: true
 
 # Repaso clase anterior
 
+<div class="slidev-toc" style="column-count: 1; font-size: 17.6px;"><ol class="slidev-toc-list slidev-toc-list-level-1" style="font-size: 17.6px;"><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/9" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Ejercicio propuesto clase anterior</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/12" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Input y output (I/O)</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/14" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Variables</p></div></a><ol class="slidev-toc-list slidev-toc-list-level-2" style="font-size: 17.6px;"><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/15" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Variables - continuación</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/16" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Variables - que se puede hacer con ellas</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/17" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Variables - operadores compuestos</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/19" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Variables - participación</p></div></a><!--v-if--></li><li class="slidev-toc-item" style="font-size: 17.6px;"><a href="/clase_04/20" class="" style="font-size: 17.6px;"><div style="font-size: 17.6px;"><p style="font-size: 17.6px;">Variables - ejemplos</p></div></a><!--v-if--></li></ol></li></ol></div>
+
 ---
 layout: center
 level: 2
@@ -143,7 +145,6 @@ hideInToc: false
 💡 Es cualquier expresión que se pueda evaluar como `True` o `False` (es cualquier expresión que entregue un valor booleano).
 
 ❓ ¿Se les ocurren ejemplos?
-💯
 
 <v-clicks>
 
@@ -364,7 +365,6 @@ else:
 
 ❗ **IMPORTANTE**: Si una condición es `True`, no se evalúan las siguientes condiciones, ni siquiera si son `True`.
 
-
 ---
 layout: center
 level: 2
@@ -431,12 +431,11 @@ hideInToc: false
 
 # Ejemplo avanzado
 
-
 Eres un periodista que está escribiendo un artículo sobre J. Robert Oppenheimer y la creación de la bomba atómica. Durante tu investigación, decides hacer algunos cálculos relacionados con los eventos históricos.
 
 1. Pregunte al usuario sobre cuántos años Oppenheimer enseñó en la Universidad de California. Debes imprimir un mensaje que pregunte: "Responde a las siguientes preguntas basadas en la vida y carrera de J. Robert Oppenheimer:"
-2. Pregunte al usuario sobre cuántos años Oppenheimer enseñó en caltech. (Valor esperado: 3 años)
-3. Se la suma de los años entregados es exactamente 8, debes decir "Estudios correctos". luego, se te pedirá que indiques la energía (en joules) liberada por cada bomba atómica. Puedes asumir que es un número entero.
+2. Pregunte al usuario sobre cuántos años Oppenheimer enseñó en caltech.
+3. Si la suma de los años entregados es exactamente 8, debes decir "Estudios correctos". luego, se te pedirá que indiques la energía (en joules) liberada por cada bomba atómica. Puedes asumir que es un número entero. También se te entregará el número de bombas atómicas lanzadas.
 4. Si los años no suman 8, deberás decir "Incorrecto en la primera pregunta. Oppenheimer enseñó un total de 8 años entre ambas instituciones."
 5. Finalmente, si la energía total lanzada equivale justo a 400000 deberás decir "Wow, mucha energía." De lo contrario, deberás decir "Esto no es una bomba atómica. Buuuu"
 
@@ -486,7 +485,6 @@ En el último ejemplo, pudimos preguntar una sola vez por la energía de la bomb
 O si queremos preguntar por el número de bombas atómicas lanzadas, y luego por la energía de cada bomba atómica?
 
 Para eso sirve el `while` y el `for`, que comenzaremos a ver en la próxima clase.
-
 
 ---
 layout: end

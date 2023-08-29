@@ -30,3 +30,4 @@ exportFilename: landing
 3. [Clase 03 - Variables y expresiones](/clase_03)
 4. [Clase 04 - Variables y expresiones II](/clase_04)
 5. [Clase 05 - Control de flujo: alternativas](/clase_05)
+6. [Clase 06 - Control de flujo: iteraciones](/clase_06)
