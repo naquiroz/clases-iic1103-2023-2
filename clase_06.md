@@ -111,7 +111,6 @@ Por ejemplo si el usuario ingresa 4, el programa debe imprimir:
 2
 3
 4
-4
 ```
 
 ```python

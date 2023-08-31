@@ -27,7 +27,8 @@ export:
   withToc: true
 exportFilename: clase_07
 ---
-# Control de flujo: iteraciones II
+# Control de flujo: iteraciones
+## Parte II
 ## Clase 07 | Introducción a la programación
 
 ### Nicolás Quiroz | <naquiroz@uc.cl> | <iic1103@uc.cl>
@@ -70,57 +71,21 @@ hideInToc: true
 
 ---
 layout: center
-level: 2
-title: Agenda
+level: 1
+title: Repaso quiz
 hideInToc: true
 ---
 
-# Instalar Thonny
-# Editor de código
+# Quiz opiniones sobre el curso
 
-Link: [https://thonny.org/](https://thonny.org/)
+## Por unos 🍭
 
-Simplemente presionar el botón de descarga, y seguir las instrucciones. Podrán guardar sus programas en su computador, y ejecutarlos desde ahí.
-
----
-layout: default
-level: 1
-title: Ejemplo - Pre ciclos
-hideInToc: false
----
-
-# Ejemplo
-
-Haz un algoritmo que le pida al usuario un número (mayor a 0), y luego imprima todos los números desde el 1 hasta el número ingresado por el usuario.
-
-Por ejemplo si el usuario ingresa 4, el programa debe imprimir:
-
-```text
-1
-2
-3
-4
-4
-```
-
-```python
-numero = int(input())
-if numero >= 1:
-    print(1)
-if numero >= 2:
-    print(2)
-if numero >= 3:
-    print(3)
-if numero >= 4:
-    print(4)
-```
-
-❓ Y si el usuario ingresa 5? O 100? O 1000000?
+<img class="w-50 mx-auto" src="/content/clase_07/qr_clase_07.png" />
 
 ---
 layout: two-cols
 level: 2
-title: Usar while en vez de if
+title: Usar for en vez de if
 hideInToc: true
 ---
 
@@ -181,133 +146,71 @@ Cuando queremos repetir algo una cantidad específica de veces, usamos el `for`,
 ---
 layout: section
 level: 1
-title: If - introducción
+title: For - introducción
 hideInToc: false
 ---
 
-# While
-## Repetir algo hasta que se cumpla una condición
+# For
+## Repetir algo una cantidad específica de veces
 
 ---
 layout: two-cols
 level: 2
-title: If - sintaxis
+title: For - sintaxis
 hideInToc: false
 ---
 
-# While
+# For
 
 Sintaxis en Python:
 
 ```python {2-3} {lines:true}
 ... # Algoritmo antes
-while CONDICION:
+for iterando in range(numero):
     instruccion
 ... # Algoritmo después
 ```
 
-- Si la condición es `True`, se ejecuta el **código indentado**. Este código se repite **hasta que la condición sea `False`**.
-- Al igual que en el `if/else` es muy importante la indentación.
+Todo el código se repetirá `numero` veces. `iterando` será un valor que irá desde `0` hasta `numero - 1`.
+
+**`range(numero)`** genera una lista de números (desde el 0 hasta `numero`).
 
 ::right::
 
-```mermaid {theme: 'neutral', scale: 1.2, flowchart: { curve: 'stepAfter' }}
-flowchart TD
-    A[Algoritmo antes] --> B{CONDICION}
-    B --> |True| C[instruccion]
-    C --> B
-    B --> |FALSE| E[Algoritmo después]
-```
+Por ejemplo, si lo usamos en un `for`
 
----
-layout: full
-level: 2
-title: While - condiciones
-hideInToc: false
----
+- `range(3) == [0,1,2]`, generaría un ciclo que se repite 3 veces
+- `range(1) == [0]`, generaría un ciclo que se repite 1 sola vez.
+- `range(n) == [0,1,...,n-1]`, generaría un ciclo que se repite `n` veces.
 
-# While
-## ¿Qué es una `condición`?
-
-💡 Al igual que en los `if` es cualquier expresión que se pueda evaluar como `True` o `False` (es cualquier expresión que entregue un valor booleano).
-
-❓ ¿Se les ocurren ejemplos para el while?
-
-<v-clicks>
-
-- Hasta que el usuario ingrese un número mayor que 10.
-- Hasta que el usuario haya ingresado un número par.
-- Hasta que el texto ingresado por el usuario sea el valor esperado.
-- Hasta que el resultado de sumar dos números sea mayor que un numero
-- Hasta que el resultado de unir strings sea igual a otro string
-</v-clicks>
-
----
-layout: default
-level: 2
-title: While - ejemplos
-hideInToc: true
----
-
-# While
-## Ejemplos
-
-Resolvamos el mismo ejercicio anterior, pero ahora usando un `while`.
-
-> Haz un algoritmo que le pida al usuario un número (mayor a 0), y luego imprima todos los números desde el 1 hasta el número ingresado por el usuario.
-
-```python
-numero_objetivo = int(input())
-numero_mostrado = 1
-
-# Mientras el numero mostrado sea menor o igual al numero objetivo
-while numero_mostrado <= numero_objetivo:
-    # Mostrar el numero mostrado
-    print(numero_mostrado)
-    # Aumentar el numero mostrado en 1
-    numero_mostrado += 1 # Equivalente a numero_mostrado = numero_mostrado + 1
-```
-
-Aquí usamos lo que suele llamarse un **contador**, que es una variable que se usa para contar algo. En este caso, el contador es `numero_mostrado`, que cuenta los números que se han mostrado hasta el momento.
-
----
-layout: center
-level: 3
-title: Ejemplo visualizado
-hideInToc: true
----
-# Ejemplo visualizado
-
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=numero_objetivo%20%3D%2010%20%23%20por%20ejempl,%20en%20vez%20de%20int%28input%28%29%29%0Anumero_mostrado%20%3D%201%0A%0A%23%20Mientras%20el%20numero%20mostrado%20sea%20menor%20o%20igual%20al%20numero%20objetivo%0Awhile%20numero_mostrado%20%3C%3D%20numero_objetivo%3A%0A%20%20%20%20%23%20Mostrar%20el%20numero%20mostrado%0A%20%20%20%20print%28numero_mostrado%29%0A%20%20%20%20%23%20Aumentar%20el%20numero%20mostrado%20en%201%0A%20%20%20%20numero_mostrado%20%2B%3D%201%20%23%20Equivalente%20a%20numero_mostrado%20%3D%20numero_mostrado%20%2B%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+Generalmente, para el iterando se usa `i` en vez de `iterando`, pero pueden usar lo que quieran. A mi personalmente me gusta usar variables con sentido.
 
 ---
 layout: two-cols
 level: 2
-title: While - más ejemplos
+title: For - ejemplos
 hideInToc: true
 ---
 
-# While
+# For
 ## Ejemplos
 
 Un programa que imprima los N primeros múltiplos de 3.
 
 ```python
 n = int(input())
-contador = 1
-while contador <= n:
-    print(contador * 3)
-    contador += 1
+
+# Por cada número (comenzando de 0)
+for numero in range(n):
+    print(numero + 1)
 ```
 
 Y si queremos mostrar los N primeros múltiplos de 3 y 5 simultáneamente?
 
 ```python
 n = int(input())
-contador = 1
-while contador <= n:
-    print(contador * 3, contador * 5)
-    contador += 1
+for numero in range(n):
+    print((numero + 1 ) * 3, (numero + 1 ) * 5)
 ```
 
 ::right::
@@ -316,72 +219,54 @@ Y mostrar los N primeros múltiplos de 3 y 5, pero solamente si es que la suma d
 
 ```python
 n = int(input())
-contador = 1
-while contador <= n:
-    if (contador * 3 + contador * 5) % 2 == 0:
-        print(contador * 3, contador * 5)
+for numero in range(n):
+    if ((numero + 1) * 3 + (numero + 1) * 5) % 2 == 0:
+        print((numero + 1) * 3, (numero + 1) * 5)
     else:
-        print(contador * 4, contador * 6)
-    contador += 1
+        print((numero + 1) * 4, (numero + 1) * 6)
 ```
 
-❓ Si queremos mostrar los N primeros múltiplos de 3 y 5, y cuando lleguemos a un numero par (al sumar ambos múltiplos), en vez de imprimir los múltiplos de 3 y 5,
-imprimimos una cuenta regresiva desde ese número (la suma de ambos) hasta el cero, para luego continuar con los siguientes múltiplos de 3 y 5, y mostrar la suma de los múltiplos de 3 al final?
+❓ No hay una forma de evitar hacer un `numero + 1` en cada línea?
 
-Para eso, necesitamos saber variables acumuladoras, y ciclos anidados.
+Si, podemos usar `range(1, n + 1)` en vez de `range(n)`.
 
 ---
-layout: section
+layout: default
 level: 2
-title: Variables acumuladoras y ciclos anidados
+title: For con rangos distintos
+hideInToc: true
+---
+
+# For con rangos distintos
+
+Cuando necesitamos un rango distinto al que entrega `range`, podemos usar `range` con 2 parámetros.
+
+```python {2-3} {lines:true}
+... # Algoritmo antes
+for iterando in range(inicio, fin):
+    instruccion
+... # Algoritmo después
+```
+
+Todo el código se repetirá `fin - inicio` veces. `iterando` será un valor que irá desde el `inicio` hasta el `fin - 1`.
+
+Ejemplo:
+
+```python
+for numero in range(1, 4):
+    print(numero)
+```
+
+---
+layout: default
+level: 2
+title: Ciclos for anidados
 hideInToc: false
 ---
 
-# Variables acumuladoras y ciclos anidados
-## Manejar datos de forma más compleja
+# Anidación de loops for
 
----
-layout: default
-level: 2
-title: Variables acumuladoras
-hideInToc: true
----
-
-# Variables acumuladoras
-
-A veces, necesitamos guardar datos de forma más compleja: calcular la suma de ciertos números, o bien, el promedio y/o otras operaciones.
-Para eso, necesitamos usar **variables acumuladoras**. Solamente es una forma distinta de llamar a una variable que se usa para acumular datos. Por ejemplo, calcular un promedio de notas hasta que la nota ingresada sea `-1.0`
-
-```python
-# Obtener la primera nota
-nota = float(input())
-# Inicializar las variables acumuladora
-suma_notas = 0
-cantidad_notas = 0
-# Mientras la nota no sea -1
-while nota != -1:
-    # Acumular la nota
-    suma_notas += nota
-    # Acumular la cantidad de notas
-    cantidad_notas += 1
-    # Obtener la siguiente nota
-    nota = float(input())
-# Calcular el promedio
-promedio = suma_notas / cantidad_notas
-# Mostrar el promedio
-print(promedio)
-```
-
----
-layout: default
-level: 2
-title: Ciclos anidados
-hideInToc: true
----
-
-# Ciclos anidados
-
-A veces, vamos a querer repetir una acción, en cada paso de un ciclo. Para ello podemos anidar ciclos todas las veces que queramos. Hacer esto es igual que al anidar `if`s, pero en vez de usar `if` usamos `while`.
+A veces, vamos a querer repetir una acción, en cada paso de un ciclo. Para ello podemos anidar ciclos todas las veces que queramos. Hacer esto es igual que al anidar `if`s, pero en vez de usar `if` usamos `for`.
 
 Algunos ejemplos:
 
@@ -392,11 +277,11 @@ Ejemplo en código:
 
 ```python {1|2|3-4|5-6|7|6|8|4|9|2|10} {lines:true}
 ... # Algoritmo antes
-while CONDICION_1:
+for numero_1 in range(inicio_1, fin_1): # Esto también podría ser for numero_1 in range(otro_numero)
     instruccion_1_antes
-    while CONDICION_2:
+    for numero_2 in range(inicio_2, fin_2):
         instruccion_2_antes
-        while CONDICION_3:
+        for numero_3 in range(inicio_3, fin_3):
             instruccion_3
         instruccion_2_despues
     instrucción_1_despues
@@ -406,48 +291,74 @@ while CONDICION_1:
 ---
 layout: default
 level: 2
-title: Ejemplo resuelto
-hideInToc: true
+title: Cuando usar for y cuando while
+hideInToc: false
 ---
 
-## Ejemplo resuelto
+Todo ciclo `for` puede ser escrito como un ciclo `while`, y viceversa. Sin embargo, hay veces en que es más fácil usar uno que el otro.
 
-> Si queremos mostrar los N primeros múltiplos de 3 y 5, y cuando lleguemos a un numero par (al sumar ambos múltiplos), en vez de imprimir los múltiplos de 3 y 5,
-> imprimimos una cuenta regresiva desde ese número hasta el cero, para luego continuar con los siguientes múltiplos de 3 y 5, y mostrar la suma de los múltiplos de 3 al final?
+- Si sabemos cuántas veces se va a repetir el ciclo, es más fácil usar un `for`.
+- Si no sabemos cuántas veces se va a repetir el ciclo, es más fácil usar un `while`.
+- Si queremos repetir algo hasta que se cumpla una condición, es más fácil usar un `while`.
+- Si queremos repetir algo una cantidad específica de veces, es más fácil usar un `for`.
+
+Ejemplo de cuando usar `for`:
 
 ```python
-# Obtener el numero de multiplos
 n = int(input())
-# Inicializamos contador y acumulador
-contador = 1
-suma = 0
+for numero in range(n):
+    print(numero + 1)
+```
 
-# Mientras el contador sea menor o igual al numero de multiplos
-while contador <= n:
-    suma_multiplos = contador * 3 + contador * 5
-    # Si la suma de los multiplos es par
-    if suma_multiplos % 2 == 0:
-        # Mientras la variable 'suma_multiplos' sea mayor o igual a 0
-        while suma_multiplos >= 0:
-            print(suma_multiplos)
-            suma_multiplos -= 1
-    # Si el contador es impar
-    else:
-        print(contador * 3, contador * 5)
-        # Acumular la suma de los multiplos de 3
-    suma += contador * 3
-    contador += 1
+Ejemplo de cuando usar `while`:
+
+```python
+valor = int(input())
+while valor != 0:
+    print(valor)
+    valor = int(input())
 ```
 
 ---
 layout: default
-level: 2
+level: 1
+title: Ciclos infinitos
+hideInToc: false
+---
+
+# Ciclos infinitos
+
+En la clase anterior, vimos que los ciclos `while` se repiten hasta que se cumpla una condición. Pero, ¿qué pasa si la condición nunca se cumple? ¿Se repite infinitamente el ciclo?
+
+Sí, y eso es un problema. Si el ciclo se repite infinitamente, el programa nunca terminará de ejecutarse. Esto **se llama un ciclo infinito**, y es un error muy común en programación.
+
+Lo ocurre en palabras simples es algo como esto:
+
+```python
+while True:
+    print("Hola")
+```
+
+O más realista:
+
+```python
+valor = 2
+while valor > 1:
+    print("Hola")
+    valor += 1
+```
+
+Para evitar esto, debemos asegurarnos que la condición de término se cumpla en algún momento.
+
+---
+layout: default
+level: 1
 title: Ejemplo avanzado
 hideInToc: false
 ---
 
 # Ejemplo avanzado
-
+## Mismo de la clase anterior, pero con `for`
 ### Ejercicio: Negociaciones Avanzadas en Catan
 
 **Contexto:**
@@ -527,6 +438,8 @@ hideInToc: true
 
 ### Solución:
 
+3 bitpoints por ayudarme a explicarlo.
+
 ```python {2-3|5-7|9-11|12-21|20-22|22-36|38-45|47-50} {lines:true, maxHeight: '300px'}
 # Recibimos la cantidad inicial de ladrillos y el número de jugadores
 ladrillos = int(input())
@@ -537,8 +450,7 @@ total_trigo = 0
 total_madera = 0
 
 # Iteramos sobre cada jugador
-i = 0
-while i < n_jugadores:
+for i in range(n_jugadores):
     # Recibimos la cantidad de veces que debemos negociar con el jugador
     n_negociaciones = int(input())
 
@@ -548,8 +460,7 @@ while i < n_jugadores:
     mejor_oferta_ladrillos = 0
 
     # Iteramos sobre cada oferta del jugador
-    j = 0
-    while j < n_negociaciones:
+    for j in range(n_negociaciones):
         # Recibimos la oferta del jugador
         ladrillos_jugador = int(input())
         trigo = int(input())
@@ -563,16 +474,12 @@ while i < n_jugadores:
                 mejor_oferta_madera = madera
                 mejor_oferta_ladrillos = ladrillos_jugador
 
-        j += 1
-
     # Actualizamos la cantidad total de trigo y madera
     total_trigo += mejor_oferta_trigo
     total_madera += mejor_oferta_madera
 
     # Actualizamos la cantidad de ladrillos que nos quedan
     ladrillos -= mejor_oferta_ladrillos
-
-    i += 1
 
 # Imprimimos los resultados
 print("Resultados de las negociaciones:")
@@ -586,16 +493,61 @@ Con las entradas dadas en el ejemplo, este código imprimirá `3` y `2` como sal
 ---
 layout: center
 level: 1
+title: FAQ - Preguntas frecuentes
+hideInToc: false
+---
+
+# FAQ - Preguntas frecuentes I
+
+1. ¿Qué pasa si no sé cuántas veces se va a repetir el ciclo?
+   - Si no sabes cuántas veces se va a repetir el ciclo, es más fácil usar un `while`.
+2. ¿Puedo anidar/mezclar ciclos `for` y `while`?
+   - Sí, puedes anidar/mezclar ciclos `for` y `while` todas las veces que quieras.
+   - Por ejemplo, puedes tener un `for` dentro de un `while`, o un `while` dentro de un `for`:
+
+        ```python
+        for i in range(10):
+            inicial = i
+            while inicial > 0:
+                print(i)
+                inicial -= 1
+        ```
+
+
+---
+layout: center
+level: 1
+title: FAQ - Preguntas frecuentes
+hideInToc: true
+---
+
+# FAQ - Preguntas frecuentes II
+
+1. ¿Puedo usar `for` con `while` y con `if`?
+    - Sí, puedes usar `for` con `while` y con `if` todas las veces que quieras.
+
+        ```python
+        for i in range(10):
+            inicial = i
+            while inicial > 0:
+                if inicial % 2 == 0:
+                    print(i)
+                inicial -= 1
+        ```
+
+
+---
+layout: center
+level: 1
 title: Spoiler while
 hideInToc: true
 ---
 
 # Coming soon...
 
-En el último ejemplo, usamos un `while` para iterar sobre los jugadores, y otro `while` para iterar sobre las ofertas de cada jugador. Esto es un ejemplo de un ciclo anidado, que es un ciclo dentro de otro ciclo. Pero, ¿no sabíamos exactamente cuántas veces se iba a repetir el ciclo?
-¿Es necesario repetir el ciclo infinitamente hasta que se cumpla la condición de término? ¿No podemos repetirlo un número específico de veces?
-
-Para eso el `for`, que comenzaremos a ver en la próxima clase.
+En el último ejemplo (y en varios que hemos visto hasta ahora) hemos repetido código muchas veces, donde
+solamente cambian pequeñas partes del código. Esto es muy común en programación, y para evitarlo, podemos encapsular el código
+e invocarlo cuando lo necesitemos. Para esto usaremos **funciones**, que veremos en la próxima clase.
 
 ---
 layout: end
