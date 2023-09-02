@@ -202,7 +202,7 @@ n = int(input())
 
 # Por cada número (comenzando de 0)
 for numero in range(n):
-    print(numero + 1)
+    print((numero +  1) * 3)
 ```
 
 Y si queremos mostrar los N primeros múltiplos de 3 y 5 simultáneamente?
