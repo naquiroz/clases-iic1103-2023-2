@@ -351,7 +351,7 @@ numero = random.randint(inicio, fin)
 print(numero)
 ```
 
-El módulo `random` tiene muchas más funciones, pero no son parte de los contenidos del curso. Si te interesa, puedes leer más en [La documentación de python](https://docs.python.org/3/library/random.html).
+El módulo `random` tiene muchas más funciones, pero no son parte de los contenidos del curso. Si te interesa, puedes leer más en [la documentación de python](https://docs.python.org/3/library/random.html).
 
 ---
 layout: two-cols
@@ -398,7 +398,7 @@ logaritmo = math.log(10)
 Todas estas funciones están definidas en el módulo `math` y **no son parte del temario del curso**
 pero pueden usarlas si les es útil.
 
-Si te interesa, puedes leer más en [La documentación de python](https://docs.python.org/3/library/math.html).
+Si te interesa, puedes leer más en [la documentación de python](https://docs.python.org/3/library/math.html).
 
 _Muy bonito y todo_ pero, puedo usar otras funciones que no sean built-in?
 
@@ -492,7 +492,7 @@ hideInToc: true
 # Materia Extra (opcional) - Otras formas de importar
 ## No es parte de los contenidos del curso
 
-Existen otras formas de importar módulos, pero no son parte de los contenidos del curso. Si te interesa, puedes leer más en [La documentación de python](https://docs.python.org/3/reference/import.html)
+Existen otras formas de importar módulos, pero no son parte de los contenidos del curso. Si te interesa, puedes leer más en [la documentación de python](https://docs.python.org/3/reference/import.html)
 
 Podemos importar un módulo y darle un alias o importar una función específica de un módulo:
 
