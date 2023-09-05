@@ -32,3 +32,4 @@ exportFilename: landing
 5. [Clase 05 - Control de flujo: alternativas](/clase_05)
 6. [Clase 06 - Control de flujo: iteraciones](/clase_06)
 7. [Clase 07 - Control de flujo: iteraciones II](/clase_07)
+8. [Clase 08 - Funciones](/clase_08)

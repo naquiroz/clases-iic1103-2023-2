@@ -28,11 +28,10 @@ ul li {
   @apply list-image-[url(chevron-right.svg)] dark:list-image-[url(chevron-right-white.svg)];
 }
 
-ol li {
+ol:not(.slidev-toc-list) li {
   @apply list-decimal
 }
 
 .slidev-vclick-target {
   transition: all 500ms ease;
 }
-
