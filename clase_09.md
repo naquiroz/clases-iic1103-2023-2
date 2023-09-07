@@ -555,4 +555,3 @@ Esta clase fue preparada con el apoyo de Valeria Herskovic, Jorge Muñoz, Cristi
 <Profesores class="mx-auto" />
 
 ¡Muchas gracias a todos/as!
-](public/content/clase_08)
