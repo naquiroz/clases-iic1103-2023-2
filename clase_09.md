@@ -351,6 +351,66 @@ Lo que estoy haciendo aquí es **`def`inir** una función llamada `area_circulo`
 La indentación aquí también es muy importante, ya que nos indica qué código pertenece a la función y qué código no.
 
 ---
+layout: two-cols
+level: 2
+title: Cómo usar funciones - ejemplo
+hideInToc: false
+---
+
+# Más ejemplos
+
+Una función que retorne true si un numero es par y false si es impar
+
+```python
+def es_par(numero):
+    if numero % 2 == 0:
+        return True
+    return False
+
+print(es_par(3))
+print(es_par(int(input())))
+```
+
+Que retorne la suma de todos los números de 1 a n
+
+```python
+def suma_hasta_n(n):
+    suma = 0
+    for i in range(1, n + 1):
+        suma += i
+    return suma
+
+resultado_1 = suma_hasta_n(5)
+resultado_2 = suma_hasta_n(resultado_1)
+print(resultado_2)
+```
+
+::right::
+
+<div class="px-2">
+Una función que reciba un cachipún y retorne el ganador
+
+```python
+def cachipun(jugador_1, jugador_2):
+    if jugador_1 == "piedra" and jugador_2 == "tijera":
+        return "jugador_1"
+    elif jugador_1 == "papel" and jugador_2 == "piedra":
+        return "jugador_1"
+    elif jugador_1 == "tijera" and jugador_2 == "papel":
+        return "jugador_1"
+    elif jugador_1 == jugador_2:
+        return "empate"
+    else:
+        return "jugador_2"
+
+print(cachipun("piedra", "tijera"))
+print(cachipun("papel", "piedra"))
+print(cachipun("tijera", "papel"))
+```
+
+</div>
+
+---
 layout: default
 level: 2
 title: Cómo usar funciones - ejemplo
