@@ -575,7 +575,7 @@ Mail de María Medina incorrecto: marimari@gmail.com. No se podrá registrar su 
 ---
 layout: center
 level: 1
-title: FAQ - Preguntas frecuentes
+title: Ejercicio - propuesto
 hideInToc: false
 ---
 
