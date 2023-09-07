@@ -183,6 +183,13 @@ for i in range(can_estudiante):
         print(f"Mail de {nombre} incorrecto: {correo}. No se podrá registrar su actividad")
 ```
 
+---
+layout: default
+level: 2
+title: Algunas soluciones
+hideInToc: true
+---
+
 ✅ Esta solución funciona pero podría ser con un for
 
 ```python
@@ -199,6 +206,8 @@ while contador < estudiantes:
         print("Mail de " + nombre + " incorrecto: " + mail + ". No se podrá registrar su actividad")
     contador += 1
 ```
+
+
 
 ---
 layout: default
@@ -581,7 +590,7 @@ En python, existen funciones que no son built-in, pero que podemos usar igual. P
 
 Para que pudiéramos usarla, alguien tuvo que definirla. Nuestro sistema de archivos se vería algo así:
 
-<img class="mx-auto w-75 rounded" src="/content/clase_09/funciones.png" alt="funciones" />
+<img class="mx-auto w-75 rounded" src="/content/clase_08/funciones.png" alt="funciones" />
 
 ::right::
 
