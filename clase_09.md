@@ -1,4 +1,4 @@
-[---
+---
 theme: apple-basic
 info: |
   ## Clase 09 IIC1103 - 2023-2 - Sección 12
