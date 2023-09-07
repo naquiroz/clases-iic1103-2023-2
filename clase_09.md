@@ -40,7 +40,7 @@ hideInToc: true
 ---
 # Anuncios
 
-1. Primera tarea se abre esta semana
+1. Primera tarea se abrió esta semana
 
    a. Recordatorio: integridad académica, **individual, personal y de propia autoría** (si nadie es citado a un caso de integridad académica, todos/as ganan bitpoints)
 
@@ -153,7 +153,6 @@ Mail de Julio Torres correcto: julio.torres@uc.cl!
 Mail de María Medina incorrecto: marimari@gmail.com. No se podrá registrar su actividad
 ```
 
-
 ---
 layout: default
 level: 2
@@ -207,8 +206,6 @@ while contador < estudiantes:
     contador += 1
 ```
 
-
-
 ---
 layout: default
 level: 2
@@ -254,7 +251,6 @@ hideInToc: true
 En muchas ocasiones, hay pasos de un código que se repiten y nos gustaría poder reutilizarlos. En la clase anterior vimos que podemos usar funciones built-in, módulos y funciones definidas por otros para reutilizar código.
 
 Sin embargo, ¿qué pasa si queremos hacer algo que no existe? ¿Podemos crear nuestras propias funciones?
-
 
 ---
 layout: section
@@ -467,226 +463,41 @@ Qué ocurre ahí con `variable_global`?
 Además, **las variables locales pierden su valor cuando la función termina de ejecutarse**.
 
 ---
-layout: section
-level: 2
-hideInToc: false
-title:
----
-
-# Funciones
-## Módulos de python
-
----
 layout: two-cols
 level: 2
-title: Funciones - modulos de python
+title: Funciones - round
 hideInToc: true
 ---
 # Funciones
-## Módulos de python - random
+## `round()`
 
-El módulo `random` nos permite generar números aleatorios. Para usarlo, debemos importarlo:
-
-```python
-import random
-```
-
-Y luego podemos usar sus funciones:
+La función `round()` nos permite redondear un número decimal. Para usarla, debemos invocarla con el número que queremos redondear y la cantidad de decimales que queremos que tenga el número redondeado:
 
 ```python
-# Generar un número aleatorio
-# entre 0 y 10 (incluye el 10)
-numero = random.randint(0, 10)
-# Parámetros: (inicio, fin), Retorna: número
+# Redondear un número decimal
+# a 2 decimales
+numero = round(3.14159, 2)
+# Parámetros: (número, decimales), Retorna: float
 ```
-
-Notar que **a diferencia de `range()`** el número generado por `random.randint()` puede ser desde 0 hasta 10, es decir, incluye el 10.
 
 ::right::
 
-Por ejemplo, si queremos generar un número aleatorio entre límites que nos da el usuario:
+Importante notar que cuando el ultimo decimal es 5, la función `round()` se comporta de manera distinta a lo que esperaríamos:
 
 ```python
-import random
+# Redondear un número decimal
+# a 2 decimales
+numero = round(3.145, 2)
+# numero es 3.15
 
-inicio = int(input())
-fin = int(input())
+numero = round(3.155, 2)
+# numero es 3.15
 
-numero = random.randint(inicio, fin)
-print(numero)
 ```
 
-El módulo `random` tiene muchas más funciones, pero no son parte de los contenidos del curso. Si te interesa, puedes leer más en \[la documentación de python\](https://docs.python.org/3/library/random.html).
+Esto se debe a una razón más compleja que no es parte de los contenidos del curso, pero pueden leer más en [la documentación de python](https://docs.python.org/3/library/functions.html#round).
 
----
-layout: two-cols
-level: 2
-title: Funciones - modulos de python
-hideInToc: true
----
-# Funciones
-## Módulos de python - math
-
-El módulo `math` nos permite hacer operaciones matemáticas más complejas. Para usarlo, debemos importarlo:
-
-```python
-import math
-```
-
-Y luego podemos usar sus funciones:
-
-```python
-# Calcular la raíz cuadrada de un número
-raiz = math.sqrt(9) # Parámetro: (número), Retorna: float
-```
-
-Hay muchas más funciones en el módulo `math`, pero **no son parte de los contenidos del curso**.
-
-::right::
-
-Por ejemplo, podemos calcular el seno de un número:
-
-```python
-# Calcular el seno de un número
-seno = math.sin(0.5)
-# Parámetro: (número), Retorna: float
-```
-
-O calcular el logaritmo de un número:
-
-```python
-# Calcular el logaritmo de un número
-logaritmo = math.log(10)
-# Parámetro: (número), Retorna: float
-```
-
-Todas estas funciones están definidas en el módulo `math` y **no son parte del temario del curso**
-pero pueden usarlas si les es útil.
-
-Si te interesa, puedes leer más en \[la documentación de python\](https://docs.python.org/3/library/math.html).
-
-_Muy bonito y todo_ pero, puedo usar otras funciones que no sean built-in?
-
----
-layout: section
-level: 1
-title: Funciones - definidas por otros
-hideInToc: false
----
-
-# Funciones
-## Definidas por otros
-
----
-layout: two-cols
-level: 2
-title: Funciones - definidas por otros
-hideInToc: true
----
-
-# Funciones definidas por otros
-
-En python, existen funciones que no son built-in, pero que podemos usar igual. Por ejemplo, la función `validar_rut` que vimos al principio de la clase.
-
-Para que pudiéramos usarla, alguien tuvo que definirla. Nuestro sistema de archivos se vería algo así:
-
-<img class="mx-auto w-75 rounded" src="/content/clase_08/funciones.png" alt="funciones" />
-
-::right::
-
-De esa manera, tenemos un archivo donde está nuestro código (`code.py`) y tenemos otro módulo donde están las funciones definidas por otros para validar el rut (`rut_verificacion.py`).
-
-Entonces para usar la función `validar_rut`, debemos importarla desde el módulo `rut_verificacion.py`:
-
-```python
-# Importamos la función
-# validar_rut desde el módulo rut_verificacion
-import rut_verificacion
-
-rut = "27333162"
-digito_verificador = "K"
-
-# Usamos la función validar_rut con
-# los parametros que necesita
-# y sabemos que retorna True o False
-if rut_verificacion.validar_rut(rut, digito_verificador):
-    print("El rut es válido")
-else:
-    print("El rut no es válido")
-```
-
----
-layout: default
-level: 2
-title: Funciones definidas por otros - requisitos
-hideInToc: false
----
-
-# Funciones definidas por otros
-## Requisitos para que funcione
-
-Para que podamos importar y usar el módulo `rut_verificacion.py`, debemos seguir ciertas reglas:
-
-1. Debemos **importarlo** por su nombre exacto: `rut_verificacion`
-2. El módulo que queremos importar debe estar en la **misma carpeta** que nuestro código
-3. El módulo que queremos importar debe tener la **extensión** `.py`
-4. El módulo que queremos importar debe tener la **función** que queremos usar
-
-☢️ Esto de aquí abajo **no** funciona!
-
-```python
-import rut_verificacion.py
-```
-
-Arrojará un error como este:
-
-```text
-Traceback (most recent call last):
-  File "code.py", line 1, in <module>
-    import rut_verificacion.py
-ModuleNotFoundError: No module named 'rut_verificacion.py'; 'rut_verificacion' is not a package
-```
-
----
-layout: two-cols
-level: 2
-title: Materia Extra - Otras formas de importar
-hideInToc: true
----
-
-# Materia Extra (opcional) - Otras formas de importar
-## No es parte de los contenidos del curso
-
-Existen otras formas de importar módulos, pero no son parte de los contenidos del curso. Si te interesa, puedes leer más en \[la documentación de python\](https://docs.python.org/3/reference/import.html)
-
-Podemos importar un módulo y darle un alias o importar una función específica de un módulo:
-
-```python
-import rut_verificacion as rv
-
-rv.validar_rut("27333162", "K")
-```
-
-::right::
-Podemos importar una función específica de un módulo:
-
-```python
-from rut_verificacion import validar_rut
-
-validar_rut("27333162", "K")
-```
-
-Podemos importar todas las funciones de un módulo:
-
-```python
-from rut_verificacion import *
-
-validar_rut("27333162", "K")
-```
-
-Nada de esto es parte de los contenidos del curso, pero pueden usarlo si les es útil.
-
-
+Considerar también que cuando se redondea un valor que termina en 5, **se redondea al valor par más cercano.** (con la excepción de 0.5 y de los ejemplos anteriores)
 
 ---
 layout: center
@@ -695,9 +506,28 @@ title: FAQ - Preguntas frecuentes
 hideInToc: false
 ---
 
-# Ejercicio - propuesto
+# Preguntas frecuentes
 
-Quien lo traiga resuelto al comienzo de la próxima clase, gana 3 bitpoints.
+1. ¿Puedo usar funciones dentro de otras funciones?: Sí, puedes usar funciones dentro de otras funciones. Por ejemplo, si tienes una función `funcion1` y una función `funcion2`, puedes usar `funcion2` dentro de `funcion1` sin problemas.
+
+   ```python
+    def funcion1():
+         # Código de la función
+         funcion2()
+         return valor_retorno
+    ```
+
+2. ¿Puedo usar una función dentro de sí misma? : Sí, puedes. Esto se llama **recursión** y es un tema que veremos más adelante en el curso.
+
+3. ¿Puede una funcion no retornar nada? : Sí, una función puede no retornar nada.
+
+   ```python
+    def funcion1():
+         # Código de la función
+         # ...
+         print("Hola")
+         # ...
+    ```
 
 ---
 layout: center
@@ -708,12 +538,9 @@ hideInToc: true
 
 # Coming soon...
 
-Hasta ahora vimos que las funciones built-in son muy útiles, pero que también
-podemos usar funciones definidas por otros. Estas funciones, en ambos casos, son funciones
-que ya existen y que podemos usar sin tener que escribir todo el código de nuevo. Sin embargo,
-¿qué pasa si queremos hacer algo que no existe? ¿Podemos crear nuestras propias funciones?
-
-En la próxima clase veremos cómo crear nuestras propias funciones, y cómo usarlas.
+La proxima clase comenzaremos con una materia un poco distinta, que es el manejo más avanzado de texto
+o strings. Aprenderemos a manipularlos, entenderemos como funcionan y como podemos usarlos para resolver
+problemas más complejos.
 ---
 layout: end
 level: 1
