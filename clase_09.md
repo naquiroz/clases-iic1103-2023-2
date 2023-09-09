@@ -513,6 +513,7 @@ def funcion():
     # Podemos modificar la variable global dentro de la función
     variable_global = 2
     print(variable_global)
+funcion()
 print(variable_global)
 ```
 
