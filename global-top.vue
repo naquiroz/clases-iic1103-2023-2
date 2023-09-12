@@ -3,6 +3,15 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from '@vercel/analytics';
+import isProduction from  './analytics'
+
+const isProd = isProduction()
+
+inject({
+      mode: isProd ? 'production' : 'development',
+      debug: !isProd,
+    });
 
 const URL = window.location.origin
 const showURL = window.location.pathname.includes("clase_")
