@@ -292,8 +292,6 @@ def mas_largo(string_1, string_2):
 # Obtenemos la primera palabra
 palabra_1 = input()
 palabra_2 = input()
-# Inicializamos la palabra mas larga
-palabra_mas_larga = palabra_1
 # Inicializamos el largo de la palabra mas larga
 largo_p_mas_larga = mas_largo(palabra_1, palabra_2)
 
@@ -306,7 +304,6 @@ while len(palabra_1) != 18 and len(palabra_2) != 18:
     # la palabra mas larga
     if largo_palabra > largo_p_mas_larga:
         # Actualizamos la palabra mas larga
-        palabra_mas_larga = palabra
         largo_p_mas_larga = largo_palabra
 ```
 
