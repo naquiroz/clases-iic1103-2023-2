@@ -3,6 +3,10 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from '@vercel/analytics';
+// import some helper that is exposed by your current framework to determine the right mode manually
+
+inject();
 const URL = window.location.origin
 const showURL = window.location.pathname.includes("clase_")
 </script>

@@ -14,6 +14,7 @@
     "@slidev/theme-apple-basic": "^0.20.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "@vercel/analytics": "^1.0.2",
     "codemirror": "^5.65.12",
     "codemirror-editor-vue3": "^2.3.0"
   },
