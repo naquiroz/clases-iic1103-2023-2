@@ -4,9 +4,9 @@
 
 <script setup lang="ts">
 import { inject } from '@vercel/analytics';
-import isProduction from  './analytics'
 
-const isProd = isProduction()
+// @ts-ignore
+const isProd = !__DEV__
 
 inject({
       mode: isProd ? 'production' : 'development',
