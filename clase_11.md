@@ -466,7 +466,12 @@ largo_recorrido = 0
 # Mientras no hayamos recorrido todo el mensaje
 # seguimos dividiendo el mensaje en A y B
 while largo_recorrido < largo_mensaje:
-    # Obtenemos el substring de A
+    # Si el largo de caracteres que vamos a leer (para cada palabra)
+    # es mayor o igual al largo entonces
+    # Dividimos los caracteres restantes en A y B a la mitad y terminamos
+    if largo_recorrido + cars_por_leer * 2 >= largo_mensaje:
+        cars_por_leer = (largo_mensaje - largo_recorrido) // 2
+    # --- Obtenemos el substring de A
     mensaje_A += mensaje[largo_recorrido:largo_recorrido + cars_por_leer]
     # Actualizamos el largo recorrido
     largo_recorrido += cars_por_leer
