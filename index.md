@@ -35,3 +35,4 @@ exportFilename: landing
 8. [Clase 08 - Funciones](/clase_08)
 9. [Clase 09 - Funciones II](/clase_09)
 10. [Clase 10 - Strings](/clase_10)
+11. [Clase 11 - Strings II](/clase_11)
