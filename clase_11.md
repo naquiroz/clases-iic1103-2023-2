@@ -366,7 +366,7 @@ hideInToc: false
 de tus contactos.
 
 Cada vez que dos usuarios distintos te envían un mensaje, Introgram los mezcla y te muestra solamente un mensaje. En el mensaje mezclado, los primeros 2 caracteres corresponden al primer mensaje, los siguientes 2 caracteres corresponden al segundo mensaje, los siguientes 3 caracteres corresponden al
-primer mensaje, los siguientes 3 caracteres corresponden al segundo mensaje, los siguientes 4 caracteres corresponden al primer mensaje, y así sucesivamente hasta que el texto termina.
+primer mensaje, los siguientes 3 caracteres corresponden al segundo mensaje, los siguientes 4 caracteres corresponden al primer mensaje, y así sucesivamente hasta que el texto termina. En el caso de que los últimos 2n caracteres no sigan este patrón (por ejemplo: aabb**ab** -> aa**a** y bb**b**), se debe tomar estos caracteres restantes y separarlos equitativamente entre **mA** y **mB**.
 
 ---
 layout: default
@@ -445,7 +445,7 @@ hideInToc: true
 
 # Solución
 
-```python {1-19|20-34} {lines:true, maxHeight:'350px'}
+```python {1-19|20-36|37-40} {lines:true, maxHeight:'350px'}
 # Recibimos el mensaje mezclado
 mensaje = input()
 
