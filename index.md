@@ -36,3 +36,7 @@ exportFilename: landing
 9. [Clase 09 - Funciones II](/clase_09)
 10. [Clase 10 - Strings](/clase_10)
 11. [Clase 11 - Strings II](/clase_11)
+
+::right::
+<!-- markdownlint-disable-next-line -->
+12. [Clase 12 - Repaso I1](/clase_12)
