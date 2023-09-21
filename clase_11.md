@@ -5,7 +5,7 @@ info: |
 drawings:
   persist: false
 transition: slide-left
-title: IIC1103 - Introducción a la programación - Clase 10
+title: IIC1103 - Introducción a la programación - Clase 11
 fonts:
   # basically the text
   sans: 'Inter,Noto Color Emoji'
@@ -28,7 +28,7 @@ export:
 exportFilename: clase_10
 ---
 # Strings II
-## Clase 10 | Introducción a la programación
+## Clase 11 | Introducción a la programación
 
 ### Nicolás Quiroz | <naquiroz@uc.cl> | <iic1103@uc.cl>
 
