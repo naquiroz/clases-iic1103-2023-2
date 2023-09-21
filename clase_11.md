@@ -1,7 +1,7 @@
 ---
 theme: apple-basic
 info: |
-  ## Clase 10 IIC1103 - 2023-2 - Sección 12
+  ## Clase 11 IIC1103 - 2023-2 - Sección 12
 drawings:
   persist: false
 transition: slide-left
@@ -25,7 +25,7 @@ export:
   dark: false
   withClicks: true
   withToc: true
-exportFilename: clase_10
+exportFilename: clase_11
 ---
 # Strings II
 ## Clase 11 | Introducción a la programación
