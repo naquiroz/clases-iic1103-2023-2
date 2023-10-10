@@ -352,6 +352,18 @@ print(cafes) # Entrega ["Café con leche", "Mocha", "Latte", "Americano", "Irish
 
 Aquí es donde la cosa se poner _bizarrap_...
 
+
+---
+layout: center
+level: 1
+title: Quiz
+hideInToc: true
+---
+
+# Quiz mutabilidad
+
+<img class="w-50 mx-auto" src="/content/clase_15/qr_15.png" />
+
 ---
 layout: section
 title: Mutabilidad de listas - cuidado
