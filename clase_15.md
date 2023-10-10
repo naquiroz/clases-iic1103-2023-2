@@ -360,7 +360,7 @@ title: Quiz
 hideInToc: true
 ---
 
-# Quiz mutabilidad
+# Quiz mutabilidad (3 bitpoints)
 
 <img class="w-50 mx-auto" src="/content/clase_15/qr_15.png" />
 
