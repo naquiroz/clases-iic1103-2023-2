@@ -42,7 +42,7 @@ hideInToc: true
 
 1. Las notas de la I1 están publicadas, les fue muy bien! 🎉
 2. No hay bitpoints extra ni por la I1 ni por la T1 (hay casos de integridad académica en esta sección 😪)
-3. Mañana se publica la T2. Empezarla lo antes posible, es más larga que la T1.
+3. Hoy se publica la T2. Empezarla lo antes posible, es más larga que la T1.
 
 ---
 layout: center
