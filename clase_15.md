@@ -650,11 +650,12 @@ hideInToc: true
 ```python
 # Input
 dulces = []
-dulce = int(input())
-while dulce != "No me quedan dulces":
+mensaje_dulce = input()
+while mensaje_dulce != "No me quedan dulces":
+    dulce = int(mensaje_dulce)
     dulces += [dulce]
-    dulce = int(input())
-    casas += 1
+    mensaje_dulce = input()
+
 # Calcular eficiencia
 suma_dulces = 0
 for dulce in dulces:
