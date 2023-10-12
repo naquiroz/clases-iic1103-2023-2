@@ -42,3 +42,4 @@ exportFilename: landing
 12.  [Clase 12 - Repaso I1](/clase_12)
 <!-- markdownlint-disable-next-line -->
 13.  [Clase 15 - Listas I](/clase_15)
+14.  [Clase 15 - Listas I](/clase_16)
