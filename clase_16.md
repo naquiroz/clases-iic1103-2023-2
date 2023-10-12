@@ -420,16 +420,16 @@ hideInToc: true
 El cuervo tomó una Coca-Cola;Jack se puso sombrero de fiesta;El fantasma intentó hacer pizza, pero se le atravesó
 Coca-Cola
 sombrero
-pizza
+pizza,
 un té de calabaza=un gorro de payaso=spaghetti con ojos
 ```
 
 ### Output
 
 ```text
-Título mejorado: El cuervo tomó una spagheti con ojos
+Título mejorado: El cuervo tomó una spaghetti con ojos
 Título mejorado: Jack se puso de fiesta un gorro de payaso
-Título mejorado: El fantasma intentó hacer, pero se le atravesó un té de calabaza
+Título mejorado: El fantasma intentó hacer pero se le atravesó un té de calabaza
 ```
 
 ---
@@ -443,7 +443,7 @@ hideInToc: true
 ### Definición de la función
 
 ```python
-def mejorar_titulo(titulo, palabras_a_remover, frase_a_agregar):
+def mejorar_titulo(titulo, palabra_a_remover, frase_a_agregar):
     # Nuestro titulo final. Tendrá las palabras del titulo original, menos la palabra a remover
     # y luego las frases a agregar
     titulo_final = []
