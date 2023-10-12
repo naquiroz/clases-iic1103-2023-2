@@ -417,7 +417,7 @@ hideInToc: true
 ### Input
 
 ```text
-El cuervo tomó una Coca-Cola;Jack se puso sombrero de fiesta;El fantasma intentó hacer pizza, pero se le atravesó;
+El cuervo tomó una Coca-Cola;Jack se puso sombrero de fiesta;El fantasma intentó hacer pizza, pero se le atravesó
 Coca-Cola
 sombrero
 pizza
