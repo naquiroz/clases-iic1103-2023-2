@@ -338,13 +338,13 @@ compras = ["Leche", "Huevos", "Pan", "Mantequilla"]
 compras_original = compras[0:len(compras)] # O compras[:]
 
 lista_string = ""
-# Recorrer la lista con un for
-for i in range(len(compras)):
-    lista_string += compras[i] + ", "
+# Recorrer la lista con un while
+while len(compras) > 0:
+    lista_string += compras.pop(0) + ", "
     # >>> "Leche, Huevos, Pan, Mantequilla, "
 
 print(lista_string)
-print("Total:", len(compras)) # Aquí usamos la lista original
+print("Total:", len(compras_original)) # Aquí usamos la lista original
 ```
 
 ---
@@ -372,7 +372,7 @@ El `separador` es opcional, y si no se entrega, se usa el espacio como separador
 
 ```python
 # Peliculas de miedo
-peliculas = "Saw, Chucky, Annabelle, It, REC"
+peliculas = "Saw Chucky Annabelle It REC"
 # Lista de peliculas
 lista_peliculas = peliculas.split()
 print(lista_peliculas)
