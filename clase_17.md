@@ -44,7 +44,7 @@ hideInToc: true
 2. Ir a las SAP (sala de ayudantes presencial) para resolver dudas.
 
 ---
-layout: two-cols
+layout: default
 level: 1
 title: Repaso Clase Anterior
 hideInToc: true
@@ -52,7 +52,33 @@ hideInToc: true
 
 # Repaso Clase Anterior
 
+Para agregar un elemento al final de una lista, se puede utilizar el método `append()`. Por ejemplo:
 
+```python
+compras = ["Leche", "Huevos", "Pan", "Mantequilla"]
+compras.append("Café") # Agrega "Café" al final de la lista
+```
+
+Podemos retirar un elemento utilizando `pop()`, que además retorna el elemento eliminado.
+
+```python
+ultimo_elemento = compras.pop() # El último elemento será removido y guardado en 'ultimo_elemento'
+```
+
+Si queremos eliminar un elemento en una posición específica, podemos suministrar un índice a `pop()`
+
+```python
+segundo_elemento = compras.pop(1) # Eliminamos el segundo elemento
+```
+
+Cuidado al modificar listas durante un `for`. Usar `while` puede ser una solución.
+
+Finalmente, el método `split()` de los strings puede servir para dividir un string en una lista de strings.
+
+```python
+dulces = "M&M, Snickers, Twix, Milky Way, Kit Kat"
+lista_dulces = dulces.split(",")
+```
 
 ---
 layout: center
@@ -68,15 +94,16 @@ hideInToc: true
 ---
 layout: intro
 level: 1
+title: Listas
 ---
 
 # Motivación
 ## Listas de listas
 
 ---
-layout: two-cols
+layout: default
 level: 2
-title: Listas de listas - motivación
+title: Motivación
 hideInToc: false
 ---
 # Listas
@@ -88,7 +115,6 @@ Hasta ahora, hemos visto que las listas pueden guardar **cualquier** tipo de dat
 
 Algunos ejemplos de listas de listas son:
 
-- Una lista de listas de notas de alumnos
 - Una lista de listas de coordenadas de puntos
 - Una inventario de una tienda, donde cada producto tiene una lista de sus características
 - Una lista de alumnos por sección, donde sección tiene estudiantes.
@@ -96,20 +122,23 @@ Algunos ejemplos de listas de listas son:
 ---
 layout: default
 level: 2
-title: Listas de listas - idea
+title: idea
 hideInToc: true
 ---
 
 # Listas
 ## Idea de listas de listas
 
-Tenemos una cuadra que tiene varias casas. Cada casa tiene varios tipos de dulces. ¿Cómo podemos representar esto en listas de listas?
+Tenemos una cuadra que tiene varias casas. Cada casa tiene varios tipos de dulces. ¿Cómo podemos representar esto en una lista?
 
-| Indice casas | Tiene Twix | Tiene M&M | Tiene Snickers | Tiene Milky Way | Tiene Kit Kat |
+| Casa Nro. | Tiene Twix | Tiene M&M | Tiene Snickers | Tiene Milky Way | Tiene Kit Kat |
 | ------------ | ---------- | -------- | -------------- | --------------- | ------------- |
 | `0`          | `3`     | `0`  | `2`         | `0`         | `10`        |
 | `1`          | `0`    | `1`   | `0`        | `3`          | `0`       |
 | `2`          | `5`     | `4`   | `3`         | `3`          | `6`        |
+
+Cada casa tiene un índice, que es el número de cuenta de la casas (que va desde 0 hasta 2).
+Cada casa además tiene una lista de dulces, donde cada elemento de la lista es la cantidad de dulces de ese tipo que tiene la casa.
 
 ---
 layout: default
@@ -126,7 +155,7 @@ Para representar listas de listas, podemos usar listas dentro de listas. Por eje
 ```python
 # Lista de casas
 casas = [
-    # Casa 0
+    # Casa 0 (estos comentarios son solo para explicar, no son necesarios)
     [3, 0, 2, 0, 10],
     # Casa 1
     [0, 1, 0, 3, 0],
@@ -137,146 +166,167 @@ casas = [
 
 Cada item de la lista `casas` es una forma de modelar una casa. Cada casa es una lista de dulces. Por ejemplo, la casa 0 tiene 3 Twix, 0 M&M, 2 Snickers, 0 Milky Way y 10 Kit Kat.
 
+---
+layout: default
+level: 2
+title: ejemplos
+hideInToc: true
+---
+
+# Listas de listas
+## Ejemplos
+
+Existen muchas situaciones de la vida real donde se usan listas de listas. Por ejemplo, en una tienda, se puede tener una lista de productos, donde cada producto tiene una lista de sus características.
+
+```python
+# Lista de productos
+productos_jumbo = [
+    # Producto 0 (nombre, precio, stock, stock mínimo)
+    ["Jamón", 1000, 250, 100],
+    # Producto 1 (nombre, precio, stock, stock mínimo)
+    ["Queso", 500, 100, 50],
+    # Producto 3 (nombre, precio, stock, stock mínimo)
+    ["Café", 1500, 50, 20]
+]
+```
+
+❗Cada lista dentro de la lista `productos_jumbo` tiene 4 elementos de distintos tipos (str, int, int, int).
+
+❗La lista de listas está escrita en varias líneas, pero también se puede escribir en una sola línea.
+
+```python
+# Lista de productos
+productos_jumbo = [["Jamón", 1000, 250, 100], ["Queso", 500, 100, 50], ...]
+```
 
 ---
 layout: default
 level: 2
-title: Listas - aclaraciones for
+title: Indexación en listas de listas
 hideInToc: false
 ---
 
-# Aclaraciones
-## `for i in range(len(lista))`
+# Listas de listas
+## Indexación
 
-Para dejar de manera explícita la explicación, existe una **tercera** forma de recorrer una lista, que es usando `for i in range(len(lista))`.
-
-```python
-compras = ["Leche", "Huevos", "Pan", "Mantequilla"]
-
-# Recorrer la lista con un for
-for i in range(len(compras)):
-    print("Item:", compras[i])
-    # >>> Item: Leche
-    # >>> ...
-```
-
-Esto es equivalente a usar `while`, pero es más corto y más fácil de leer.
+Si queremos acceder a un elemento de una lista de listas, podemos usar la indexación. Por ejemplo, si queremos acceder al elemento `0` de la lista `casas`, podemos hacer lo siguiente:
 
 ```python
-i = 0
-while i < len(compras):
-    print("Item:", compras[i])
-    i += 1
-    # >>> Item: Leche
-    # >>> ...
+# Lista de casas
+casas = [
+    # Casa 0
+    [3, 0, 2, 0, 10],
+    # Casa 1
+    [0, 1, 0, 3, 0],
+    # Casa 2
+    [5, 4, 3, 3, 6]
+]
+casa_0 = casas[0]
+print(casa_0)
+# >>> [3, 0, 2, 0, 10]
 ```
+
+Sin embargo, si queremos acceder al elemento `0` de la lista `casa_0`, también podemos usar la indexación.
 
 ---
 layout: default
 level: 2
-title: Listas - aclaraciones for
-hideInToc: true
+title: Indexación anidada
+hideInToc: false
 ---
 
-# Listas
-## Editar elementos durante un `for`
+# Listas de listas
+## Indexación anidada
 
-**Tener mucho cuidado** cuando se editan elementos de una lista durante un `for`. Esto puede llevar a comportamientos inesperados.
+Si además quisiéramos acceder al elemento `0` de la lista `casa_0`, podemos usar la indexación anidada.
+Esto significa que podemos usar la indexación dentro de la indexación.
 
 ```python
-# Lista de compras
-compras = ["Leche", "Huevos", "Pan", "Mantequilla"]
-
-# Recorrer la lista con un for
-for i in range(len(compras)):
-    compra = compras.pop(i)
-    print("Item:", compra)
-    # >>> Item: Leche
-    # >>> Item: Pan
-    # >>> Se saltó el "Huevos"!
+# Lista de casas
+casas = [
+    # Casa 0
+    [3, 0, 2, 0, 10],
+    # ...
+]
+casa_0 = casas[0]
+primer_dulce_casa_0 = casa_0[0]
+print(primer_dulce_casa_0)
+# >>> 3
 ```
 
-Cuando se edita una lista durante un `for`, se puede saltar elementos. Esto es porque el `for` se mueve de elemento en elemento, pero como estamos editando la lista, los elementos se mueven.
-
----
-layout: two-cols
-level: 2
-title: Listas - aclaraciones for
-hideInToc: true
----
-
-# Listas
-## Editar elementos durante un `for`
-### ¿ Cual es la solución ?
-
-Para evitar este problema, podemos usar un `while` en vez de un `for` y usar el índice para recorrer la lista.
+Lo cual es equivalente a usar los corchetes de la indexación dos veces.
 
 ```python
-# Lista de compras
-compras = ["Leche", "Huevos", "Pan", "Mantequilla"]
-
-# Recorrer la lista con un while
-while len(compras) > 0:
-    compra = compras.pop(0)
-    print("Item:", compra)
-    # >>> Item: Leche
-    # >>> Item: Huevos
-    # >>> Item: Pan
-    # >>> Item: Mantequilla
-    # >>> Se imprimieron todos los elementos!
-```
-
-::right::
-
-Y en caso que luego necesitemos los datos originales, siempre es mejor armarse una copia de la lista original antes de recorrerla.
-
-```python
-# Lista de compras
-compras = ["Leche", "Huevos", "Pan", "Mantequilla"]
-# Copia de la lista de compras
-compras_original = compras[0:len(compras)] # O compras[:]
-
-lista_string = ""
-# Recorrer la lista con un while
-while len(compras) > 0:
-    lista_string += compras.pop(0) + ", "
-    # >>> "Leche, Huevos, Pan, Mantequilla, "
-
-print(lista_string)
-print("Total:", len(compras_original)) # Aquí usamos la lista original
+primer_dulce_casa_0 = casas[0][0]
+print(primer_dulce_casa_0)
+# >>> 3
 ```
 
 ---
 layout: default
-title: Operaciones con listas - split
+title: Mutabilidad en listas de listas
 level: 2
-hideInToc: true
+hideInToc: false
 ---
 
-# Operaciones con listas
-## string.split(separador)
+# Mutabilidad
+## Listas de listas
 
-Otra forma de crear listas es a partir de un string, usando el método `split`. `split(separador)` es un método que tienen los strings, y que separa un string en una lista de strings, usando el `separador` como separador.
-
-```python
-# String de dulces de haloween
-dulces = "M&M, Snickers, Twix, Milky Way, Kit Kat"
-# Lista de dulces
-lista_dulces = dulces.split(", ")
-print(lista_dulces)
-# >>> ["M&M", "Snickers", "Twix", "Milky Way", "Kit Kat"]
-```
-
-El `separador` es opcional, y si no se entrega, se usa el espacio como separador.
+Dado que una lista de listas es una lista, podemos modificar sus elementos usando la indexación.
 
 ```python
-# Peliculas de miedo
-peliculas = "Saw Chucky Annabelle It REC"
-# Lista de peliculas
-lista_peliculas = peliculas.split()
-print(lista_peliculas)
-# >>> ["Saw", "Chucky", "Annabelle", "It", "REC"]
+# Lista de casas
+casas = [
+    # Casa 0
+    [3, 0, 2, 0, 10],
+    # ...
+]
+# Modificamos la primera casa
+casas[0] = [0, 0, 0, 0, 0]
 ```
+
+También podemos modificar los elementos de las listas dentro de la lista.
+
+```python
+# Modificamos el primer dulce de la primera casa (asumiendo que casas[0] es [3, 0, 2, 0, 10])
+casas[0][0] = 0
+print(casas[0])
+# >>> [0, 0, 2, 0, 10]
+```
+
+Y eso es porque las listas,y por consecuencia **las listas de listas, son mutables**.
+
+---
+layout: default
+title: Listas de tipos mixtos
+level: 2
+hideInToc: false
+---
+# Listas de tipos mixtos
+
+Hasta ahora, hemos visto ejemplos de listas de listas donde todos los elementos de la lista son del mismo tipo. Pero, ¿qué pasa si queremos guardar elementos de distintos tipos en una lista de listas?
+
+Por ejemplo, ¿qué pasa si queremos guardar el nombre de un producto, su precio,
+una lista de ingredientes, stock y stock mínimo?
+
+```python
+# Lista de productos
+productos = [
+    # Producto 0 (nombre, precio, ingredientes, stock, stock mínimo)
+    ["Jamón", 1000, ["carne de cerdo", "sal", "conservantes"], 250, 100],
+    # Producto 1 (nombre, precio, ingredientes, stock, stock mínimo)
+    ["Queso", 500, ["leche", "sal", "conservantes"], 100, 50],
+    # Producto 3 (nombre, precio, ingredientes, stock, stock mínimo)
+    ["Coca Cola", 1500, ["agua", "azúcar", "conservantes"], 50, 20]
+]
+
+POSICION_INGREDIENTES = 2
+# Obtener numero de ingredientes de cada producto
+for producto in productos:
+    print(len(producto[POSICION_INGREDIENTES]))
+```
+
+Usamos variables para guardar la posición de los ingredientes, para que sea más fácil de entender.
 
 ---
 layout: section
@@ -286,80 +336,209 @@ title: Ejemplos
 # Ejemplo
 
 ---
-layout: default
+layout: center
 level: 2
-title: Ejemplos - mejores títulos
+title: Ejemplos - GeoTree
 hideInToc: true
 ---
 
-# Ejemplo
-## Mejores títulos
+# Introducción
 
-Eres director de una productora de películas de terror, pero los títulos que te están sugiriendo para tus películas no son muy buenos. Para esto, decides crear un programa que te ayude a mejorar los títulos de tus películas.
-Recibirás una línea con todas las películas (separadas por un punto y coma `;`). Luego recibirás una linea por cada pelicula, con una palabra a remover del título de la película.
-Finalmente, recibirás una sola línea con varias frases (separadas por un =) que deberás agregarlas a cada película (al final del título) ,en orden invertido, es decir, la ultima frase a la primera película.
+Estás realizando tu práctica en GeoTree, un emprendimiento UC que usa Python para armar árboles genealógicos. Sin embargo, están teniendo problemas en la implementación, por lo que te piden a ti, flamante alumno de Introducción a la Programación, que los ayudes a terminar su programa.
 
-Define una función `mejorar_titulo` que reciba una película, una palabra a remover y una frase a agregar, y retorne el título mejorado. Luego usa esta función para mejorar los títulos de tus películas.
-
-Por cada película debes imprimir `Título mejorado: <título_mejorado>`
+Hasta ahora, lo único que tienen es una representación con listas del árbol de una familia y las declaraciones que vas a necesitar. El árbol está representado por una lista donde, en cada elemento se guarda un _string_ con el nombre del miembro de la familia (no hay _strings_ repetidos),
+seguido de una lista de las posiciones de sus hijos dentro de la lista.
 
 ---
-layout: default
+layout: two-cols
 level: 2
-title: Ejemplos - mejores títulos
+title: Ejemplos - GeoTree
 hideInToc: true
 ---
 
-# Ejemplo
-## Mejores títulos
-
-### Input
+Por ejemplo, la siguiente variable 'arbol'
 
 ```text
-El cuervo tomó una Coca-Cola;Jack se puso sombrero de fiesta;El fantasma intentó hacer pizza, pero se le atravesó
-Coca-Cola
-sombrero
-pizza,
-un té de calabaza=un gorro de payaso=spaghetti con ojos
+arbol = [
+["Abraham", [1,2]],    #0
+["Herb", []],               #1
+["Homer", [3,4,5]],    #2
+["Bart", []],                #3
+["Maggie", []],          #4
+["Lisa", []],                 #5
+["Marge", [3,4,5]],     #6
+["Mona", [2]],            #7
+["Clancy", [6,10,11]],  #8
+["Jackie", [6,10,11]],   #9
+["Selma", [12]],          #10
+["Patty", []],                #11
+["Ling", []]                  #12
+]
 ```
 
-### Output
+::right::
 
-```text
-Título mejorado: El cuervo tomó una spaghetti con ojos
-Título mejorado: Jack se puso de fiesta un gorro de payaso
-Título mejorado: El fantasma intentó hacer pero se le atravesó un té de calabaza
+Representa el siguiente arbol genealogico:
+
+![simpsons.png](content/clase_17/simpsons.png)
+
+(Cuidado que Herb es hijo únicamente de Abraham, y no de Mona)
+
+---
+layout: center
+level: 2
+title: Ejemplos - GeoTree
+hideInToc: true
+---
+
+# Objetivo
+
+Tu objetivo es implementar las siguientes funciones:
+
+- _**hijos(a,n):**_ recibe una _lista_ a con el árbol genealógico y un _string_ n con el nombre de un integrante de la familia. Retorna una _lista_ de _strings_ con los nombres de los hijos de ese integrante. Si el integrante no tiene hijos, retorna una _lista_ vacía.
+
+- _**padres(a,n):**_ recibe una _lista_ a con el árbol genealógico y un _string_ n con el nombre de un integrante de la familia. Retorna una _lista_ de _strings_ con los nombres de los padres de ese integrante. Si el integrante no tiene padres, retorna una _lista_ vacía.
+-
+
+**IMPORTANTE: Solo** _**debes implementar las funciones pedidas, el resto ya se encuentra implementado.**_
+
+---
+layout: center
+level: 2
+title: Ejemplos - GeoTree
+hideInToc: true
+---
+
+## Input Format
+
+No debes preocuparte del input, solo de crear las funciones correctamente.
+
+## Output Format
+
+Se imprime la lista con los padres o hijos del integrante entregado en los parámetros.
+
+---
+layout: two-cols
+level: 2
+title: Ejemplos - GeoTree
+hideInToc: true
+---
+
+## Ejemplos
+
+### Input Test Case 00
+
+```python
+arbol = [
+["Abraham", [1,2]],
+["Herb", []],
+["Homer", [3,4,5]],
+["Bart", []],
+["Maggie", []],
+["Lisa", []],
+["Marge", [3,4,5]],
+["Mona", [2]],
+["Clancy", [6,10,11]],
+["Jackie", [6,10,11]],
+["Selma", [12]],
+["Patty", []],
+["Ling", []]
+]
+resultado = hijos(arbol, 'Marge')
+print(resultado)
+
 ```
+
+::right::
+### Output Test Case 00
+
+```python
+['Bart', 'Maggie', 'Lisa']
+```
+
+**Explicación:** Si nos fijamos en el árbol genealógico, podemos notar que los hijos de Marge son Bart, Lisa y Maggie.
+Esto lo podemos ver dado que la lista que contiene al nombre "Marge" (Elemento en el indice 6) tiene la lista con los indices 3, 4 y 5. Observando los elementos de la lista arbol en estos indices, podemos ver que se encuentran las sub-listas con los nombres "Bart", "Lisa" y "Maggie".
+
+---
+layout: two-cols
+level: 2
+title: Ejemplos - GeoTree
+hideInToc: true
+---
+
+### Input Test Case 01
+
+```python
+arbol = [
+["Abraham", [1,2]],
+["Herb", []],
+["Homer", [3,4,5]],
+["Bart", []],
+["Maggie", []],
+["Lisa", []],
+["Marge", [3,4,5]],
+["Mona", [2]],
+["Clancy", [6,10,11]],
+["Jackie", [6,10,11]],
+["Selma", [12]],
+["Patty", []],
+["Ling", []]
+]
+resultado = padres(arbol, 'Homer')
+print(resultado)
+```
+
+::right::
+### Output Test Case 01
+
+```python
+['Abraham', 'Mona']
+```
+
+**Explicación:** Si nos fijamos en el árbol genealógico, podemos notar que los padres de Homer son Abraham y Mona.
+Esto lo podemos ver dado que las listas que contiene al nombre "Mona" (Elemento en el indice 7) y al nombre "Abraham" (Elemento en el indice 0) tiene la lista con el indice 2, donde se encuentra ubicada la sub-lista con el nombre "Homer".
 
 ---
 layout: default
 level: 2
-title: Ejemplos - solución
 hideInToc: true
 ---
 
 ## Solución
-### Definición de la función
 
-```python
-def mejorar_titulo(titulo, palabra_a_remover, frase_a_agregar):
-    # Nuestro titulo final. Tendrá las palabras del titulo original, menos la palabra a remover
-    # y luego las frases a agregar
-    titulo_final = []
-    # Dividimos el titulo en palabras
-    palabras = titulo.split()
-    # Recorremos las palabras
-    for palabra in palabras:
-        # Si la palabra no es la palabra a remover, la agregamos al titulo final
-        if palabra != palabra_a_remover:
-            titulo_final.append(palabra)
-    titulo_a_entregar = ""
-    for palabra in titulo_final:
-        titulo_a_entregar += palabra + " "
-    # Agregamos la frase a agregar al final del titulo
-    titulo_a_entregar += frase_a_agregar
-    return titulo_a_entregar
+```python {1-3|4-17|20-32} {lines: true, maxHeight: '350px'}
+# Definimos las constantes para que sea mas facil de entender
+POSICION_NOMBRE = 0
+POSICION_HIJOS = 1
+# Le colocaremos mejores nombres a los parametros
+# de la funcion para que sea mas facil de entender
+def hijos(arbol, nombre_de_interes):
+    # Buscamos el nombre en la lista
+    for indice_hijo in range(len(arbol)):
+        if arbol[indice_hijo][POSICION_NOMBRE] == nombre_de_interes:
+            # Si lo encontramos, retornamos la lista de hijos
+            hijos_obtenidos = []
+            indices_hijos = arbol[indice_hijo][POSICION_HIJOS]
+            for indice_hijo in indices_hijos:
+                hijos_obtenidos.append(arbol[indice_hijo][POSICION_NOMBRE])
+            return hijos_obtenidos
+    # Si no lo encontramos, retornamos una lista vacia
+    return []
 
+
+def padres(arbol, nombre_de_interes):
+    # Buscamos el nombre en la lista
+    for indice_hijo in range(len(arbol)):
+        if arbol[indice_hijo][POSICION_NOMBRE] == nombre_de_interes:
+            # Si lo encontramos, usamos el indice del hijo y buscamos
+            # los nombres de los padres (si tienen al hijo en su lista)
+            padres = []
+            for posible_padre in range(len(a)):
+                if indice_hijo in arbol[posible_padre][POSICION_HIJOS]:
+                    padres.append(arbol[posible_padre][POSICION_NOMBRE])
+
+    # Si no lo encontramos, retornamos una lista vacia
+    return []
 ```
 
 ---
@@ -378,16 +557,16 @@ peliculas = input().split(";")
 
 # Recibimos las palabras a remover
 palabras_a_remover = []
-for i in range(len(peliculas)):
+for indice_hijo in range(len(peliculas)):
     palabras_a_remover.append(input())
 
 # Recibimos las frases a agregar
 frases_a_agregar = input().split("=")
-for i in range(len(peliculas)):
+for indice_hijo in range(len(peliculas)):
     # Por cada pelicula, mejoramos el titulo
     # Extraemos la ultima frase a agregar con pop() sin parametros
     # para sacar el ultimo elemento de la lista
-    titulo_mejorado = mejorar_titulo(peliculas[i], palabras_a_remover[i], frases_a_agregar.pop())
+    titulo_mejorado = mejorar_titulo(peliculas[indice_hijo], palabras_a_remover[indice_hijo], frases_a_agregar.pop())
     print("Título mejorado:", titulo_mejorado)
 ```
 
