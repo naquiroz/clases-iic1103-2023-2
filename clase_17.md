@@ -455,7 +455,8 @@ arbol = [
 
 Representa el siguiente arbol genealogico:
 
-![simpsons.png](content/clase_17/simpsons.png)
+<img class="w-50 mx-auto" src="/content/clase_17/simpsons.png" />
+
 
 (Cuidado que Herb es hijo únicamente de Abraham, y no de Mona)
 
