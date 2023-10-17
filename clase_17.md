@@ -28,7 +28,7 @@ export:
 exportFilename: clase_17
 ---
 # Listas de listas
-## Clase 16 | Introducción a la programación
+## Clase 17 | Introducción a la programación
 
 ### Nicolás Quiroz | <naquiroz@uc.cl> | <iic1103@uc.cl>
 
