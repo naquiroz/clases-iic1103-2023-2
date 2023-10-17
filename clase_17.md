@@ -381,7 +381,6 @@ tiene un solo item (asumiremos repisas de un solo nivel) y cada item se represen
 un SKU (Stock Keeping Unit), que es un número único que identifica a cada producto además de inventario. Por ejemplo, para una bodega de muebles de oficina:
 
 ```python
-# Lista de repisas
 repisas = [
     # Repisa 0
     [["SKU-0001", 10], ["SKU-0002", 5], ["SKU-0003", 0]],
@@ -392,7 +391,6 @@ repisas = [
     # Repisa 3
     [["SKU-0010", 9], ["SKU-0011", 7], ["SKU-0012", 0]],
 ]
-
 # Stock SKU-0001
 fila = 0
 columna = 0
@@ -626,16 +624,11 @@ hideInToc: true
 
 # Coming soon...
 
-Hemos guardado números, booleanos, strings dentro de listas. Pero, ¿podemos guardar otros tipos de datos?
+Que ocurre si queremos repetir un algoritmo varias veces? 🤔
 
-Que tal por ejemplo... ¿una lista dentro de otra lista?
+Hasta ahora hemos visto for y while, pero hay más!
 
-¿O una lista dentro de una lista dentro de otra lista?
-
-Veremos esto en la próxima clase.
-
-Nos vemos la próxima clase!
-
+La proxima clase veremos un concepto con funciones, que se llama la recursión.
 ---
 layout: end
 level: 1
