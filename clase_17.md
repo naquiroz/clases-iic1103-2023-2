@@ -329,6 +329,81 @@ for producto in productos:
 Usamos variables para guardar la posición de los ingredientes, para que sea más fácil de entender.
 
 ---
+layout: default
+level: 2
+title: Listas de listas como matrices
+hideInToc: true
+---
+
+# Listas de listas
+## Entendiendo las listas de listas como matrices
+
+Las listas de listas suelen usarse para representar matrices. Por ejemplo, la siguiente matriz:
+
+$$
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+$$
+
+Se puede representar como la siguiente lista de listas:
+
+```python
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+```
+
+También hay otros tipos de matrices como por ejemplo:
+
+- Tableros de ajedrez, donde cada casilla es un elemento de la lista.
+- Mapas, donde cada elemento de la lista es una fila del mapa y cada elemento de la fila es una casilla del mapa.
+- Imágenes, donde cada elemento de la lista es una fila de la imagen y cada elemento de la fila es un pixel de la imagen.
+- Y muchos más...
+
+
+---
+layout: default
+level: 2
+title: Ejemplo - Matriz
+hideInToc: true
+---
+
+# Ejemplo
+## Matriz
+
+Supongamos queremos representar el inventario que tiene una bodega de productos. La bodega tiene filas de repisas, y cada repisa tiene columnas de productos. Cada columna
+tiene un solo item (asumiremos repisas de un solo nivel) y cada item se representa como
+un SKU (Stock Keeping Unit), que es un número único que identifica a cada producto además de inventario. Por ejemplo, para una bodega de muebles de oficina:
+
+```python
+# Lista de repisas
+repisas = [
+    # Repisa 0
+    [["SKU-0001", 10], ["SKU-0002", 5], ["SKU-0003", 0]],
+    # Repisa 1
+    [["SKU-0004", 23], ["SKU-0005", 13], ["SKU-0006", 2]],
+    # Repisa 2
+    [["SKU-0007", 2], ["SKU-0008", 1], ["SKU-0009", 3]],
+    # Repisa 3
+    [["SKU-0010", 9], ["SKU-0011", 7], ["SKU-0012", 0]],
+]
+
+# Stock SKU-0001
+fila = 0
+columna = 0
+POSICION_STOCK = 1
+print(repisa[fila][columna][POSICION_STOCK])
+# >>> 10
+```
+
+En este caso es una lista, con 4 elementos, donde cada elemento es una lista de 3 elementos, donde cada elemento es una lista de 2 elementos.
+
+---
 layout: section
 level: 1
 title: Ejemplos
@@ -533,41 +608,12 @@ def padres(arbol, nombre_de_interes):
             # Si lo encontramos, usamos el indice del hijo y buscamos
             # los nombres de los padres (si tienen al hijo en su lista)
             padres = []
-            for posible_padre in range(len(a)):
+            for posible_padre in range(len(arbol)):
                 if indice_hijo in arbol[posible_padre][POSICION_HIJOS]:
                     padres.append(arbol[posible_padre][POSICION_NOMBRE])
-
+            return padres
     # Si no lo encontramos, retornamos una lista vacia
     return []
-```
-
----
-layout: default
-level: 2
-title: Ejemplos - solución
-hideInToc: true
----
-
-## Solución
-### Usando la función
-
-```python
-# Input
-peliculas = input().split(";")
-
-# Recibimos las palabras a remover
-palabras_a_remover = []
-for indice_hijo in range(len(peliculas)):
-    palabras_a_remover.append(input())
-
-# Recibimos las frases a agregar
-frases_a_agregar = input().split("=")
-for indice_hijo in range(len(peliculas)):
-    # Por cada pelicula, mejoramos el titulo
-    # Extraemos la ultima frase a agregar con pop() sin parametros
-    # para sacar el ultimo elemento de la lista
-    titulo_mejorado = mejorar_titulo(peliculas[indice_hijo], palabras_a_remover[indice_hijo], frases_a_agregar.pop())
-    print("Título mejorado:", titulo_mejorado)
 ```
 
 ---
