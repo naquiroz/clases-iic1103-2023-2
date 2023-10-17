@@ -436,18 +436,18 @@ Por ejemplo, la siguiente variable 'arbol'
 ```text
 arbol = [
 ["Abraham", [1,2]],    #0
-["Herb", []],               #1
+["Herb", []],          #1
 ["Homer", [3,4,5]],    #2
-["Bart", []],                #3
-["Maggie", []],          #4
-["Lisa", []],                 #5
-["Marge", [3,4,5]],     #6
-["Mona", [2]],            #7
-["Clancy", [6,10,11]],  #8
-["Jackie", [6,10,11]],   #9
-["Selma", [12]],          #10
-["Patty", []],                #11
-["Ling", []]                  #12
+["Bart", []],          #3
+["Maggie", []],        #4
+["Lisa", []],          #5
+["Marge", [3,4,5]],    #6
+["Mona", [2]],         #7
+["Clancy", [6,10,11]], #8
+["Jackie", [6,10,11]], #9
+["Selma", [12]],       #10
+["Patty", []],         #11
+["Ling", []]           #12
 ]
 ```
 
@@ -455,7 +455,7 @@ arbol = [
 
 Representa el siguiente arbol genealogico:
 
-<img class="w-50 mx-auto" src="/content/clase_17/simpsons.png" />
+<img class="w-100 mx-auto" src="/content/clase_17/simpsons.png" />
 
 
 (Cuidado que Herb es hijo únicamente de Abraham, y no de Mona)
