@@ -42,4 +42,4 @@ exportFilename: landing
 - [Clase 12 - Repaso I1](/clase_12)
 - [Clase 15 - Listas I](/clase_15)
 - [Clase 16 - Listas II](/clase_16)
-- [Clase 17 - Listas II](/clase_17)
+- [Clase 17 - Listas de listas](/clase_17)
