@@ -41,7 +41,10 @@ hideInToc: true
 # Anuncios
 
 1. Recordar tarea 2 se entrega el 26 de octubre.
-2. Ir a las SAP (sala de ayudantes presencial) para resolver dudas.
+2. Compilado para la I2 publicado
+3. Concurso de memes, participen!
+4. Disfraces halloween, participen!
+5. Quieren ayudantía extra para la I2? Responder poll en telegram.
 
 ---
 layout: two-cols
