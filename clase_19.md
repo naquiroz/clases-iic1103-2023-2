@@ -606,3 +606,33 @@ for estrella in estrellas:
 ```
 
 Nota: Este programa asume que todas las líneas en el archivo están en el formato correcto y que todas las mediciones de brillo son números enteros. Si estos supuestos no son ciertos, se deben hacer cambios en el programa para manejar estos casos.
+
+---
+layout: center
+level: 1
+title: Spoiler repaso
+hideInToc: true
+---
+
+# Coming soon...
+
+Vimos cómo leer archivos, pero de que nos sirve si no podemos guardar la información que leemos? 🤔
+
+No formas más estandarizadas de guardar información, separadas por ejemplo por comas?
+
+Lo veremos en la próxima clase!
+
+---
+layout: end
+level: 1
+title: Créditos
+hideInToc: true
+---
+
+# Créditos
+
+Esta clase fue preparada con el apoyo de Valeria Herskovic, Jorge Muñoz, Cristian Ruz, Nicolás Alvarado y José Tomás Marquinez
+
+<Profesores class="mx-auto" />
+
+¡Muchas gracias a todos/as!
