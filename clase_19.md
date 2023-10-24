@@ -107,6 +107,17 @@ def expandir_coro(coro):
 
 ---
 layout: center
+level: 2
+title: Agenda
+hideInToc: true
+---
+
+# Agenda
+
+<Toc />
+
+---
+layout: center
 level: 1
 title: Funciones Recursivas
 hideInToc: true
