@@ -216,6 +216,7 @@ Por ejemplo:
 ```python
 def de_la_mama():
     print("de la mama")
+    de_la_mama()
 
 print("La mama")
 de_la_mama()
