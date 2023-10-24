@@ -44,3 +44,4 @@ exportFilename: landing
 - [Clase 16 - Listas II](/clase_16)
 - [Clase 17 - Listas de listas](/clase_17)
 - [Clase 18 - Funciones recursivas](/clase_18)
+- [Clase 19 - Funciones recursivas II y Archivos I](/clase_19)
