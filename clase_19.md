@@ -107,6 +107,16 @@ def expandir_coro(coro):
 
 ---
 layout: center
+level: 1
+title: Funciones Recursivas
+hideInToc: true
+---
+
+## Nota Importante
+Para evitar llamados infinitos, toda función recursiva debe tener al menos un caso base que no haga un llamado recursivo.
+
+---
+layout: center
 level: 2
 title: Agenda
 hideInToc: true
@@ -115,16 +125,6 @@ hideInToc: true
 # Agenda
 
 <Toc />
-
----
-layout: center
-level: 1
-title: Funciones Recursivas
-hideInToc: true
----
-
-## Nota Importante
-Para evitar llamados infinitos, toda función recursiva debe tener al menos un caso base que no haga un llamado recursivo.
 
 ---
 layout: section
@@ -377,7 +377,7 @@ title: Archivos - Cómo leerlos - `read()`
 hideInToc: false
 ---
 
-# Archivos - Cómo leerlos - <span class="text-white">`read()`</span>
+# Archivos - Cómo leerlos - <span class="text-black dark:text-white">`read()`</span>
 ## 👉🏻 Esta diapositiva es material extra
 
 Para leer el archivo completo como un solo string, usamos la función `read()`.
@@ -408,7 +408,7 @@ title: Archivos - `"\n"` y `split()`
 hideInToc: false
 ---
 
-# Archivos - <span class="text-white">`"\n"`</span>
+# Archivos - <span class="text-black dark:text-white">`"\n"`</span>
 ## Saltos de línea
 
 Los saltos de línea son caracteres especiales (igual que los espacios) que indican que el texto debe pasar a la siguiente línea. En Python, el salto de línea se representa con el caracter `"\n"`.
@@ -454,7 +454,7 @@ level: 2
 title: Archivos - `strip()`
 hideInToc: false
 ---
-# Archivos - <span class="text-white">`strip()`</span>
+# Archivos - <span class="text-black dark:text-white">`strip()`</span>
 
 Vimos que el string que nos devuelve `read()` tiene saltos de línea. ¿Cómo podemos sacarlos?
 
@@ -487,7 +487,7 @@ hideInToc: false
 ---
 
 # Archivos
-## Cómo leerlos - <span class="text-white">`readlines()`</span> y <span class="text-white">`readline()`</span>
+## Cómo leerlos - <span class="text-black dark:text-white">`readlines()`</span> y <span class="text-black dark:text-white">`readline()`</span>
 
 Otra forma de leer archivos es línea por línea. Para eso, tenemos dos funciones:
 
