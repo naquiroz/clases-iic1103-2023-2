@@ -446,7 +446,8 @@ for linea in lineas:
     # Buscamos si el usuario ya está en la lista de usuarios
     usuario_encontrado = False
     usuario_indice = 0
-    while not usuario_encontrado:
+
+    while not usuario_encontrado and len(usuarios) > 0:
         usuario = usuarios[usuario_indice]
         # Por cada usuarios:
         # Si el usuario ya está en la lista
