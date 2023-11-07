@@ -1,11 +1,11 @@
 ---
 theme: apple-basic
 info: |
-  ## Clase 22 IIC1103 - 2023-2 - Sección 12
+  ## Clase 23 IIC1103 - 2023-2 - Sección 12
 drawings:
   persist: false
 transition: slide-left
-title: IIC1103 - Introducción a la programación - Clase 22
+title: IIC1103 - Introducción a la programación - Clase 23
 fonts:
   # basically the text
   sans: 'Inter,Noto Color Emoji'
@@ -25,10 +25,10 @@ export:
   dark: false
   withClicks: true
   withToc: true
-exportFilename: clase_22
+exportFilename: clase_23
 ---
 # OOP: Tipos propios I
-## Clase 22 | Introducción a la programación
+## Clase 23 | Introducción a la programación
 
 ### Nicolás Quiroz | <naquiroz@uc.cl> | <iic1103@uc.cl>
 

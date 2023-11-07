@@ -47,3 +47,4 @@ exportFilename: landing
 - [Clase 19 - Funciones recursivas II y Archivos I](/clase_19)
 - [Clase 20 - Archivos II](/clase_20)
 - [Clase 21 - Repaso I2](/clase_21)
+- [Clase 23 - OOP: Tipos propios I](/clase_23)
