@@ -1,7 +1,7 @@
 ---
 theme: apple-basic
 info: |
-  ## Clase 13 IIC1103 - 2023-2 - Sección 12
+  ## Clase 20 IIC1103 - 2023-2 - Sección 12
 drawings:
   persist: false
 transition: slide-left
@@ -42,7 +42,6 @@ hideInToc: true
 
 1. Recordar tarea 2 se entrega hoy!
 2. Disfraces halloween, próximo martes.
-
 
 ---
 layout: default

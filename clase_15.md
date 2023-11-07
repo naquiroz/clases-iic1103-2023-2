@@ -1,7 +1,7 @@
 ---
 theme: apple-basic
 info: |
-  ## Clase 13 IIC1103 - 2023-2 - Sección 12
+  ## Clase 15 IIC1103 - 2023-2 - Sección 12
 drawings:
   persist: false
 transition: slide-left
