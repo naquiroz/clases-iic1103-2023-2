@@ -1,8 +1,31 @@
 ---
-layout: section
+theme: apple-basic
+info: |
+  ## Clase 24 IIC1103 - 2023-2 - Sección 12
+drawings:
+  persist: false
+transition: slide-left
+title: IIC1103 - Introducción a la programación - Clase 24
+fonts:
+  # basically the text
+  sans: 'Inter,Noto Color Emoji'
+  # use with `font-serif` css class from windicss
+  serif: 'Inter,Noto Color Emoji'
+  # for code blocks, inline code, etc.
+  mono: 'Fira Code,Noto Color Emoji'
+  weights: '300,700,900'
+layout: intro
 level: 1
-title: OOP Tipos propios II
-hideInToc: False
+hideInToc: true
+download: true
+presenter: dev
+export:
+  format: pdf
+  timeout: 30000
+  dark: false
+  withClicks: true
+  withToc: true
+exportFilename: clase_24
 ---
 
 # OOP: Tipos propios II
@@ -171,8 +194,6 @@ hideInToc: False
 
 # Reutilización de métodos
 
-## Usando métodos dentro de otros métodos
-
 Podemos usar métodos dentro de otros métodos. Por ejemplo, podemos crear un método `usar_ducha` que gasta 10 litros de agua por minuto y reutiliza el método `consumir_agua` pero además consume 7 metros cúbicos de gas por minuto.
 
 ```python
@@ -183,11 +204,9 @@ class Casa:
         self.ventanas = [False] * n_ventanas
         self.color = color
         self.consumo_servicios_basicos = [0, 0, 0]
-
     def consumir_agua(self, litros):
         """Recibe un número de litros y aumenta el consumo de agua en ese número."""
         self.consumo_servicios_basicos[0] += litros
-
     def usar_ducha(self, minutos):
         """Recibe un número de minutos y gasta 10 litros de agua por minuto."""
         self.consumir_agua(minutos * 10)
@@ -210,7 +229,7 @@ print(casa_1.consumo_servicios_basicos)
 ---
 layout: center
 level: 2
-title: Motivación para definir `__str__`
+title: Motivación para definir str
 hideInToc: False
 ---
 
@@ -223,7 +242,7 @@ Sería útil tener una forma rápida y fácil de obtener una representación en 
 ---
 layout: center
 level: 2
-title: Motivación para definir `__str__`
+title: Motivación para definir str
 hideInToc: true
 ---
 
@@ -403,6 +422,9 @@ Define los métodos
 - `eliminar_producto(producto)` : Recibe un producto de la forma `[nombre, precio]` y lo elimina de la lista de productos.
 - `calcular_total()` : Calcula el total del pedido como la suma de los precios de los productos.
 - `enviar_pedido()` : Cambia el estado del pedido a `"en camino"`.
+
+::right::
+
 - `entregar_pedido()`. Cambia el estado del pedido a `"entregado"`.
 - `pagar(monto)`: Cambia el estado del pedido a `"entregado"` y retorna el vuelto como `monto - total`.
 - `__str__` : Retorna una string con el estado del pedido, de la forma
@@ -424,7 +446,7 @@ title: Solución
 hideInToc: False
 ---
 
-```python {1-14|16-31|33-43|45-51|53-65|67-81} {lines: true, maxHeight: '350px'}
+```python {1-14|16-28|30-41} {lines: true, maxHeight: '350px'}
 class Pedido:
     def __init__(self, nombre, direccion):
         self.nombre = nombre
@@ -479,11 +501,9 @@ hideInToc: true
 
 Ahora vimos el comienzo de la programación orientada a objetos, pero aún esto es solo el comienzo. Veremos más adelante:
 
-1. Cómo usar métodos en otros métodos.
-2. Cómo hacer la representación de una clase en forma de string.
-3. Cómo crear objetos dentro de otros objetos.
-4. Como crear listas de objetos pero dentro de otros objetos.
-5. Cómo usar distintos objetos en otros objetos.
+1. Cómo crear objetos dentro de otros objetos.
+2. Como crear listas de objetos pero dentro de otros objetos.
+3. Cómo usar distintos objetos en otros objetos.
 
 Y mucho más...
 Nos vemos en la próxima clase.
