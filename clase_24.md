@@ -604,11 +604,10 @@ hideInToc: true
 
 # Coming soon...
 
-Ahora vimos el comienzo de la programación orientada a objetos, pero aún esto es solo el comienzo. Veremos más adelante:
+Ahora vimos la primera parte de la programación orientada a objetos, pero aún nos quedan algunas cosas. Veremos más adelante:
 
 1. Cómo crear objetos dentro de otros objetos.
 2. Como crear listas de objetos pero dentro de otros objetos.
 3. Cómo usar distintos objetos en otros objetos.
 
-Y mucho más...
 Nos vemos en la próxima clase.
