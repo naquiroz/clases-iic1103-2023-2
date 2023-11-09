@@ -74,6 +74,15 @@ Para crear una instancia de una clase, usamos el nombre de la clase seguido de p
 casa_1 = Casa("Benito Rebolledo #3032", 4, "Rojo")
 ```
 
+---
+layout: default
+level: 2
+title: Repaso Clase Anterior
+hideInToc: False
+---
+
+# Repaso Clase Anterior
+
 El método `__init__` es un método especial que se llama automáticamente cuando se crea una instancia de la clase. En este se definen los **atributos** que tendrá la instancia. Además del método `__init__`, las clases pueden tener otros métodos.
 
 Por ejemplo, si queremos definir el método `abrir_puerta` de la clase `Casa` que utilice un atributo de la clase, hacemos:
@@ -105,7 +114,7 @@ hideInToc: true
 
 ---
 layout: default
-level: 2
+level: 1
 title: Motivación
 hideInToc: False
 ---
@@ -117,7 +126,7 @@ sus propios atributos (son como variables asociados a una instancia de la clase)
 
 ---
 layout: default
-level: 2
+level: 1
 title: Uso de métodos
 hideInToc: False
 ---
@@ -154,7 +163,7 @@ casa_2.consumir_agua(200)
 
 ---
 layout: default
-level: 2
+level: 1
 title: Uso de atributos
 hideInToc: False
 ---
@@ -187,7 +196,7 @@ if casa_1.puerta_abierta:
 
 ---
 layout: two-cols
-level: 2
+level: 1
 title: Reutilización de métodos
 hideInToc: False
 ---
@@ -228,8 +237,8 @@ print(casa_1.consumo_servicios_basicos)
 
 ---
 layout: center
-level: 2
-title: Motivación para definir str
+level: 1
+title: Motivación para definir `__str__`
 hideInToc: False
 ---
 
@@ -241,7 +250,7 @@ Sería útil tener una forma rápida y fácil de obtener una representación en 
 
 ---
 layout: center
-level: 2
+level: 1
 title: Motivación para definir str
 hideInToc: true
 ---
@@ -278,8 +287,8 @@ class Casa:
 
 ---
 layout: center
-level: 2
-title: Motivación para definir `__str__`
+level: 1
+title: Motivación para definir str
 hideInToc: true
 ---
 
@@ -319,8 +328,8 @@ Consumo de servicios básicos: [50, 100, 150]
 
 ---
 layout: default
-level: 2
-title: str
+level: 1
+title: Metodo `__str__`
 hideInToc: False
 ---
 
@@ -388,7 +397,7 @@ class Casa:
 
 ---
 layout: default
-level: 2
+level: 1
 title: Ejemplo avanzado
 hideInToc: False
 ---
@@ -396,7 +405,8 @@ hideInToc: False
 # Ejemplo avanzado
 ## Pedidos de comida
 
-Supongamos que queremos hacer un programa que nos permita hacer pedidos de comida. Para eso, vamos a crear una clase `Pedido` que nos permita crear pedidos de comida. Cada pedido tiene un nombre, una dirección, una lista de productos con sus precios, un estado (pendiente, en camino o entregado) y un total.
+Supongamos que queremos hacer un programa que nos permita hacer pedidos de comida. Para eso, vamos a crear una clase `Pedido` que nos permita crear pedidos de comida.
+Cada pedido tiene un nombre, una dirección, una lista de productos con sus precios, un estado (pendiente, en camino o entregado) y un total.
 
 Define los siguientes atributos para la clase `Pedido`:
 
@@ -406,10 +416,10 @@ Define los siguientes atributos para la clase `Pedido`:
 4. `estado`: Estado del pedido, puede ser `"pendiente"`, `"en camino"` o `"entregado"`.
 
 ---
-layout: default
-level: 2
+layout: two-cols
+level: 1
 title: Ejemplo avanzado
-hideInToc: False
+hideInToc: True
 ---
 
 # Ejemplo avanzado
@@ -420,12 +430,21 @@ Define los métodos
 - `__init__(self, nombre, direccion)`: Constructor de la clase, recibe el nombre y la dirección del pedido. Inicializa el resto de los atributos.
 - `agregar_producto(producto)` : Recibe un producto de la forma `[nombre, precio]` y lo agrega a la lista de productos.
 - `eliminar_producto(producto)` : Recibe un producto de la forma `[nombre, precio]` y lo elimina de la lista de productos.
-- `calcular_total()` : Calcula el total del pedido como la suma de los precios de los productos.
-- `enviar_pedido()` : Cambia el estado del pedido a `"en camino"`.
 
 ::right::
 
+- `calcular_total()` : Calcula y retorna el total del pedido como la suma de los precios de los productos.
+- `enviar_pedido()` : Cambia el estado del pedido a `"en camino"`.
+
 - `entregar_pedido()`. Cambia el estado del pedido a `"entregado"`.
+
+---
+layout: default
+level: 1
+title: Ejemplo avanzado
+hideInToc: True
+---
+
 - `pagar(monto)`: Cambia el estado del pedido a `"entregado"` y retorna el vuelto como `monto - total`.
 - `__str__` : Retorna una string con el estado del pedido, de la forma
 
@@ -439,33 +458,91 @@ Define los métodos
     Estado: <estado>
     ```
 
+Luego, crea tres pedidos recibiendo el nombre y la dirección como inputs (uno por linea).
+Por cada pedido recibirás luego un numero que indica la cantidad de productos que se van a agregar al pedido.
+Por cada linea, recibirás el nombre y el precio del producto separados por un espacio.
+Finalmente, recibirás un numero que indica la cantidad de productos que se van a eliminar del pedido.
+Por cada linea, recibirás el nombre del producto, debes eliminar todas las ocurrencias de este producto en el pedido.
+Luego de esto, debes enviar el pedido. Una vez enviado, debes imprimir el pedido.
+Luego debes recibir el monto con el que se va a pagar el pedido y debes imprimir el pedido nuevamente, junto con el vuelto en una linea aparte.
+
+---
+layout: default
+level: 1
+title: Ejemplo avanzado
+hideInToc: True
+---
+
+## Ejemplo Input
+
+```text
+Nicolás Quiroz
+Benito Rebolledo #3032
+2
+Pizza 5000
+Hamburguesa 3000
+1
+Pizza
+50000
+```
+
+Esto se repite tres veces, con distintos nombres, direcciones y productos.
+
+## Ejemplo Output
+
+```text
+Pedido de Nicolás Quiroz a Benito Rebolledo #3032:
+Pizza: $5000
+Hamburguesa: $3000
+Total: $8000
+Estado: en camino
+Pedido de Nicolás Quiroz a Benito Rebolledo #3032:
+Pizza: $5000
+Hamburguesa: $3000
+Total: $8000
+Estado: entregado
+Vuelto: $42000
+```
+
+Esto se repite tres veces, con distintos nombres, direcciones y productos.
+
 ---
 layout: default
 level: 2
 title: Solución
-hideInToc: False
+hideInToc: True
 ---
 
-```python {1-14|16-28|30-41} {lines: true, maxHeight: '350px'}
+```python {1-17|18-30|30-44|45-53|55-73} {lines: true, maxHeight: '350px'}
 class Pedido:
     def __init__(self, nombre, direccion):
         self.nombre = nombre
         self.direccion = direccion
         self.productos = []
         self.estado = "pendiente"
-        self.total = 0
-
 
     def agregar_producto(self, producto):
         self.productos.append(producto)
 
+    def buscar_producto(self, producto):
+        """No nos pidieron hacer este método, pero lo usamos para eliminar productos."""
+        for i in range(len(self.productos)):
+            if self.productos[i][0] == producto:
+                return i
+        return -1
+
     def eliminar_producto(self, producto):
-        self.productos.remove(producto)
+        indice = self.buscar_producto(producto)
+        while indice != -1:
+            self.productos.pop(indice)
+            indice = self.buscar_producto(producto)
+
 
     def calcular_total(self):
-        self.total = 0
+        total = 0
         for producto in self.productos:
-            self.total += producto[1]
+            total += producto[1]
+        return total
 
     def actualizar_estado_pedido(self, estado):
         self.estado = estado
@@ -478,7 +555,8 @@ class Pedido:
 
     def pagar(self, monto):
         self.entregar_pedido()
-        return monto - self.total
+        total = self.calcular_total()
+        return monto - total
 
     def __str__(self):
         self.calcular_total()
@@ -488,6 +566,26 @@ class Pedido:
         string += "Total: $" + str(self.total) + "\n"
         string += "Estado: " + self.estado
         return string
+
+for i in range(3):
+    nombre = input()
+    direccion = input()
+    pedido = Pedido(nombre, direccion)
+    n_productos = int(input())
+    for j in range(n_productos):
+        producto = input().split()
+        producto[1] = int(producto[1])
+        pedido.agregar_producto(producto)
+    n_productos = int(input())
+    for j in range(n_productos):
+        producto = input()
+        pedido.eliminar_producto(producto)
+    pedido.enviar_pedido()
+    print(pedido)
+    monto = int(input())
+    vuelto = pedido.pagar(monto)
+    print(pedido)
+    print("Vuelto: $" + str(vuelto))
 ```
 
 ---
