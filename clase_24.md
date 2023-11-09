@@ -467,7 +467,7 @@ Luego de esto, debes enviar el pedido. Una vez enviado, debes imprimir el pedido
 Luego debes recibir el monto con el que se va a pagar el pedido y debes imprimir el pedido nuevamente, junto con el vuelto en una linea aparte.
 
 ---
-layout: default
+layout: center
 level: 1
 title: Ejemplo avanzado
 hideInToc: True
@@ -487,6 +487,13 @@ Pizza
 ```
 
 Esto se repite tres veces, con distintos nombres, direcciones y productos.
+
+---
+layout: center
+level: 1
+title: Ejemplo avanzado
+hideInToc: True
+---
 
 ## Ejemplo Output
 
