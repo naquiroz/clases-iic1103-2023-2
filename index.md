@@ -48,3 +48,4 @@ exportFilename: landing
 - [Clase 20 - Archivos II](/clase_20)
 - [Clase 21 - Repaso I2](/clase_21)
 - [Clase 23 - OOP: Tipos propios I](/clase_23)
+- [Clase 24 - OOP: Tipos propios II](/clase_24)
