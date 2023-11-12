@@ -151,6 +151,13 @@ class Casa:
         self.consumo_servicios_basicos[0] += litros
 ```
 
+---
+layout: default
+level: 1
+title: Uso de métodos
+hideInToc: False
+---
+
 Y ahora creemos unas cuantas casas y consumamos agua en cada una de ellas.
 
 ```python
@@ -429,7 +436,7 @@ Define los métodos
 
 - `__init__(self, nombre, direccion)`: Constructor de la clase, recibe el nombre y la dirección del pedido. Inicializa el resto de los atributos.
 - `agregar_producto(producto)` : Recibe un producto de la forma `[nombre, precio]` y lo agrega a la lista de productos.
-- `eliminar_producto(producto)` : Recibe un producto de la forma `[nombre, precio]` y lo elimina de la lista de productos.
+- `eliminar_producto(nombre_producto)` : Recibe el nombre de un producto y elimina todas las ocurrencias del producto en la lista de productos.
 
 ::right::
 
@@ -499,16 +506,14 @@ hideInToc: True
 
 ```text
 Pedido de Nicolás Quiroz a Benito Rebolledo #3032:
-Pizza: $5000
 Hamburguesa: $3000
-Total: $8000
+Total: $3000
 Estado: en camino
 Pedido de Nicolás Quiroz a Benito Rebolledo #3032:
-Pizza: $5000
 Hamburguesa: $3000
-Total: $8000
+Total: $3000
 Estado: entregado
-Vuelto: $42000
+Vuelto: $47000
 ```
 
 Esto se repite tres veces, con distintos nombres, direcciones y productos.
@@ -566,7 +571,7 @@ class Pedido:
         return monto - total
 
     def __str__(self):
-        self.calcular_total()
+        total = self.calcular_total()
         string = "Pedido de " + self.nombre + " a " + self.direccion + ":\n"
         for producto in self.productos:
             string += producto[0] + ": $" + str(producto[1]) + "\n"
