@@ -49,3 +49,4 @@ exportFilename: landing
 - [Clase 21 - Repaso I2](/clase_21)
 - [Clase 23 - OOP: Tipos propios I](/clase_23)
 - [Clase 24 - OOP: Tipos propios II](/clase_24)
+- [Clase 25 - OOP: Interacción entre objetos](/clase_25)
