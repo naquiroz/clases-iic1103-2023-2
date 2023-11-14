@@ -249,7 +249,7 @@ Sería muy útil poder hacer lo siguiente para agregar una casa a un condominio:
 casa_1 = Casa("Benito Rebolledo #3032", 4, "Rojo")
 casa_2 = Casa("Benito Rebolledo #3033", 1, "Azul")
 
-condominio = Condominio("Benito Rebolledo #3030")
+condominio = Condominio("Benito Rebolledo #3030", [])
 condominio.agregar_casa(casa_1)
 condominio.agregar_casa(casa_2)
 ```
@@ -358,7 +358,7 @@ class Condominio:
     def agregar_casa(self, casa):
         """Recibe una instancia de la clase Casa y la agrega a la lista de casas del condominio."""
         self.casas.append(casa)
-    def transferir_agua(self, casa_1, casa_2, litros):
+    def transferir_agua(self, indice_1, indice_2, litros):
         """Recibe dos instancias de la clase Casa y
         un número de litros y transfiere esa cantidad de litros de agua de una casa a otra."""
         casa_1.consumir_agua(litros)
@@ -498,7 +498,7 @@ hideInToc: false
 # Creación al interior de una clase
 ## Otro ejemplo
 
-Otro ejemplo, para una clase `Mazo` que tiene una lista de cartas, podemos definir un constructor que reciba una lista de cartas y cree un mazo con esas cartas.
+Para una clase `Mazo` con una lista de cartas, definimos un constructor que cree un mazo con esas cartas.
 
 ```python
 class Carta:
@@ -518,7 +518,9 @@ class Mazo:
                     carta = Carta(pinta, "Q")
                 elif numero == 13:
                     carta = Carta(pinta, "K")
-            self.cartas.append(Carta(pinta, numero))
+                else:
+                    carta = Carta(pinta, numero)
+                self.cartas.append(carta)
 ```
 
 ---
