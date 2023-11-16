@@ -56,6 +56,16 @@ hideInToc: true
 ## Veamoslo
 
 ---
+layout: center
+level: 2
+title: Evaluación OOP
+hideInToc: true
+---
+
+# Evaluación OOP
+## Opcional por 30 bitpoints
+
+---
 layout: default
 level: 1
 title: Repaso Clase Anterior
