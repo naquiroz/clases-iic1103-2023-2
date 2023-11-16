@@ -50,3 +50,4 @@ exportFilename: landing
 - [Clase 23 - OOP: Tipos propios I](/clase_23)
 - [Clase 24 - OOP: Tipos propios II](/clase_24)
 - [Clase 25 - OOP: Interacción entre objetos](/clase_25)
+- [Clase 26 - Ordenamiento](/clase_26)
