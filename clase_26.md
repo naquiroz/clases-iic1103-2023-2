@@ -354,9 +354,9 @@ def cuantas_vocales(string):
     return contador
 
 lista = ["Pedro", "Antonio", "Juan", "Maria"]
-lista.sort(key=largo_string)
+lista.sort(key=cuantas_vocales)
 print(lista)
-# ["Juan", "Pedro", "Maria", "Antonio"]
+# ["Juan", "Pedro", "Antonio", "Maria"]
 ```
 
 ---
@@ -393,7 +393,7 @@ print(regalos[0].nombre)
 ```
 
 ---
-layout: default
+layout: center
 level: 1
 title: Otros algoritmos de ordenamiento
 hideInToc: false
@@ -588,7 +588,7 @@ hideInToc: false
 
 # Solución
 
-```python
+```python {1-11|12-20|22-35} {lines: true, maxHeight: '350px'}
 # Indices de la lista
 NOMBRE = 0
 CONTINENTE = 1
