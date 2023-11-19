@@ -232,7 +232,7 @@ def insertion_sort(lista):
         for i in range(len(lista)):
             elemento = lista[i]
             if (elemento_menor is None
-            or elemento < elemento_menor):
+            or elemento < lista[elemento_menor]):
                 elemento_menor = i
         lista_ordenada.append(lista.pop(elemento_menor))
     return lista_ordenada
@@ -366,7 +366,7 @@ def cuantas_vocales(string):
 lista = ["Pedro", "Antonio", "Juan", "Maria"]
 lista.sort(key=cuantas_vocales)
 print(lista)
-# ["Juan", "Pedro", "Antonio", "Maria"]
+# ["Pedro", "Juan", "Antonio", "Maria"]
 ```
 
 ---
