@@ -35,6 +35,19 @@ exportFilename: clase_27
 
 ---
 layout: center
+level: 1
+title: Anuncios
+hideInToc: true
+---
+
+# Anuncios
+
+1. La tarea se publicó el miércoles. Recordar que tienen hasta el 30 de noviembre para entregarla.
+2. El compilado de ejercicios está publicado para el examen.
+3. 😪 No hay bitpoints por integridad académica.
+
+---
+layout: center
 level: 2
 title: Ejercicio restante de la clase anterior
 hideInToc: true
@@ -406,6 +419,7 @@ print(max(lista, key=criterio))
 print(min(lista, key=criterio))
 # Luz
 ```
+
 ```
 
 ---
