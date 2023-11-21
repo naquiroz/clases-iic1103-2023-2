@@ -421,8 +421,6 @@ print(min(lista, key=criterio))
 # Luz
 ```
 
-```
-
 ---
 layout: section
 level: 1
