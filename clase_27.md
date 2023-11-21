@@ -194,7 +194,7 @@ print(f"Hola {nombre}")
 # Hola Juan
 ```
 
-Esto acepta cualquier expresión de python, lo evaluá y lo convierte a string. Por ejemplo:
+Esto acepta cualquier expresión de python, lo evalúa y lo convierte a string. Por ejemplo:
 
 ```python
 print(f"2 + 2 = {2 + 2}")
