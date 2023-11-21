@@ -45,6 +45,7 @@ hideInToc: true
 1. La tarea se publicó el miércoles. Recordar que tienen hasta el 30 de noviembre para entregarla.
 2. El compilado de ejercicios está publicado para el examen.
 3. 😪 No hay bitpoints por integridad académica.
+4. Subiré el premio para la T3 a 50 bitpoints.
 
 ---
 layout: center
