@@ -393,7 +393,7 @@ hideInToc: true
 También podemos usar `max` y `min` con `key` para especificar un criterio de ordenamiento. Por ejemplo:
 
 ```python
-lista = ["Hola", "mundo", "cruel"]
+lista = ["Polo", "Viejito", "Luz"]
 def criterio(string):
     vocales = "aeiou"
     cantidad_vocales = 0
@@ -402,9 +402,10 @@ def criterio(string):
             cantidad_vocales += 1
     return cantidad_vocales
 print(max(lista, key=criterio))
-# mundo
+# Viejito
 print(min(lista, key=criterio))
-# Hola
+# Luz
+```
 ```
 
 ---
