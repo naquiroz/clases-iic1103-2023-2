@@ -232,7 +232,6 @@ También podemos escribir con `print()`. Debemos usar el `file` en `print()`, pa
 ```python
 archivo = open("carpeta_bacan/archivo.txt", "w")
 print("4.5", file=archivo)
-print("6.0", file=archivo)
 print("7.0", file=archivo)
 archivo.close()
 ```
@@ -361,8 +360,8 @@ class Casa:
 casas = [Casa("Benito Rebolledo #3032", 4, "Rojo"), Casa("Benito Rebolledo #3033", 4, "Azul")]
 ```
 
-Es la forma que nosotros indicamos que para una futura instancia que siga el plano de la clase `Casa`, el atributo `direccion` será igual al parámetro `direccion` que recibe el método `__init__` y así con todos los atributos y parámetros de la función.
-Ahora, cualquier comportamiendo de la instancia sabrá de sus propios valores para cada atributo.
+Es la forma que nosotros indicamos que para una futura instancia que siga el plano de la clase `Casa`, el atributo `direccion` será igual al parámetro `direccion` que recibe el método `__init__` y lo mismo con los otros.
+Ahora, cualquier comportamiento de la instancia sabrá de sus propios valores para cada atributo.
 
 ❗ Los atributos de una clase se definen con `self.atributo = valor` dentro de un método de la clase y **no son lo mismo** que los parámetros de un método. Es mas, pueden tener el mismo nombre, pero no son lo mismo y pueden haber más atributos que parámetros (o viceversa)
 
