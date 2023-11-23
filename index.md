@@ -52,3 +52,4 @@ exportFilename: landing
 - [Clase 25 - OOP: Interacción entre objetos](/clase_25)
 - [Clase 26 - Ordenamiento](/clase_26)
 - [Clase 27 - Material extra](/clase_27)
+- [Clase 28 - Repaso Examen](/clase_28)
