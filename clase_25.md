@@ -361,11 +361,9 @@ class Condominio:
     def transferir_agua(self, indice_1, indice_2, litros):
         """Recibe dos instancias de la clase Casa y
         un número de litros y transfiere esa cantidad de litros de agua de una casa a otra."""
-        casa_1.consumir_agua(litros)
-        casa_2.consumir_agua(-litros)
+        self.casas[indice_1].consumir_agua(litros)
+        self.casas[indice_2].consumir_agua(-litros)
 ```
-
-🖊️ Nota: Si bien no es necesario que el método `transferir_agua` esté en la clase `Condominio`, es una buena práctica que esté ahí, ya que es una acción que involucra a dos casas del condominio.
 
 ---
 layout: default
