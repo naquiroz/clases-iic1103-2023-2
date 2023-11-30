@@ -53,3 +53,4 @@ exportFilename: landing
 - [Clase 26 - Ordenamiento](/clase_26)
 - [Clase 27 - Material extra](/clase_27)
 - [Clase 28 - Repaso Examen](/clase_28)
+- [Clase 30 - Cierre de curso](/clase_30)
