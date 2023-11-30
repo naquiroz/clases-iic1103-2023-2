@@ -48,6 +48,13 @@ selectable: true
 - 30 clases!
 
 ---
+layout: section
+title: ¿Qué pueden hacer ahora?
+---
+
+# ¿Qué pueden hacer ahora?
+
+---
 layout: 3-images
 title: ¿Qué pueden hacer ahora?
 imageLeft: /content/clase_30/chip.gif
